@@ -1,5 +1,13 @@
-import Home from "./home";
+import Home from "./sections/home";
+import AboutUs from "./sections/aboutus";
+import SkillBoost from "./skillboost";
 
 export default function Page() {
-  return <Home />;
+  return (
+    <>
+      <Home />
+      <AboutUs />
+      <SkillBoost />
+    </>
+  );
 } 
