@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaBook } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { FaHands } from 'react-icons/fa';
@@ -31,36 +33,85 @@ const subjects = [
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function SkillBoost() {
   return (
-    <div className="w-full min-h-screen bg-[#F5F5FE] flex flex-col items-center justify-center py-16 px-4">
-      <div className="w-full max-w-7xl flex flex-col md:flex-row gap-12 items-center justify-between h-full bg-">
+    <section className="w-full min-h-screen bg-[#F5F5FE] flex flex-col items-center justify-center py-16 px-4">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.7 }}
+        variants={fadeUp}
+        transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.05 }}
+        className="w-full max-w-7xl flex flex-col md:flex-row gap-12 items-center justify-between h-full bg-"
+      >
         {/* Left: Hero Content */}
         <div className="flex-1 flex flex-col gap-6 max-w-xl h-full">
-          {/* <span className="inline-block bg-[#E7DEFF] text-[#5F2DED] text-xs font-semibold px-4 py-1 rounded-full mb-2">Populer Subject</span> */}
-          <span className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full  shadow-sm w-fit p-3">Why Choose Us</span>
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 ">
+          <motion.span
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.7 }}
+            variants={fadeUp}
+            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.12 }}
+            className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full  shadow-sm w-fit p-3"
+          >
+            Why Choose Us
+          </motion.span>
+          <motion.h1
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.7 }}
+            variants={fadeUp}
+            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.22 }}
+            className="text-2xl md:text-4xl font-bold text-gray-900 "
+          >
             Matching Your Skills with<br />
             the Right Opportunities
-          </h1>
-          <p className="text-[#5F6C76] text-base mb-4 pr-10">
+          </motion.h1>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.7 }}
+            variants={fadeUp}
+            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
+            className="text-[#5F6C76] text-base mb-4 pr-10"
+          >
            Proven Track Record: With a history of successful placements and satisfied clients, our results speak for themselves.
            Customized Solutions: We understand that every individual and organization is unique. Our customized training solutions are designed to address specific needs and objectives.
            <br/>
            <br/>
            State-of-the-Art Facilities: Our training centers are equipped with modern amenities and technology to provide a conducive learning environment.
-           Strong Industry Connections: Our extensive network with leading companies and organizations helps us stay updated with industry trends and provides valuable placement opportunities for our trainees          </p>
-          <div className="flex gap-4 mt-2">
+            Strong Industry Connections: Our extensive network with leading companies and organizations helps us stay updated with industry trends and provides valuable placement opportunities for our trainees          </motion.p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.7 }}
+            variants={fadeUp}
+            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.42 }}
+            className="flex gap-4 mt-2"
+          >
             <a href="#explore" className="px-6 py-3 rounded-lg bg-[#F2277E] text-white font-semibold shadow hover:bg-pink-600 transition flex items-center gap-2">
               Explore More
               <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M5 9h8m0 0l-3-3m3 3l-3 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
-          </div>
+          </motion.div>
         </div>
         {/* Right: Subject Cards */}
         <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-10 w-full" id="explore">
           {subjects.map((s, i) => (
-            <div key={i} className={`rounded-2xl shadow-xl bg-gradient-to-br ${s.color} p-6 flex flex-col gap-4 relative overflow-hidden ${i %2 !== 0 ? 'top-8' : ''}`}>
+            <motion.div
+              key={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.7 }}
+              variants={fadeUp}
+              transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.15 + i * 0.13 }}
+              className={`rounded-2xl shadow-xl bg-gradient-to-br ${s.color} p-6 flex flex-col gap-4 relative overflow-hidden ${i %2 !== 0 ? 'top-8' : ''}`}
+            >
               <div className="flex items-center gap-2">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
                   <div className="text-2xl text-purple-700">
@@ -70,11 +121,10 @@ export default function SkillBoost() {
               </div>
               <h2 className="text-xl font-bold text-gray-900 ">{s.title}</h2>
               <p className="text-gray-600 text-sm mb-1">{s.desc}</p>
-              {/* <div className="absolute right-2 bottom-2 opacity-10 text-7xl select-none pointer-events-none">{i+1}</div> */}
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 } 

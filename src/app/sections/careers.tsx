@@ -33,6 +33,11 @@ const courses = [
 
 const visibleCards = 3;
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function Careers() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
@@ -80,18 +85,50 @@ export default function Careers() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center justify-center bg-white" style={{ minHeight: '100vh' }}>
       {/* Carousel Section */}
-      <div className="w-full max-w-6xl flex flex-col items-center mb-12 ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Our popular courses</h2>
-        <p className="text-gray-500 mb-8 max-w-xl text-center">Non-disclosure agreement seed round seed money accelerator influencer.</p>
-        <div className="relative w-full flex flex-col items-center min-h-[400px]">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.7 }}
+        variants={fadeUp}
+        transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.05 }}
+        className="w-full max-w-6xl flex flex-col items-center mb-12 "
+      >
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+          variants={fadeUp}
+          transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.12 }}
+          className="text-3xl md:text-4xl font-bold mb-2 text-gray-900"
+        >
+          Our popular courses
+        </motion.h2>
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+          variants={fadeUp}
+          transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.22 }}
+          className="text-gray-500 mb-8 max-w-xl text-center"
+        >
+          Non-disclosure agreement seed round seed money accelerator influencer.
+        </motion.p>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+          variants={fadeUp}
+          transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
+          className="relative w-full flex flex-col items-center min-h-[400px]"
+        >
           <div className="w-full flex items-center justify-center relative min-h-[340px] gap-8">
-          <button
+        <button
               className="bg-white border border-gray-200 rounded-full shadow p-2 hover:bg-gray-100 transition"
-              onClick={handlePrev}
-              aria-label="Previous"
-            >
-              <FaChevronLeft size={20} />
-            </button>
+          onClick={handlePrev}
+          aria-label="Previous"
+        >
+          <FaChevronLeft size={20} />
+        </button>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -105,43 +142,53 @@ export default function Careers() {
                 style={{ minHeight: 320 }}
               >
                 {getVisible().map((course, i) => (
-                  <div
+                  <motion.div
                     key={course.title + i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.7 }}
+                    variants={fadeUp}
+                    transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.38 + i * 0.13 }}
                     className="flex flex-col overflow-hidden border border-gray-100 rounded-xl bg-white w-full max-w-xs mx-auto shadow hover:shadow-lg transition"
-                  >
+              >
                     <img src={course.img} alt={course.title} className="w-full h-56 object-cover rounded-t-xl" />
                     <div className="p-6 flex flex-col gap-3 flex-1">
-                      <h3 className="font-semibold text-lg text-gray-900 mb-1">{course.title}</h3>
+                  <h3 className="font-semibold text-lg text-gray-900 mb-1">{course.title}</h3>
                       <p className="text-gray-600 text-sm mb-2 flex-1">{course.desc}</p>
                       <button className="mt-2 px-4 py-2 rounded-xl bg-blue-700 text-white font-medium text-sm shadow hover:bg-blue-800 transition w-fit self-start">Apply Now</button>
-                    </div>
-                  </div>
-                ))}
+                </div>
               </motion.div>
-            </AnimatePresence>
-            <button
+            ))}
+              </motion.div>
+          </AnimatePresence>
+        <button
               className="bg-white border border-gray-200 rounded-full shadow p-2 hover:bg-gray-100 transition"
-              onClick={handleNext}
-              aria-label="Next"
-            >
-              <FaChevronRight size={20} />
-            </button>
-          </div>
-            
-          </div>
+          onClick={handleNext}
+          aria-label="Next"
+        >
+          <FaChevronRight size={20} />
+        </button>
       </div>
+        </motion.div>
+      </motion.div>
       {/* How to Apply Section */}
-      <div className="w-full max-w-2xl flex flex-col items-center justify-center">
-        {/* Job Application Icon */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.7 }}
+        variants={fadeUp}
+        transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.7 }}
+        className="w-full max-w-2xl flex flex-col items-center justify-center"
+      >
         <div className="flex flex-row items-center justify-center gap-4 mb-4">
           <FaBriefcase size={40} className="text-purple-800" />
           <h3 className="text-2xl font-bold text-purple-800">How to Apply</h3>
-        </div>
+    </div>
         <p className="text-gray-700 text-base text-center">
           Please send your resume and a cover letter to <a href="mailto:instituteoflearn@gmail.com" className="text-blue-700 underline">instituteoflearn@gmail.com</a>.<br />
           Include <span className="font-semibold">"Student Intern Application"</span> in the subject line along with your name.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 } 
