@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import aboutus1 from '../../../public/aboutus1.jpg';
-import Link from 'next/link';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -58,13 +57,13 @@ const AboutUs = () => {
           transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
           className="text-gray-600 text-base  mb-6"
         >
-            We are a pioneering placement training company dedicated to empowering job seekers and students with the skills, strategies, tools and insights they need to excel in today's competitive and dynamic job market. 
+            We are a pioneering placement training company dedicated to empowering job seekers and students with the skills, strategies, tools and insights they need to excel in today&apos;s competitive and dynamic job market. 
             <br/>
             <br/>
             Founded with a vision to empower the next generation of professionals, we are committed to providing industry-relevant training to students and job seekers. Our programs focus on practical skills, placement readiness, and personal development—ensuring learners are equipped to thrive in real-world careers.
             <br/>
             <br/>
-            We’re here to close the gap between what students learn in the classroom and what employers expect in the workplace.        
+            We&apos;re here to close the gap between what students learn in the classroom and what employers expect in the workplace.        
         </motion.p>
         <motion.div
           initial="hidden"

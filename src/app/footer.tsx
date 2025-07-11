@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 import { motion } from 'framer-motion';
 import logo from '../../public/logo.png';
 import Image from 'next/image';
+import Link from 'next/link';
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0 },
@@ -31,10 +32,10 @@ export default function Footer() {
         </div>
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-gray-700 font-semibold text-base w-full md:w-1/3 justify-center">
-          <a href="/" className="hover:text-blue-700 transition-colors duration-200">Home</a>
-          <a href="/aboutus" className="hover:text-blue-700 transition-colors duration-200">About</a>
-          <a href="/sections/careers" className="hover:text-blue-700 transition-colors duration-200">Careers</a>
-          <a href="/sections/contactus" className="hover:text-blue-700 transition-colors duration-200">Contact</a>
+          <Link href="/" className="hover:text-blue-700 transition-colors duration-200">Home</Link>
+          <Link href="/aboutus" className="hover:text-blue-700 transition-colors duration-200">About</Link>
+          <Link href="/sections/careers" className="hover:text-blue-700 transition-colors duration-200">Careers</Link>
+          <Link href="/sections/contactus" className="hover:text-blue-700 transition-colors duration-200">Contact</Link>
         </nav>
         {/* Social Icons */}
         <div className="flex gap-5 w-full md:w-1/3 justify-center md:justify-end mt-6 md:mt-0">

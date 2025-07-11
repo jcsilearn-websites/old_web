@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { FaBriefcase, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 const courses = [
   {
@@ -151,10 +152,10 @@ export default function Careers() {
                     transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.38 + i * 0.13 }}
                     className="flex flex-col overflow-hidden border border-gray-100 rounded-xl bg-white w-full max-w-xs mx-auto shadow hover:shadow-lg transition"
               >
-                    <img src={course.img} alt={course.title} className="w-full h-56 object-cover rounded-t-xl" />
+                    <Image src={course.img} alt={course.title} width={400} height={224} className="w-full h-56 object-cover rounded-t-xl" />
                     <div className="p-6 flex flex-col gap-3 flex-1">
                   <h3 className="font-semibold text-lg text-gray-900 mb-1">{course.title}</h3>
-                      <p className="text-gray-600 text-sm mb-2 flex-1">{course.desc}</p>
+                      <p className="text-gray-600 text-sm mb-2 flex-1">{course.desc.replace(/"/g, '&quot;')}</p>
                       <button className="mt-2 px-4 py-2 rounded-xl bg-blue-700 text-white font-medium text-sm shadow hover:bg-blue-800 transition w-fit self-start">Apply Now</button>
                 </div>
               </motion.div>
@@ -186,7 +187,7 @@ export default function Careers() {
     </div>
         <p className="text-gray-700 text-base text-center">
           Please send your resume and a cover letter to <a href="mailto:instituteoflearn@gmail.com" className="text-blue-700 underline">instituteoflearn@gmail.com</a>.<br />
-          Include <span className="font-semibold">"Student Intern Application"</span> in the subject line along with your name.
+          Include <span className="font-semibold">&quot;Student Intern Application&quot;</span> in the subject line along with your name.
         </p>
       </motion.div>
     </section>

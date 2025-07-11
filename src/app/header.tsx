@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import logo from '../../public/logo.png';
+import Image from 'next/image';
 const fadeUp = {
   hidden: { opacity: 0, y: -24 },
   visible: { opacity: 1, y: 0 },
@@ -30,7 +31,7 @@ const Header = () => {
     >
       <div className="flex items-center justify-between w-3/4 mx-auto">
       <div className="flex items-center gap-3">
-        <img src={logo.src} alt="Logo" className="h-12 w-auto object-contain drop-shadow-md" />
+        <Image src={logo} alt="Logo" height={48} className="h-12 w-auto object-contain drop-shadow-md" />
       </div>
       <motion.nav className="flex items-center gap-8">
         <motion.a href="/aboutus" className={`font-semibold text-md hover:text-[#F2277E] transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}>About Us</motion.a>

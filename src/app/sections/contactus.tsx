@@ -1,9 +1,8 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import contactus from '../../../public/contact.jpg';
-import Footer from '../footer';
+import Image from 'next/image';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -31,7 +30,7 @@ export default function ContactUs() {
             transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.12 }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Contact Us</h2>
-            <p className="text-gray-600 mb-6 text-sm max-w-lg">We'd love to hear from you! Fill out the form or reach us directly using the info below.</p>
+            <p className="text-gray-600 mb-6 text-sm max-w-lg">We&apos;d love to hear from you! Fill out the form or reach us directly using the info below.</p>
           </motion.div>
           <motion.form
             initial="hidden"
@@ -72,9 +71,11 @@ export default function ContactUs() {
           transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
           className="flex-1 flex items-center justify-center"
         >
-          <img
-            src={contactus.src}
+          <Image
+            src={contactus}
             alt="Contact Us"
+            width={400}
+            height={320}
             className="w-full max-w-md rounded-3xl shadow-2xl object-cover"
             style={{ minHeight: 320 }}
           />

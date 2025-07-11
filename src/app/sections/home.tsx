@@ -47,7 +47,7 @@ export default function Home() {
             transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
             className="text-white/90 text-lg max-w-md"
           >
-            Comprehensive training programs tailored to equip you with the skills needed to thrive in today's competitive job market
+            Comprehensive training programs tailored to equip you with the skills needed to thrive in today&apos;s competitive job market
           </motion.p>
           <motion.div
             initial="hidden"
