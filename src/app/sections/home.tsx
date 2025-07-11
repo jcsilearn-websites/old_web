@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import HeroImage from "../../../public/hero.png";
+import HeroImage from "../../../public/hero1.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -10,8 +10,14 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen w-full px-4  bg-gradient-to-r from-[#0a0b68ff] via-[#1024abff] to-[#0d0d7eff] animate-gradient-move">
-      <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto gap-12 ">
+    <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 bg-gradient-to-br from-[#a7bfff] via-[#3a4edb] to-[#0a0b68] relative overflow-hidden">
+      {/* Soft lighting/texture overlay */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute left-1/4 top-0 w-2/3 h-2/3 bg-white/10 rounded-full blur-3xl" style={{ filter: 'blur(80px)' }} />
+        <div className="absolute right-0 bottom-0 w-1/2 h-1/2 bg-blue-200/20 rounded-full blur-2xl" style={{ filter: 'blur(60px)' }} />
+        <div className="absolute left-0 bottom-1/4 w-1/3 h-1/3 bg-purple-300/20 rounded-full blur-2xl" style={{ filter: 'blur(60px)' }} />
+      </div>
+      <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto gap-12 relative z-10 ">
         <div className="flex-1 flex flex-col gap-6 max-w-xl ">
           <motion.span
             initial="hidden"
