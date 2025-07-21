@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import HeroImage from "../../../public/hero1.png";
-import CTA from "../components/cta";
 
 export default function Home() {
   return (

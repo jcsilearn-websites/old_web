@@ -17,6 +17,7 @@ const AboutUs = () => {
           className="rounded-[10%] "
         />
       </div>
+      
       <div className="flex-1 flex flex-col gap-4 max-w">
         <span
           className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full  shadow-sm w-fit p-3"

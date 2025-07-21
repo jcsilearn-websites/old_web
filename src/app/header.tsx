@@ -130,6 +130,7 @@ const Header = () => {
   
         if (scrollPosition >= sectionTop - sectionHeight / 2) {
           setCurrentSection(section.id);
+          console.log(currentSection);
         }
       });
     };
