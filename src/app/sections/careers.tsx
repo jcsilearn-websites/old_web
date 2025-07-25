@@ -127,7 +127,7 @@ export default function Careers() {
           }}
           className="text-3xl md:text-4xl font-bold mb-2 text-gray-900"
         >
-          Our popular courses
+          Our popular Careers
         </motion.h2>
         <p className="text-gray-500 mb-8 max-w-xl text-center">
           Your pathway to professional and personal growth.
@@ -248,6 +248,20 @@ export default function Careers() {
           </span>{" "}
           in the subject line along with your name.
         </p>
+        <div className="flex flex-col items-center justify-center gap-4 mb-4 text-center">
+          <h3 className="text-2xl font-bold text-purple-800">Join Us</h3>
+          <div className="flex flex-col items-center justify-center px-5 max-w-3xl">
+            <p>
+              Whether you are a student preparing to enter the workforce or a
+              professional seeking to enhance your skills, JCS iLEARN is your
+              trusted partner in career development.
+            </p>
+            <p className="mt-2">
+              Join us and take the first step towards a successful and
+              fulfilling career.
+            </p>
+          </div>
+        </div>
       </motion.div>
     </section>
   );

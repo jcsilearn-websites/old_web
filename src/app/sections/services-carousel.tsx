@@ -1,40 +1,71 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaBook } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa';
-import { FaHands } from 'react-icons/fa';
-import { FaGraduationCap } from 'react-icons/fa';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+// import { FaBook } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
+// import { FaHands } from "react-icons/fa";
+// import { FaGraduationCap } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaGraduationCap,
+  FaBook,
+  FaUser,
+  FaHands,
+  FaCompactDisc,
+  FaHighlighter,
+  FaStudiovinari,
+} from "react-icons/fa";
 
 const subjects = [
   {
     icon: <FaBook />,
-    title: 'Comprehensive Training Programs',
-    desc: 'Tailored to meet the specific needs of various industries, our training programs cover a wide range of essential skills, including technical know-how, soft skills, interview preparation, and more.',
-    color: 'from-purple-200 to-purple-100',
-    bgColor: 'bg-purple-50',
+    title: "Soft Skills & Communication Module",
+    desc: "Strong communication and interpersonal skills are essential in every career. This module builds confidence, clarity, and emotional intelligence to help you collaborate and lead effectively.",
+    color: "from-purple-200 to-purple-100",
+    bgColor: "bg-purple-50",
   },
   {
     icon: <FaUser />,
-    title: 'Expert Trainers',
-    desc: 'Our team of experienced, young and vibrant trainers brings a wealth of knowledge from diverse fields, offering insights and guidance that are both practical and impactful',
-    color: 'from-pink-200 to-pink-100',
-    bgColor: 'bg-pink-50',
+    title: "Aptitude & Reasoning Module",
+    desc: "Logical thinking and problem-solving are key in competitive exams and job interviews. This module sharpens your analytical skills, speed, and accuracy to help you crack aptitude tests with ease.",
+    color: "from-pink-200 to-pink-100",
+    bgColor: "bg-pink-50",
   },
   {
     icon: <FaHands />,
-    title: 'Hands-On Learning',
-    desc: 'We believe in learning by doing. Our interactive training sessions, real-world projects, and simulation exercises ensure that participants gain hands-on experience.',
-    color: 'from-yellow-200 to-yellow-100',
-    bgColor: 'bg-yellow-50',
+    title: "Technical Skills Module",
+    desc: "In a tech-driven world, domain knowledge is non-negotiable. This module offers hands-on learning in programming, tools, and platforms to align with industry needs and job roles.",
+    color: "from-yellow-200 to-yellow-100",
+    bgColor: "bg-yellow-50",
   },
   {
     icon: <FaGraduationCap />,
-    title: 'Career Guidance and Support',
-    desc: 'Beyond training, we provide personalized career counseling, resume building workshops, and job placement assistance to help our participants achieve their career goals',
-    color: 'from-blue-200 to-blue-100',
-    bgColor: 'bg-blue-50',
+    title: "Placement & Recruitment Module",
+    desc: "Get job-ready with expert guidance on resumes, group discussions, interviews, and HR rounds. This module prepares you to confidently face every stage of the hiring process.",
+    color: "from-blue-200 to-blue-100",
+    bgColor: "bg-blue-50",
+  },
+  {
+    icon: <FaCompactDisc />,
+    title: "Corporate Readiness & Compliance Module",
+    desc: "Learn the professional etiquette, email writing, time management, and workplace ethics required to succeed and sustain in a corporate environment.",
+    color: "from-red-200 to-white-100",
+    bgColor: "bg-grey-50",
+  },
+  {
+    icon: <FaHighlighter />,
+    title: "Career Planning & Personal Growth Module",
+    desc: "Discover your strengths, set career goals, and develop essential life skills. This module helps you make informed choices and grow personally and professionally.",
+    color: "from-purple-400 to-black-100",
+    bgColor: "bg-blue-50",
+  },
+  {
+    icon: <FaStudiovinari />,
+    title: "School Enrichment Module",
+    desc: "Early exposure to communication, leadership, and learning strategies fosters a strong foundation. This module empowers school students with skills for academic and life success.",
+    color: "from-yellow-200 to-red-500",
+    bgColor: "bg-blue-50",
   },
 ];
 
@@ -46,23 +77,33 @@ const fadeUp = {
 export default function ServicesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % subjects.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + subjects.length) % subjects.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + subjects.length) % subjects.length
+    );
   };
 
   return (
-    <section className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16 px-4" id="explore">
+    <section
+      className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16 px-4"
+      id="explore"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
         variants={fadeUp}
-        transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.05 }}
+        transition={{
+          duration: 0.7,
+          type: "spring",
+          stiffness: 60,
+          damping: 18,
+          delay: 0.05,
+        }}
         className="w-full max-w-7xl flex flex-col items-center gap-12"
       >
         {/* Section Header */}
@@ -72,7 +113,13 @@ export default function ServicesCarousel() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.7 }}
             variants={fadeUp}
-            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.12 }}
+            transition={{
+              duration: 0.7,
+              type: "spring",
+              stiffness: 60,
+              damping: 18,
+              delay: 0.12,
+            }}
             className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full shadow-sm w-fit p-3 mb-6"
           >
             Our Services
@@ -82,7 +129,13 @@ export default function ServicesCarousel() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.7 }}
             variants={fadeUp}
-            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.22 }}
+            transition={{
+              duration: 0.7,
+              type: "spring",
+              stiffness: 60,
+              damping: 18,
+              delay: 0.22,
+            }}
             className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Comprehensive Training Solutions
@@ -92,10 +145,17 @@ export default function ServicesCarousel() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.7 }}
             variants={fadeUp}
-            transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.32 }}
+            transition={{
+              duration: 0.7,
+              type: "spring",
+              stiffness: 60,
+              damping: 18,
+              delay: 0.32,
+            }}
             className="text-[#5F6C76] text-lg"
           >
-            Discover our range of professional training programs designed to enhance your skills and accelerate your career growth
+            Discover our range of professional training programs designed to
+            enhance your skills and accelerate your career growth
           </motion.p>
         </div>
 
@@ -126,16 +186,22 @@ export default function ServicesCarousel() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="w-full"
               >
-                <div className={`rounded-3xl shadow-2xl bg-gradient-to-br ${subjects[currentIndex].color} p-24 min-h-[500px] flex flex-col justify-center`}>
+                <div
+                  className={`rounded-3xl shadow-2xl bg-gradient-to-br ${subjects[currentIndex].color} p-24 min-h-[500px] flex flex-col justify-center`}
+                >
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-lg">
                       <div className="text-4xl text-purple-700">
                         {subjects[currentIndex].icon}
                       </div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">{subjects[currentIndex].title}</h3>
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      {subjects[currentIndex].title}
+                    </h3>
                   </div>
-                  <p className="text-gray-700 text-xl leading-relaxed">{subjects[currentIndex].desc}</p>
+                  <p className="text-gray-700 text-xl leading-relaxed">
+                    {subjects[currentIndex].desc}
+                  </p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -148,7 +214,9 @@ export default function ServicesCarousel() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-purple-600 w-8' : 'bg-gray-300 hover:bg-gray-400'
+                  index === currentIndex
+                    ? "bg-purple-600 w-8"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
             ))}
@@ -161,15 +229,32 @@ export default function ServicesCarousel() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.7 }}
           variants={fadeUp}
-          transition={{ duration: 0.7, type: "spring", stiffness: 60, damping: 18, delay: 0.42 }}
+          transition={{
+            duration: 0.7,
+            type: "spring",
+            stiffness: 60,
+            damping: 18,
+            delay: 0.42,
+          }}
           className="text-center mt-12"
         >
-          <a href="#contact" className="px-8 py-4 rounded-lg bg-[#F2277E] text-white font-semibold shadow-lg hover:bg-pink-600 transition flex items-center gap-2 mx-auto w-fit">
+          <a
+            href="#contact"
+            className="px-8 py-4 rounded-lg bg-[#F2277E] text-white font-semibold shadow-lg hover:bg-pink-600 transition flex items-center gap-2 mx-auto w-fit"
+          >
             Get Started Today
-            <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M5 9h8m0 0l-3-3m3 3l-3 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+              <path
+                d="M5 9h8m0 0l-3-3m3 3l-3 3"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </a>
         </motion.div>
       </motion.div>
     </section>
   );
-} 
+}
