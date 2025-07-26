@@ -148,7 +148,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [currentSection]);
 
   const toggleDropdown = (label: string) => {
     setOpenDropdown(openDropdown === label ? null : label);

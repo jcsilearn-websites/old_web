@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-// import { FaBook } from "react-icons/fa";
-// import { FaUser } from "react-icons/fa";
-// import { FaHands } from "react-icons/fa";
-// import { FaGraduationCap } from "react-icons/fa";
+  import { AnimatePresence, motion } from "framer-motion";
+
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -69,10 +66,7 @@ const subjects = [
   },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0 },
-};
+
 
 export default function ServicesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,71 +86,31 @@ export default function ServicesCarousel() {
       className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16 px-4"
       id="explore"
     >
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.7 }}
-        variants={fadeUp}
-        transition={{
-          duration: 0.7,
-          type: "spring",
-          stiffness: 60,
-          damping: 18,
-          delay: 0.05,
-        }}
+      <div
+
         className="w-full max-w-7xl flex flex-col items-center gap-12"
       >
         {/* Section Header */}
         <div className="text-center max-w-3xl">
-          <motion.span
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
-            variants={fadeUp}
-            transition={{
-              duration: 0.7,
-              type: "spring",
-              stiffness: 60,
-              damping: 18,
-              delay: 0.12,
-            }}
+          <span
+
             className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full shadow-sm w-fit p-3 mb-6"
           >
             Our Services
-          </motion.span>
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
-            variants={fadeUp}
-            transition={{
-              duration: 0.7,
-              type: "spring",
-              stiffness: 60,
-              damping: 18,
-              delay: 0.22,
-            }}
+          </span>
+          <h2
+
             className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Comprehensive Training Solutions
-          </motion.h2>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
-            variants={fadeUp}
-            transition={{
-              duration: 0.7,
-              type: "spring",
-              stiffness: 60,
-              damping: 18,
-              delay: 0.32,
-            }}
+          </h2>
+          <p
+
             className="text-[#5F6C76] text-lg"
           >
             Discover our range of professional training programs designed to
             enhance your skills and accelerate your career growth
-          </motion.p>
+          </p>
         </div>
 
         {/* Carousel Container */}
@@ -224,18 +178,8 @@ export default function ServicesCarousel() {
         </div>
 
         {/* Additional Info */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.7 }}
-          variants={fadeUp}
-          transition={{
-            duration: 0.7,
-            type: "spring",
-            stiffness: 60,
-            damping: 18,
-            delay: 0.42,
-          }}
+        <div
+
           className="text-center mt-12"
         >
           <a
@@ -253,8 +197,8 @@ export default function ServicesCarousel() {
               />
             </svg>
           </a>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

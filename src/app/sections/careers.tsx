@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { FaBriefcase, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaBriefcase, FaChevronLeft, FaChevronRight, FaEnvelope, FaUsers } from "react-icons/fa";
 import Image from "next/image";
 
 const courses = [
@@ -51,18 +51,18 @@ const fadeUp = {
 
 export default function Careers() {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
 
   const handlePrev = () => {
     setDirection(-1);
     setIndex((prev) => (prev - 1 + courses.length) % courses.length);
   };
+  
   const handleNext = () => {
     setDirection(1);
     setIndex((prev) => (prev + 1) % courses.length);
   };
 
-  // Get the visible cards in a circular way
   const getVisible = () => {
     const arr = [];
     for (let i = 0; i < visibleCards; i++) {
@@ -71,7 +71,6 @@ export default function Careers() {
     return arr;
   };
 
-  // Animation variants for horizontal sliding of the group
   const variants: Variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? 400 : -400,
@@ -94,175 +93,162 @@ export default function Careers() {
   };
 
   return (
-    <section
-      className="w-full min-h-screen flex flex-col items-center justify-center bg-white"
-      style={{ minHeight: "100vh" }}
-    >
-      {/* Carousel Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.7 }}
-        variants={fadeUp}
-        transition={{
-          duration: 0.7,
-          type: "spring",
-          stiffness: 60,
-          damping: 18,
-          delay: 0.05,
-        }}
-        className="w-full max-w-6xl flex flex-col items-center mb-12 "
-      >
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.7 }}
-          variants={fadeUp}
-          transition={{
-            duration: 0.7,
-            type: "spring",
-            stiffness: 60,
-            damping: 18,
-            delay: 0.12,
-          }}
-          className="text-3xl md:text-4xl font-bold mb-2 text-gray-900"
-        >
-          Our popular Careers
-        </motion.h2>
-        <p className="text-gray-500 mb-8 max-w-xl text-center">
-          Your pathway to professional and personal growth.
-        </p>
+    <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-20 px-4">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-16">
+        {/* Header Section */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.7 }}
           variants={fadeUp}
-          transition={{
-            duration: 0.7,
-            type: "spring",
-            stiffness: 60,
-            damping: 18,
-            delay: 0.32,
-          }}
-          className="relative w-full flex flex-col items-center min-h-[400px]"
+          className="text-center mb-10"
         >
-          <div className="w-full flex items-center justify-center relative min-h-[340px] gap-8">
-            <button
-              className="bg-white border border-gray-200 rounded-full shadow p-2 hover:bg-gray-100 transition"
-              onClick={handlePrev}
-              aria-label="Previous"
-            >
-              <FaChevronLeft size={20} />
-            </button>
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.div
-                key={index}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.5, type: "tween" }}
-                className="flex w-full gap-8 justify-center"
-                style={{ minHeight: 320 }}
-              >
-                {getVisible().map((course, i) => (
-                  <motion.div
-                    key={course.title + i}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.7 }}
-                    variants={fadeUp}
-                    transition={{
-                      duration: 0.7,
-                      type: "spring",
-                      stiffness: 60,
-                      damping: 18,
-                      delay: 0.38 + i * 0.13,
-                    }}
-                    className="flex flex-col overflow-hidden border border-gray-100 rounded-xl bg-white w-full max-w-xs mx-auto shadow hover:shadow-lg transition"
-                  >
-                    <Image
-                      src={course.img}
-                      alt={course.title}
-                      width={400}
-                      height={224}
-                      className="w-full h-56 object-cover rounded-t-xl"
-                    />
-                    <div className="p-6 flex flex-col gap-3 flex-1">
-                      <h3 className="font-semibold text-lg text-gray-900 mb-1">
-                        {course.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-2 flex-1">
-                        {course.desc.replace(/"/g, "&quot;")}
-                      </p>
-                      <button className="mt-2 px-4 py-2 rounded-xl bg-blue-700 text-white font-medium text-sm shadow hover:bg-blue-800 transition w-fit self-start">
-                        Apply Now
-                      </button>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
-            <button
-              className="bg-white border border-gray-200 rounded-full shadow p-2 hover:bg-gray-100 transition"
-              onClick={handleNext}
-              aria-label="Next"
-            >
-              <FaChevronRight size={20} />
-            </button>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold px-6 py-3 rounded-full shadow-sm mb-6">
+            <FaBriefcase className="text-purple-600" />
+            Career Opportunities
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+            Explore Our Popular
+            <br />
+            <span className="text-green-600">Career Programs</span>
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Your pathway to professional and personal growth through comprehensive training modules 
+            designed to bridge the gap between education and employment.
+          </p>
         </motion.div>
-      </motion.div>
-      {/* How to Apply Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.7 }}
-        variants={fadeUp}
-        transition={{
-          duration: 0.7,
-          type: "spring",
-          stiffness: 60,
-          damping: 18,
-          delay: 0.7,
-        }}
-        className="w-full max-w-2xl flex flex-col items-center justify-center"
-      >
-        <div className="flex flex-row items-center justify-center gap-4 mb-4">
-          <FaBriefcase size={40} className="text-purple-800" />
-          <h3 className="text-2xl font-bold text-purple-800">How to Apply</h3>
-        </div>
-        <p className="text-gray-700 text-base text-center">
-          Please send your resume and a cover letter to{" "}
-          <a
-            href="mailto:instituteoflearn@gmail.com"
-            className="text-blue-700 underline"
-          >
-            instituteoflearn@gmail.com
-          </a>
-          .<br />
-          Include{" "}
-          <span className="font-semibold">
-            &quot;Student Intern Application&quot;
-          </span>{" "}
-          in the subject line along with your name.
-        </p>
-        <div className="flex flex-col items-center justify-center gap-4 mb-4 text-center">
-          <h3 className="text-2xl font-bold text-purple-800">Join Us</h3>
-          <div className="flex flex-col items-center justify-center px-5 max-w-3xl">
-            <p>
-              Whether you are a student preparing to enter the workforce or a
-              professional seeking to enhance your skills, JCS iLEARN is your
-              trusted partner in career development.
-            </p>
-            <p className="mt-2">
-              Join us and take the first step towards a successful and
-              fulfilling career.
-            </p>
+
+        {/* Carousel - Full Width */}
+        <div className="w-full flex flex-col items-center mb-12">
+          <div className="relative w-full flex flex-col items-center min-h-[500px]">
+            <div className="w-full flex items-center justify-center relative min-h-[440px] gap-4">
+              <button
+                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                onClick={handlePrev}
+                aria-label="Previous"
+              >
+                <FaChevronLeft size={20} className="text-gray-700" />
+              </button>
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.div
+                  key={index}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.5, type: "tween" }}
+                  className="flex w-full gap-6 justify-center"
+                  style={{ minHeight: 420 }}
+                >
+                  {getVisible().map((course, i) => (
+                    <motion.div
+                      key={course.title + i}
+                      className="flex flex-col overflow-hidden border border-gray-100 rounded-2xl bg-white/90 backdrop-blur-sm w-full max-w-xs mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                    >
+                      <div className="relative overflow-hidden">
+                        <Image
+                          src={course.img}
+                          alt={course.title}
+                          width={400}
+                          height={224}
+                          className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                      </div>
+                      <div className="p-6 flex flex-col gap-3 flex-1">
+                        <h3 className="font-bold text-lg text-gray-900 mb-2">
+                          {course.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm mb-4 flex-1 leading-relaxed">
+                          {course.desc.replace(/"/g, "&quot;")}
+                        </p>
+                        <button className="mt-auto px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
+                          Apply Now
+                        </button>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+              <button
+                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                onClick={handleNext}
+                aria-label="Next"
+              >
+                <FaChevronRight size={20} className="text-gray-700" />
+              </button>
+            </div>
           </div>
         </div>
-      </motion.div>
+
+        {/* Two Column Layout for How to Apply & Join Us */}
+        <div className="grid md:grid-cols-2 gap-10 w-full max-w-5xl mx-auto">
+          {/* How to Apply Card */}
+          <div
+            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 flex flex-col justify-center"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+                <FaEnvelope className="text-white text-xl" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">How to Apply</h3>
+            </div>
+            <div className="space-y-4">
+              <p className="text-gray-600 leading-relaxed">
+                Please send your resume and a cover letter to{" "}
+                <a
+                  href="mailto:instituteoflearn@gmail.com"
+                  className="text-blue-600 hover:text-blue-700 font-semibold underline transition-colors duration-300"
+                >
+                  instituteoflearn@gmail.com
+                </a>
+              </p>
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-100">
+                <p className="text-gray-700 text-sm">
+                  Include{" "}
+                  <span className="font-bold text-purple-700">
+                    &quot;Student Intern Application&quot;
+                  </span>{" "}
+                  in the subject line along with your name.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Join Us Card */}
+          <div
+            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 text-white shadow-xl flex flex-col justify-center"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <FaUsers className="text-white text-xl" />
+              </div>
+              <h3 className="text-2xl font-bold">Join Our Team</h3>
+            </div>
+            <div className="space-y-4">
+              <p className="text-blue-100 leading-relaxed">
+                Whether you are a student preparing to enter the workforce or a
+                professional seeking to enhance your skills, JCS iLEARN is your
+                trusted partner in career development.
+              </p>
+              <p className="text-blue-100 leading-relaxed">
+                Join us and take the first step towards a successful and
+                fulfilling career.
+              </p>
+              <button className="mt-4 px-8 py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit">
+                Get Started Today
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
