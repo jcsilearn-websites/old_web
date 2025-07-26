@@ -17,13 +17,13 @@ export default function Footer() {
         <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-tr from-pink-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-8">
 
           {/* Main Heading */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
               Empowering Learners.{" "}
-              <span className="text-green-600">Elevating Skills.</span>
+              Elevating Skills.
               <br />
               Enabling Success.
             </h2>

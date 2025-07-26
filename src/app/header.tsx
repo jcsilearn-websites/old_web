@@ -181,8 +181,8 @@ const Header = () => {
               {link.type === 'dropdown' ? (
                 <>
                   <button 
-                    className={`flex items-center gap-1 font-semibold text-md hover:text-[#F2277E] transition-colors text-black py-2 ${
-                      openDropdown === link.label ? 'text-[#F2277E]' : ''
+                    className={`flex items-center gap-1 font-semibold text-md hover:text-pink-600 transition-colors text-black py-2 ${
+                      openDropdown === link.label ? 'text-pink-600' : ''
                     }`}
                     onClick={() => toggleDropdown(link.label)}
                   >
@@ -208,7 +208,7 @@ const Header = () => {
                             <motion.a
                               key={item.label}
                               href={item.href}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:text-[#F2277E] hover:bg-gray-50 transition-colors duration-150"
+                              className="block px-4 py-3 text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-50 transition-colors duration-150"
                               onClick={closeDropdown}
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
@@ -225,7 +225,7 @@ const Header = () => {
               ) : (
                 <a 
                   href={link.href} 
-                  className="font-semibold text-md hover:text-[#F2277E] transition-colors  bg-[#F2277E] px-6 py-2 rounded-full text-white hover:bg-pink-600"
+                  className="font-semibold text-md bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-xl shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
                 >
                   {link.label}
                 </a>
@@ -292,7 +292,7 @@ const Header = () => {
                               <a
                                 key={item.label}
                                 href={item.href}
-                                className="block text-sm text-gray-600 hover:text-[#F2277E] py-1"
+                                className="block text-sm text-gray-600 hover:text-pink-600 py-1"
                                 onClick={closeDropdown}
                               >
                                 {item.label}
@@ -305,7 +305,7 @@ const Header = () => {
                   ) : (
                     <a 
                       href={link.href} 
-                      className="block font-semibold text-md text-gray-700 hover:text-[#F2277E] py-2"
+                      className="block font-semibold text-md text-gray-700 hover:text-pink-600 py-2"
                       onClick={closeDropdown}
                     >
                       {link.label}

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-  import { AnimatePresence, motion } from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -66,8 +65,6 @@ const subjects = [
   },
 ];
 
-
-
 export default function ServicesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -82,55 +79,47 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <section
-      className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16 px-4"
-      id="explore"
-    >
-      <div
+    <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-20 px-4 items-center justify-center  flex flex-col">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+      </div>
 
-        className="w-full max-w-7xl flex flex-col items-center gap-12"
-      >
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center self-center  gap-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl">
-          <span
-
-            className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full shadow-sm w-fit p-3 mb-6"
-          >
+          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold px-6 py-3 rounded-full shadow-sm mb-6">
+            <FaGraduationCap className="text-purple-600" />
             Our Services
           </span>
-          <h2
-
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Comprehensive Training Solutions
           </h2>
-          <p
-
-            className="text-[#5F6C76] text-lg"
-          >
+          <p className="text-lg text-gray-600 leading-relaxed">
             Discover our range of professional training programs designed to
             enhance your skills and accelerate your career growth
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="w-full max-w-4xl relative">
+        <div className="w-full max-w-6xl relative flex justify-center">
           {/* Carousel Navigation */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:bg-white hover:shadow-xl transition-all duration-300"
           >
-            <FaChevronLeft className="text-gray-600" />
+            <FaChevronLeft className="text-gray-700" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:bg-white hover:shadow-xl transition-all duration-300"
           >
-            <FaChevronRight className="text-gray-600" />
+            <FaChevronRight className="text-gray-700" />
           </button>
 
           {/* Carousel Content */}
-          <div className="overflow-hidden rounded-3xl">
+          <div className="w-full max-w-4xl overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -140,16 +129,14 @@ export default function ServicesCarousel() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="w-full"
               >
-                <div
-                  className={`rounded-3xl shadow-2xl bg-gradient-to-br ${subjects[currentIndex].color} p-24 min-h-[500px] flex flex-col justify-center`}
-                >
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-lg">
-                      <div className="text-4xl text-purple-700">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl border border-blue-200 p-10 min-h-[450px] flex flex-col justify-center">
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
+                    <div className="w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 shadow-lg flex-shrink-0">
+                      <div className="text-4xl text-white">
                         {subjects[currentIndex].icon}
                       </div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">
+                    <h3 className="text-3xl font-bold text-gray-900 leading-tight">
                       {subjects[currentIndex].title}
                     </h3>
                   </div>
@@ -160,44 +147,25 @@ export default function ServicesCarousel() {
               </motion.div>
             </AnimatePresence>
           </div>
+        </div>
 
-          {/* Carousel Indicators */}
-          <div className="flex justify-center gap-3 mt-8">
-            {subjects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-purple-600 w-8"
-                    : "bg-gray-300 hover:bg-gray-400"
-                }`}
-              />
-            ))}
-          </div>
+        {/* Carousel Indicators */}
+        <div className="flex justify-center gap-3 mt-8">
+          {subjects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-gradient-to-r from-pink-500 to-purple-600 w-8"
+                  : "bg-gray-300 hover:bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
 
         {/* Additional Info */}
-        <div
 
-          className="text-center mt-12"
-        >
-          <a
-            href="#contact"
-            className="px-8 py-4 rounded-lg bg-[#F2277E] text-white font-semibold shadow-lg hover:bg-pink-600 transition flex items-center gap-2 mx-auto w-fit"
-          >
-            Get Started Today
-            <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
-              <path
-                d="M5 9h8m0 0l-3-3m3 3l-3 3"
-                stroke="#fff"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );

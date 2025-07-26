@@ -3,8 +3,6 @@ import React from "react";
 import { FaInstagramSquare, FaLinkedin, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
-
-
 const icons: IconType[] = [FaInstagramSquare, FaLinkedin, FaYoutube];
 
 export default function ContactUs() {
@@ -18,9 +16,7 @@ export default function ContactUs() {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Header Section */}
-        <div
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Get In Touch
           </h1>
@@ -29,11 +25,9 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Contact Form */}
-          <div
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-white/20"
-          >
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-white/20 flex flex-col justify-center h-full">
             <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 Send us a Message
@@ -43,7 +37,7 @@ export default function ContactUs() {
               </p>
             </div>
 
-            <form className="space-y-6">
+            <form className="space-y-6 flex-1 flex flex-col">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-gray-700">Full Name</label>
@@ -72,12 +66,12 @@ export default function ContactUs() {
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 flex-1">
                 <label className="text-sm font-semibold text-gray-700">Message</label>
                 <textarea
                   placeholder="Tell us more about your inquiry..."
                   rows={6}
-                  className="w-full px-4 py-4 rounded-xl border border-gray-200 bg-white/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-700 placeholder-gray-400 resize-none"
+                  className="w-full px-4 py-4 rounded-xl border border-gray-200 bg-white/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-700 placeholder-gray-400 resize-none h-full"
                 />
               </div>
 
@@ -91,57 +85,51 @@ export default function ContactUs() {
           </div>
 
           {/* Contact Information */}
-          <div
-            className="space-y-8"
-          >
-            {/* Main Contact Info */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 md:p-10 text-white shadow-2xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                Ready to Empower Your Future?
-              </h2>
-              <p className="text-blue-100 text-lg leading-relaxed mb-8">
-                We welcome your inquiries and feedback. For more information about our programs and services, please don&apos;t hesitate to reach out.
-              </p>
+          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 md:p-10 text-white shadow-2xl flex flex-col justify-center h-full">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Ready to Empower Your Future?
+            </h2>
+            <p className="text-blue-100 text-lg leading-relaxed mb-8">
+              We welcome your inquiries and feedback. For more information about our programs and services, please don&apos;t hesitate to reach out.
+            </p>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <FaPhone className="text-white text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                    <p className="text-blue-100">+91 75984 98451</p>
-                  </div>
+            <div className="space-y-6 flex-1">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                  <FaPhone className="text-white text-xl" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <FaEnvelope className="text-white text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Email</h3>
-                    <p className="text-blue-100">jcsilearn@gmail.com</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">Phone</h3>
+                  <p className="text-blue-100">+91 75984 98451</p>
                 </div>
+              </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <FaMapMarkerAlt className="text-white text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Address</h3>
-                    <p className="text-blue-100 leading-relaxed">
-                      No.10, Udayampalayam Main Road,<br />
-                      Sowripalayam, Coimbatore - 641028
-                    </p>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                  <FaEnvelope className="text-white text-xl" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">Email</h3>
+                  <p className="text-blue-100">jcsilearn@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                  <FaMapMarkerAlt className="text-white text-xl" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">Address</h3>
+                  <p className="text-blue-100 leading-relaxed">
+                    No.10, Udayampalayam Main Road,<br />
+                    Sowripalayam, Coimbatore - 641028
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Follow Us</h3>
+            <div className="mt-8">
+              <h3 className="text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 {icons.map((Icon, index) => (
                   <a
@@ -154,7 +142,6 @@ export default function ContactUs() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>

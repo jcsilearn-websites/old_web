@@ -24,7 +24,7 @@ export default function SkillBoost() {
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Matching Your Skills with
             <br />
-            <span className="text-green-600">the Right Opportunities</span>
+            he Right Opportunities
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We bridge the gap between education and employment through personalized training programs, 
@@ -101,7 +101,7 @@ export default function SkillBoost() {
             >
               <a
                 href="#explore"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg shadow-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 text-lg transform hover:scale-[1.02] transition-all duration-300"
               >
                 Explore Our Programs
                 <svg width="20" height="20" fill="none" viewBox="0 0 20 20">

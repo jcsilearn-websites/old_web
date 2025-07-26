@@ -116,7 +116,7 @@ export default function Careers() {
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Explore Our Popular
             <br />
-            <span className="text-green-600">Career Programs</span>
+            Career Programs
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your pathway to professional and personal growth through comprehensive training modules 
