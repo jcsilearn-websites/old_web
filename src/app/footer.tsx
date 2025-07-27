@@ -74,7 +74,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link 
-                      href="/sections/careers" 
+                      href="/careers" 
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm flex items-center group"
                     >
                       <span className="w-1 h-1 bg-blue-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
@@ -83,7 +83,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link 
-                      href="/sections/contactus" 
+                      href="/contact" 
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm flex items-center group"
                     >
                       <span className="w-1 h-1 bg-blue-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
@@ -100,34 +100,49 @@ export default function Footer() {
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Our Services</h4>
                 <ul className="space-y-3">
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/services" 
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       For Colleges & Universities
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/services" 
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       For Corporates
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/services" 
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       For Schools
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/services" 
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       For Individuals
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/services" 
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-purple-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       For Startups
-                    </span>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -139,46 +154,67 @@ export default function Footer() {
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Programs</h4>
                 <ul className="space-y-3">
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
-                      <span className="w-1 h-1 bg-pink-500  rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
+                      <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Soft Skills & Communication
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Aptitude & Reasoning  
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Technical Skills
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Placement & Recruitment
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Corporate Readiness & Compliance
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
                       <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       Career Planning & Personal Growth
-                    </span>
+                    </Link>
                   </li>
                   <li>
-                    <span className="text-gray-600 text-sm flex items-center group cursor-pointer">
-                        <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                    <Link 
+                      href="/programs" 
+                      className="text-gray-600 hover:text-pink-600 transition-colors duration-300 text-sm flex items-center group"
+                    >
+                      <span className="w-1 h-1 bg-pink-500 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                       School Enrichment
-                    </span>
+                    </Link>
                   </li>
                 </ul>
               </div>

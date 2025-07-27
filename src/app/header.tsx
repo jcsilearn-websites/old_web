@@ -12,24 +12,24 @@ const navLinks = [
     type: 'dropdown',
     items: [
       {
+        label: 'About Us',
+        href: '/about'
+      },
+      {
         label: 'Our Journey',
-        href: '/about',
-        section: '#journey'
+        href: '/about/journey'
       },
       {
-        label: 'Who we are',
-        href: '/about',
-        section: '#who-we-are'
-      },
-      {
-        label: 'Our Mission',
-        href: '/about',
-        section: '#mission'
+        label: 'Our Founders',
+        href: '/about/founders'
       },
       {
         label: 'Our Vision',
-        href: '/about',
-        section: '#vision'
+        href: '/about/vision'
+      },
+      {
+        label: 'Our Identity',
+        href: '/about/identity'
       },
     ]
   },

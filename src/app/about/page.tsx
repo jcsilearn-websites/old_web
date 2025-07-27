@@ -42,12 +42,18 @@ export default function AboutPage() {
                 We're here to close the gap between what students learn in the classroom and what employers expect in the workplace.
               </p>
             </div>
-            <div className="mt-8">
+            <div className="mt-8 flex gap-4">
               <Link 
                 href="/about/journey"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
               >
                 Learn About Our Journey
+              </Link>
+              <Link 
+                href="/"
+                className="inline-block px-6 py-3 border-2 border-pink-500 text-pink-600 font-semibold rounded-xl hover:bg-pink-500 hover:text-white transition-all duration-300"
+              >
+                Back to Home
               </Link>
             </div>
           </div>

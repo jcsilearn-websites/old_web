@@ -174,8 +174,14 @@ export default function FoundersPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/about"
+                href="/"
                 className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
+              >
+                Back to Home
+              </Link>
+              <Link 
+                href="/about"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Back to About Us
               </Link>
