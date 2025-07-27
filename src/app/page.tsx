@@ -4,7 +4,6 @@ import SkillBoost from "./sections/skillboost";
 import ServicesCarousel from "./sections/services-carousel";
 import Careers from "./sections/careers";
 import ContactUs from "./sections/contactus";
-import Footer from "./footer";
 
 export default function Page() {
   return (

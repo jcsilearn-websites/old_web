@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,9 +19,11 @@ export default function Home() {
           <p className="text-white/90 text-lg max-w-md leading-relaxed">
             Comprehensive training programs tailored to equip you with the skills needed to thrive in today&apos;s competitive job market
           </p>
-          <button className="px-8 py-4 rounded-xl bg-white text-blue-900 font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
-            Contact Us
-          </button>
+          <Link href="/contact">
+            <button className="px-8 py-4 rounded-xl bg-white text-blue-900 font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+              Contact Us
+            </button>
+          </Link>
         </div>
         <div className="flex-1 flex items-center justify-center">
           <Image 
