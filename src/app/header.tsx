@@ -8,27 +8,27 @@ import { FaChevronDown } from 'react-icons/fa';
 const navLinks = [
   {
     label: 'About Us',
-    href: '/aboutus',
+    href: '/about',
     type: 'dropdown',
     items: [
       {
         label: 'Our Journey',
-        href: '/aboutus',
+        href: '/about',
         section: '#journey'
       },
       {
         label: 'Who we are',
-        href: '/aboutus',
+        href: '/about',
         section: '#who-we-are'
       },
       {
         label: 'Our Mission',
-        href: '/aboutus',
+        href: '/about',
         section: '#mission'
       },
       {
         label: 'Our Vision',
-        href: '/aboutus',
+        href: '/about',
         section: '#vision'
       },
     ]

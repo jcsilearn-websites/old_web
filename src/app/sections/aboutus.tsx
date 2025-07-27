@@ -26,11 +26,14 @@ const AboutUs = () => {
           Welcome to JCS iLEARN
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          At JCS iLEARN LLP, we are reshaping the future of education and employability through industry-relevant, hands-on training. Legally registered as a Limited Liability Partnership (LLP) under the Ministry of Corporate Affairs (MCA), we are a trusted and recognized name in placement training and professional development.<br/><br/>
-          Driven by the mission to bridge the gap between academic learning and industry expectations, we deliver structured programs focused on soft skills, technical expertise, career readiness, and personal growth. Our approach blends practical knowledge with real-world insights to empower students and job seekers to confidently navigate today&apos;s competitive job market.<br/><br/>
-          From classrooms to corporate boardrooms, we are committed to nurturing the next generation of skilled professionals—one learner at a time.
-        </p>
-        <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 w-fit">
+        At JCS iLEARN LLP, we are reshaping the future of education and employability through industry-relevant, hands-on training. Legally registered as a Limited Liability Partnership (LLP) under the Ministry of Corporate Affairs (MCA), we are a trusted and recognized name in placement training and professional development.<br/><br/>
+        Driven by the mission to bridge the gap between academic learning and industry expectations, we deliver structured programs focused on soft skills, technical expertise, career readiness, and personal growth. Our approach blends practical knowledge with real-world insights to empower students and job seekers to confidently navigate today&apos;s competitive job market.<br/><br/>
+        From classrooms to corporate boardrooms, we are committed to nurturing the next generation of skilled professionals—one learner at a time.        </p>
+        <button 
+        onClick={() => {
+          window.location.href = '/aboutus';
+        }}
+        className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 w-fit">
           Learn More
           <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
             <path d="M5 9h8m0 0l-3-3m3 3l-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
