@@ -93,47 +93,47 @@ export default function Careers() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-20 px-4">
+    <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16">
         {/* Header Section */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.7 }}
           variants={fadeUp}
-          className="text-center mb-10"
+          className="text-center mb-6 sm:mb-10"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold px-6 py-3 rounded-full shadow-sm mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-sm mb-4 sm:mb-6">
             <FaBriefcase className="text-purple-600" />
             Career Opportunities
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Explore Our Popular
             <br />
             Career Programs
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your pathway to professional and personal growth through comprehensive training modules 
             designed to bridge the gap between education and employment.
           </p>
         </motion.div>
 
         {/* Carousel - Full Width */}
-        <div className="w-full flex flex-col items-center mb-12">
-          <div className="relative w-full flex flex-col items-center min-h-[500px]">
-            <div className="w-full flex items-center justify-center relative min-h-[440px] gap-4">
+        <div className="w-full flex flex-col items-center mb-8 sm:mb-12">
+          <div className="relative w-full flex flex-col items-center min-h-[400px] sm:min-h-[500px]">
+            <div className="w-full flex items-center justify-center relative min-h-[350px] sm:min-h-[440px] gap-2 sm:gap-4">
               <button
-                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-2 sm:p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
                 onClick={handlePrev}
                 aria-label="Previous"
               >
-                <FaChevronLeft size={20} className="text-gray-700" />
+                <FaChevronLeft size={16} className="text-gray-700 sm:w-5 sm:h-5" />
               </button>
               <AnimatePresence initial={false} custom={direction}>
                 <motion.div
@@ -144,8 +144,8 @@ export default function Careers() {
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.5, type: "tween" }}
-                  className="flex w-full gap-6 justify-center"
-                  style={{ minHeight: 420 }}
+                  className="flex w-full gap-4 sm:gap-6 justify-center"
+                  style={{ minHeight: 320 }}
                 >
                   {getVisible().map((course, i) => (
                     <motion.div
@@ -158,18 +158,18 @@ export default function Careers() {
                           alt={course.title}
                           width={400}
                           height={224}
-                          className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                       </div>
-                      <div className="p-6 flex flex-col gap-3 flex-1">
-                        <h3 className="font-bold text-lg text-gray-900 mb-2">
+                      <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-3 flex-1">
+                        <h3 className="font-bold text-sm sm:text-base lg:text-lg text-gray-900 mb-1 sm:mb-2">
                           {course.title}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-4 flex-1 leading-relaxed">
+                        <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-1 leading-relaxed">
                           {course.desc.replace(/"/g, "&quot;")}
                         </p>
-                        <button className="mt-auto px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
+                        <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
                           Apply Now
                         </button>
                       </div>
@@ -178,30 +178,30 @@ export default function Careers() {
                 </motion.div>
               </AnimatePresence>
               <button
-                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-2 sm:p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
                 onClick={handleNext}
                 aria-label="Next"
               >
-                <FaChevronRight size={20} className="text-gray-700" />
+                <FaChevronRight size={16} className="text-gray-700 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Two Column Layout for How to Apply & Join Us */}
-        <div className="grid md:grid-cols-2 gap-10 w-full max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
           {/* How to Apply Card */}
           <div
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 flex flex-col justify-center"
+            className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 flex flex-col justify-center"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-                <FaEnvelope className="text-white text-xl" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+                <FaEnvelope className="text-white text-lg sm:text-xl" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">How to Apply</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">How to Apply</h3>
             </div>
-            <div className="space-y-4">
-              <p className="text-gray-600 leading-relaxed">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Please send your resume and a cover letter to{" "}
                 <a
                   href="mailto:instituteoflearn@gmail.com"
@@ -210,8 +210,8 @@ export default function Careers() {
                   instituteoflearn@gmail.com
                 </a>
               </p>
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-100">
-                <p className="text-gray-700 text-sm">
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-3 sm:p-4 border border-blue-100">
+                <p className="text-gray-700 text-xs sm:text-sm">
                   Include{" "}
                   <span className="font-bold text-purple-700">
                     &quot;Student Intern Application&quot;
@@ -224,25 +224,25 @@ export default function Careers() {
 
           {/* Join Us Card */}
           <div
-            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 text-white shadow-xl flex flex-col justify-center"
+            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-center"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <FaUsers className="text-white text-xl" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <FaUsers className="text-white text-lg sm:text-xl" />
               </div>
-              <h3 className="text-2xl font-bold">Join Our Team</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">Join Our Team</h3>
             </div>
-            <div className="space-y-4">
-              <p className="text-blue-100 leading-relaxed">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                 Whether you are a student preparing to enter the workforce or a
                 professional seeking to enhance your skills, JCS iLEARN is your
                 trusted partner in career development.
               </p>
-              <p className="text-blue-100 leading-relaxed">
+              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                 Join us and take the first step towards a successful and
                 fulfilling career.
               </p>
-              <button className="mt-4 px-8 py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit">
+              <button className="mt-3 sm:mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit text-sm sm:text-base">
                 Get Started Today
               </button>
             </div>

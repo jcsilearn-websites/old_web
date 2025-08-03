@@ -136,38 +136,40 @@ export default function ProgramsPage() {
       </div>
 
       {/* Header Section */}
-      <section className="relative pt-20 pb-16 px-4 mt-10">
+      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
             Our Programs
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Our Products & Signature Programs — JCS iLearn
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
             Empowering learners with skill-based, career-aligned and industry-ready modules.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-gray-600">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 text-gray-600">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">📍</span>
-              <span>Offline | Online | Hybrid</span>
+              <span className="text-lg sm:text-xl lg:text-2xl">📍</span>
+              <span className="text-xs sm:text-sm lg:text-base">Offline | Online | Hybrid</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl">📅</span>
-              <span>1-day workshops to full-year integration</span>
+              <span className="text-lg sm:text-xl lg:text-2xl">📅</span>
+              <span className="text-xs sm:text-sm lg:text-base">1-day workshops to full-year integration</span>
             </div>
           </div>
         </div>
       </section>
 
+
+
       {/* Filter Buttons */}
-      <section className="max-w-6xl mx-auto px-4 mb-12">
-        <div className="flex flex-wrap justify-center gap-4">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm lg:text-base ${
                 activeFilter === filter
                   ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white hover:shadow-md border border-gray-200"
@@ -180,111 +182,111 @@ export default function ProgramsPage() {
       </section>
 
       {/* Popular Programs Section */}
-      <section className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Popular Programs</h2>
-          <p className="text-gray-600 text-lg">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Popular Programs</h2>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600">
             Choose from our curated selection of industry-leading programs
           </p>
         </div>
 
-        {/* Program Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredPrograms.map((program) => (
-            <div key={program.id} className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/20 hover:scale-[1.02]">
-              {/* Top Section - Image with Gradient Overlay */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={program.image}
-                  alt={program.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-700">
-                    {program.duration}
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                    {program.category}
+                {/* Program Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {filteredPrograms.map((program, index) => {
+            // Random color combinations for each card
+            const colorSchemes = [
+              { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
+              { bg: "from-green-100 to-green-300", text: "text-green-800" },
+              { bg: "from-teal-100 to-teal-300", text: "text-teal-800" },
+              { bg: "from-purple-100 to-purple-300", text: "text-purple-800" },
+              { bg: "from-pink-100 to-pink-300", text: "text-pink-800" },
+              { bg: "from-indigo-100 to-indigo-300", text: "text-indigo-800" },
+              { bg: "from-yellow-100 to-yellow-300", text: "text-yellow-800" },
+              { bg: "from-red-100 to-red-300", text: "text-red-800" },
+              { bg: "from-violet-100 to-violet-300", text: "text-violet-800" },
+              { bg: "from-orange-100 to-orange-300", text: "text-orange-800" },
+              { bg: "from-emerald-100 to-emerald-300", text: "text-emerald-800" },
+              { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
+            ];
+            
+            // Use program ID to generate random but consistent color for each program
+            const colorScheme = colorSchemes[program.id % colorSchemes.length];
+            
+            return (
+              <div key={program.id} className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                <div className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg} h-full flex flex-col justify-center`}>
+                  <div className="text-center">
+                    {/* Icon based on category */}
+                    <div className="mb-6">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-full flex items-center justify-center mx-auto">
+                        {program.category === "Soft Skills" ? (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                          </svg>
+                        ) : program.category === "Technical Skills" ? (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                          </svg>
+                        ) : program.category === "Aptitude & Reasoning" ? (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                          </svg>
+                        ) : program.category === "Placement & Recruitment" ? (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          </svg>
+                        ) : program.category === "Career Planning" ? (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                          </svg>
+                        ) : (
+                          <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                          </svg>
+                        )}
+                      </div>
+                    </div>
+                    <h3 className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}>
+                      {program.title.split(' - ')[1] || program.title}
+                    </h3>
+                    <p className="text-black text-sm sm:text-base font-medium leading-relaxed mb-3">
+                      {program.description}
+                    </p>
                   </div>
                 </div>
               </div>
-
-              {/* Middle Section - Course Info */}
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-pink-600 transition-colors duration-300">
-                  {program.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
-                  {program.description}
-                </p>
-                {/* <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
-                      {program.instructor.split(' ')[0][0]}{program.instructor.split(' ')[1][0]}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-gray-700 text-sm font-medium">with</p>
-                    <p className="text-gray-900 text-sm font-semibold">{program.instructor}</p>
-                  </div>
-                </div> */}
-              </div>
-
-              {/* Bottom Section - Pricing & Button */}
-              <div className="px-6 pb-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-gray-900">
-                      ${program.price}
-                    </span>
-                    <span className="text-gray-400 line-through text-sm">
-                      ${program.originalPrice}
-                    </span>
-                  </div>
-                  <div className="text-xs text-green-600 font-semibold bg-green-100 px-2 py-1 rounded-full">
-                    {Math.round(((program.originalPrice - program.price) / program.originalPrice) * 100)}% OFF
-                  </div>
-                </div>
-                <button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Enroll Now
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
       {/* About Our Programs */}
-      <section className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 About Our Programs</h2>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">🧠 About Our Programs</h2>
+            <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg">
                 At JCS iLearn, we believe that impactful education isn't one-size-fits-all — it's modular, tailored and deeply outcome-driven.
               </p>
-              <p>
+              <p className="text-sm sm:text-base lg:text-lg">
                 That's why we've designed JCS iLearn as a curated suite of 25+ training programs, each carefully crafted to develop a specific skill set, career goal or learning outcome.
               </p>
-              <p>
+              <p className="text-sm sm:text-base lg:text-lg">
                 Whether you're a student looking to build a strong technical foundation or an institution aiming to boost campus placement readiness, our offerings are structured to serve your goals with focus and flexibility.
               </p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative order-first lg:order-last">
             <Image 
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
               alt="Students learning and collaborating" 
               width={500} 
               height={400} 
-              className="rounded-3xl shadow-2xl" 
+              className="rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-none" 
             />
-            <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
-              <p className="text-gray-700 font-semibold italic">
+            <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-xl border border-white/20">
+              <p className="text-gray-700 font-semibold italic text-xs sm:text-sm lg:text-base">
                 "Modular, tailored, and outcome-driven learning"
               </p>
             </div>
@@ -293,43 +295,43 @@ export default function ProgramsPage() {
       </section>
 
       {/* What Makes Us Unique */}
-      <section className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🎯 What Makes JCS iLearn Unique?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-white/20">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">🎯 What Makes JCS iLearn Unique?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white">📚</span>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl lg:text-2xl text-white">📚</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Program-Based Learning</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">Program-Based Learning</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Each module follows a structured curriculum with defined goals, activities and outcomes.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white">📦</span>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl lg:text-2xl text-white">📦</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Product-Style Delivery</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">Product-Style Delivery</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Every iLearn module functions as a standalone product that can be deployed individually or bundled.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white">⚡</span>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl lg:text-2xl text-white">⚡</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Tiered Flexibility</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">Tiered Flexibility</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Our modules come in Lite, Pro, and Plus formats — letting you choose the depth and duration.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white">🌐</span>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <span className="text-lg sm:text-xl lg:text-2xl text-white">🌐</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Cross-Domain Ecosystem</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">Cross-Domain Ecosystem</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">
                 From coding and soft skills to career readiness and innovation, iLearn covers it all seamlessly.
               </p>
             </div>
@@ -338,23 +340,23 @@ export default function ProgramsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+        <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Ready to Choose Your Program?</h2>
-            <p className="text-blue-100 leading-relaxed mb-8 text-lg">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Ready to Choose Your Program?</h2>
+            <p className="text-blue-100 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
               Explore our comprehensive suite of 25+ programs designed to transform your learning journey and career prospects.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
               >
                 Get Started Today
               </Link>
               <Link 
                 href="/"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 text-sm sm:text-base"
               >
                 Back to Home
               </Link>
