@@ -29,34 +29,42 @@ export default function JourneyPage() {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 pb-20 space-y-20">
-        
         {/* Origin Story */}
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Beginning</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              The Beginning
+            </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                JCS iLearn was born from a classroom moment—but built on years of passion, purpose, and belief in the power of education.
+                JCS iLearn was born from a classroom moment—but built on years
+                of passion, purpose, and belief in the power of education.
               </p>
               <p>
-                What began as a spark of inspiration soon grew into a purposeful movement. From our first session, we set out to redefine how students prepare for their futures—combining quality instruction with mentorship and real-world insight.
+                What began as a spark of inspiration soon grew into a purposeful
+                movement. From our first session, we set out to redefine how
+                students prepare for their futures—combining quality instruction
+                with mentorship and real-world insight.
               </p>
               <p>
-                We've since built a strong reputation for delivering practical, engaging, and result-oriented programs.
+                We've since built a strong reputation for delivering practical,
+                engaging, and result-oriented programs.
               </p>
             </div>
           </div>
           <div className="relative">
-            <Image 
-              src="https://images.unsplash.com/photo-1523240794102-9ebd0b167d56?auto=format&fit=crop&w=800&q=80"
-              alt="Classroom with students learning" 
-              width={500} 
-              height={400} 
-              className="rounded-3xl shadow-2xl" 
+            {/* Need too Check the image */}
+            <Image
+              src=""
+              alt="Classroom with students learning"
+              width={500}
+              height={400}
+              className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
               <p className="text-gray-700 font-semibold italic">
-                "Education is not preparation for life; education is life itself."
+                "Education is not preparation for life; education is life
+                itself."
               </p>
             </div>
           </div>
@@ -64,33 +72,44 @@ export default function JourneyPage() {
 
         {/* Growth and Development */}
         <section className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Growth Story</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Our Growth Story
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white font-bold">1</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">The Spark</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                The Spark
+              </h3>
               <p className="text-gray-600 text-sm">
-                A student's question during an entrepreneurship workshop ignited our founder's passion to create real change.
+                A student's question during an entrepreneurship workshop ignited
+                our founder's passion to create real change.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">The Vision</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                The Vision
+              </h3>
               <p className="text-gray-600 text-sm">
-                We developed a comprehensive approach to bridge the gap between education and employment.
+                We developed a comprehensive approach to bridge the gap between
+                education and employment.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white font-bold">3</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">The Impact</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                The Impact
+              </h3>
               <p className="text-gray-600 text-sm">
-                Today, we've helped thousands of students transform their careers and achieve their dreams.
+                Today, we've helped thousands of students transform their
+                careers and achieve their dreams.
               </p>
             </div>
           </div>
@@ -99,22 +118,25 @@ export default function JourneyPage() {
         {/* Mission Statement */}
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <Image 
+            <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-              alt="Team working together" 
-              width={500} 
-              height={400} 
-              className="rounded-3xl shadow-2xl" 
+              alt="Team working together"
+              width={500}
+              height={400}
+              className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -top-6 -left-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-4 text-white">
               <p className="font-semibold">Our Mission</p>
             </div>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Guided by Purpose</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Guided by Purpose
+            </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Our journey is guided by one mission: To empower learners with the skills, mindset, and confidence to thrive in the real world.
+                Our journey is guided by one mission: To empower learners with
+                the skills, mindset, and confidence to thrive in the real world.
               </p>
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-200">
                 <p className="text-gray-700 font-medium">
@@ -122,7 +144,9 @@ export default function JourneyPage() {
                 </p>
               </div>
               <p>
-                This isn't just the end of our story—it's just the beginning. We're committed to continuing our mission of transforming education and creating opportunities for learners worldwide.
+                This isn't just the end of our story—it's just the beginning.
+                We're committed to continuing our mission of transforming
+                education and creating opportunities for learners worldwide.
               </p>
             </div>
           </div>
@@ -133,22 +157,23 @@ export default function JourneyPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Join Our Journey</h2>
             <p className="text-pink-100 leading-relaxed mb-8">
-              Be part of a movement that's transforming education and creating real opportunities for learners everywhere.
+              Be part of a movement that's transforming education and creating
+              real opportunities for learners everywhere.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/"
                 className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Back to Home
               </Link>
-              <Link 
+              <Link
                 href="/about"
                 className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Back to About Us
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
@@ -160,4 +185,4 @@ export default function JourneyPage() {
       </div>
     </div>
   );
-} 
+}

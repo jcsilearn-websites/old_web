@@ -88,15 +88,15 @@ export default function ServicesCarousel() {
 
       <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center self-center gap-8 sm:gap-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl px-4">
+        <div className="text-center max-w-0xl px-4">
           <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-sm mb-4 sm:mb-6">
             <FaGraduationCap className="text-purple-600" />
             Our Services
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Comprehensive Training Solutions
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+          <p className="max-2-3xl text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
             Discover our range of professional training programs designed to
             enhance your skills and accelerate your career growth
           </p>
@@ -165,7 +165,6 @@ export default function ServicesCarousel() {
         </div>
 
         {/* Additional Info */}
-
       </div>
     </section>
   );
