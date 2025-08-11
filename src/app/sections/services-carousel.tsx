@@ -16,52 +16,38 @@ import {
 const subjects = [
   {
     icon: <FaBook />,
-    title: "Soft Skills & Communication Module",
+    title: "For Colleges & Universities",
     desc: "Strong communication and interpersonal skills are essential in every career. This module builds confidence, clarity, and emotional intelligence to help you collaborate and lead effectively.",
     color: "from-purple-200 to-purple-100",
     bgColor: "bg-purple-50",
   },
   {
     icon: <FaUser />,
-    title: "Aptitude & Reasoning Module",
+    title: "For Companies & Corporates",
     desc: "Logical thinking and problem-solving are key in competitive exams and job interviews. This module sharpens your analytical skills, speed, and accuracy to help you crack aptitude tests with ease.",
     color: "from-pink-200 to-pink-100",
     bgColor: "bg-pink-50",
   },
   {
     icon: <FaHands />,
-    title: "Technical Skills Module",
+    title: "For Startups",
     desc: "In a tech-driven world, domain knowledge is non-negotiable. This module offers hands-on learning in programming, tools, and platforms to align with industry needs and job roles.",
     color: "from-yellow-200 to-yellow-100",
     bgColor: "bg-yellow-50",
   },
   {
     icon: <FaGraduationCap />,
-    title: "Placement & Recruitment Module",
+    title: "For Schools",
     desc: "Get job-ready with expert guidance on resumes, group discussions, interviews, and HR rounds. This module prepares you to confidently face every stage of the hiring process.",
     color: "from-blue-200 to-blue-100",
     bgColor: "bg-blue-50",
   },
   {
     icon: <FaCompactDisc />,
-    title: "Corporate Readiness & Compliance Module",
+    title: "For Professionals",
     desc: "Learn the professional etiquette, email writing, time management, and workplace ethics required to succeed and sustain in a corporate environment.",
     color: "from-red-200 to-white-100",
     bgColor: "bg-grey-50",
-  },
-  {
-    icon: <FaHighlighter />,
-    title: "Career Planning & Personal Growth Module",
-    desc: "Discover your strengths, set career goals, and develop essential life skills. This module helps you make informed choices and grow personally and professionally.",
-    color: "from-purple-400 to-black-100",
-    bgColor: "bg-blue-50",
-  },
-  {
-    icon: <FaStudiovinari />,
-    title: "School Enrichment Module",
-    desc: "Early exposure to communication, leadership, and learning strategies fosters a strong foundation. This module empowers school students with skills for academic and life success.",
-    color: "from-yellow-200 to-red-500",
-    bgColor: "bg-blue-50",
   },
 ];
 

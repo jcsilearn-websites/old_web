@@ -15,9 +15,6 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
-            Our Services
-          </div>
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Comprehensive Training Solutions
           </h1>
@@ -149,12 +146,12 @@ export default function ServicesPage() {
                 Industry collaboration programs
               </li>
             </ul>
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
             >
               Learn More
-            </Link>
+            </Link> */}
           </div>
 
           {/* For Corporates */}
@@ -185,12 +182,6 @@ export default function ServicesPage() {
                 Technical competency enhancement
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link>
           </div>
 
           {/* For Startups */}
@@ -221,12 +212,6 @@ export default function ServicesPage() {
                 Business strategy training
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link>
           </div>
 
           {/* For Schools */}
@@ -257,12 +242,6 @@ export default function ServicesPage() {
                 Academic excellence support
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link>
           </div>
 
           {/* For Professionals */}
@@ -293,12 +272,6 @@ export default function ServicesPage() {
                 Professional certification courses
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link>
           </div>
 
           {/* For Individuals */}
@@ -329,12 +302,6 @@ export default function ServicesPage() {
                 Self-improvement programs
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link>
           </div>
         </div>
       </section>
