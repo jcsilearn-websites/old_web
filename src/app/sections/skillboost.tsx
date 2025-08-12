@@ -111,7 +111,7 @@ export default function SkillBoost() {
             <div className="pt-4 sm:pt-6">
               <Link
                 href="/programs"
-                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold shadow-lg hover:from-pink-600 hover:to-purple-700 text-sm sm:text-base lg:text-lg transform hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]   text-white font-semibold shadow-lg hover:from-pink-600 hover:to-purple-700 text-sm sm:text-base lg:text-lg transform hover:scale-[1.02] transition-all duration-300"
               >
                 Explore Our Programs
                 <svg
@@ -153,61 +153,6 @@ export default function SkillBoost() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-              <FaPeopleCarry className="text-white text-lg sm:text-xl" />
-            </div>
-            <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-2">
-              Soft Skills
-            </h4>
-            <p className="text-xs sm:text-sm text-gray-600">
-              Communication, leadership, and interpersonal skills for
-              professional success.
-            </p>
-          </div>
-
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-              <FaBookReader className="text-white text-lg sm:text-xl" />
-            </div>
-            <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-2">
-              Technical Skills
-            </h4>
-            <p className="text-xs sm:text-sm text-gray-600">
-              Programming, data analysis, and technical competencies for modern
-              careers.
-            </p>
-          </div>
-
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-              <FaBrain className="text-white text-lg sm:text-xl" />
-            </div>
-            <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-2">
-              Aptitude Training
-            </h4>
-            <p className="text-xs sm:text-sm text-gray-600">
-              Logical reasoning, problem-solving, and analytical thinking
-              skills.
-            </p>
-          </div>
-
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-              <FaChartLine className="text-white text-lg sm:text-xl" />
-            </div>
-            <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-2">
-              Career Guidance
-            </h4>
-            <p className="text-xs sm:text-sm text-gray-600">
-              Resume building, interview preparation, and career planning
-              support.
-            </p>
           </div>
         </div>
       </div>

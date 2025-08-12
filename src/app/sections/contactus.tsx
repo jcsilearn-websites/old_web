@@ -219,7 +219,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
+                className="w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
               >
                 Send Message
               </button>

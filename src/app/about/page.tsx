@@ -52,7 +52,7 @@ export default function AboutPage() {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href="/about/journey"
-                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
               >
                 Learn About Our Journey
               </Link>

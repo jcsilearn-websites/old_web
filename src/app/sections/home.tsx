@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-500 via-indigo-600 to-blue-900 relative overflow-hidden">
+    <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] relative overflow-hidden">
       {/* Soft lighting/texture overlay */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div

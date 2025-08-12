@@ -45,14 +45,14 @@ const navLinks = [
         section: "#soft-skills",
       },
       {
-        label: "Aptitude & Reasoning Module",
-        href: "/programs",
-        section: "#aptitude",
-      },
-      {
         label: "Technical Skills Module",
         href: "/programs",
         section: "#technical-skills",
+      },
+      {
+        label: "Aptitude & Reasoning Module",
+        href: "/programs",
+        section: "#aptitude",
       },
       {
         label: "Placement & Recruitment Module",
@@ -60,14 +60,14 @@ const navLinks = [
         section: "#placement",
       },
       {
-        label: "Corporate Readiness & Compliance Module",
-        href: "/programs",
-        section: "#corporate-readiness",
-      },
-      {
         label: "Career Planning & Personal Growth Module",
         href: "/programs",
         section: "#career-planning",
+      },
+      {
+        label: "Corporate Readiness & Compliance Module",
+        href: "/programs",
+        section: "#corporate-readiness",
       },
       {
         label: "School Enrichment Module",
@@ -235,7 +235,7 @@ const Header = () => {
                 <a
                   href={link.href}
                   // className="font-semibold text-xs lg:text-sm xl:text-base bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg hover:from-blue-600 hover:to-blue-700 transform hover:scale-[1.02] transition-all duration-300"
-                  className="font-semibold text-xs lg:text-sm xl:text-base bg-gradient-to-r from-blue-500 to-blue-700 text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300"
+                  className="font-semibold text-xs lg:text-sm xl:text-base bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300"
                 >
                   {link.label}
                 </a>
