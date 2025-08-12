@@ -21,11 +21,7 @@ export default function Footer() {
               />
               {/* <span className="text-lg sm:text-xl font-bold">JCS iLearn</span> */}
             </div>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-300 leading-relaxed">
-              Empowering learners with skill-based, career-aligned and
-              industry-ready modules to bridge the gap between education and
-              employability.
-            </p>
+
             <div className="flex gap-2 sm:gap-3">
               <a
                 href="#"
@@ -122,39 +118,7 @@ export default function Footer() {
                   href="#"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
-                  Training Materials
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
-                >
                   Career Guides
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  Industry Insights
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  Success Stories
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  Blog & Articles
                 </a>
               </li>
               <li>

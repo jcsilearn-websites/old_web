@@ -1,7 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { FaBriefcase, FaChevronLeft, FaChevronRight, FaEnvelope, FaUsers } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaChevronLeft,
+  FaChevronRight,
+  FaEnvelope,
+  FaUsers,
+} from "react-icons/fa";
 import Image from "next/image";
 
 const courses = [
@@ -52,12 +58,29 @@ const fadeUp = {
 export default function Careers() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [count, setCount] = useState(0);
+  const target = 85; // Your final number
+
+  useEffect(() => {
+    let start = 0;
+    const end = target;
+    const duration = 2000; // in ms
+    const stepTime = Math.abs(Math.floor(duration / end));
+
+    const timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(timer);
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handlePrev = () => {
     setDirection(-1);
     setIndex((prev) => (prev - 1 + courses.length) % courses.length);
   };
-  
+
   const handleNext = () => {
     setDirection(1);
     setIndex((prev) => (prev + 1) % courses.length);
@@ -119,8 +142,9 @@ export default function Careers() {
             Career Programs
           </h1>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Your pathway to professional and personal growth through comprehensive training modules 
-            designed to bridge the gap between education and employment.
+            Your pathway to professional and personal growth through
+            comprehensive training modules designed to bridge the gap between
+            education and employment.
           </p>
         </motion.div>
 
@@ -133,7 +157,10 @@ export default function Careers() {
                 onClick={handlePrev}
                 aria-label="Previous"
               >
-                <FaChevronLeft size={16} className="text-gray-700 sm:w-5 sm:h-5" />
+                <FaChevronLeft
+                  size={16}
+                  className="text-gray-700 sm:w-5 sm:h-5"
+                />
               </button>
               <AnimatePresence initial={false} custom={direction}>
                 <motion.div
@@ -182,7 +209,10 @@ export default function Careers() {
                 onClick={handleNext}
                 aria-label="Next"
               >
-                <FaChevronRight size={16} className="text-gray-700 sm:w-5 sm:h-5" />
+                <FaChevronRight
+                  size={16}
+                  className="text-gray-700 sm:w-5 sm:h-5"
+                />
               </button>
             </div>
           </div>
@@ -191,14 +221,14 @@ export default function Careers() {
         {/* Two Column Layout for How to Apply & Join Us */}
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
           {/* How to Apply Card */}
-          <div
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 flex flex-col justify-center"
-          >
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 flex flex-col justify-center">
             <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
                 <FaEnvelope className="text-white text-lg sm:text-xl" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">How to Apply</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                How to Apply
+              </h3>
             </div>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -219,18 +249,24 @@ export default function Careers() {
                   in the subject line along with your name.
                 </p>
               </div>
+              <span className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
+                Current Openings
+              </span>
+              <span className="px-4 py-1.5 rounded-full m-2 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
+                {count}
+              </span>
             </div>
           </div>
 
           {/* Join Us Card */}
-          <div
-            className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-center"
-          >
+          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-center">
             <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center">
                 <FaUsers className="text-white text-lg sm:text-xl" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">Join Our Team</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
+                Start Your Path to Success
+              </h3>
             </div>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-blue-100 leading-relaxed text-sm sm:text-base">

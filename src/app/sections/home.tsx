@@ -27,9 +27,10 @@ export default function Home() {
             <span className="block">Bridging Education and Employability</span>
           </h1>
           <p className="text-white/90 text-sm sm:text-base lg:text-lg max-w-md leading-relaxed">
-            Our approach blends practical knowledge with real-world insights to
-            empower students and job seekers to confidently navigate
-            today&apos;s competitive job market.
+            JCS iLEARN, a pioneering placement training company dedicated to
+            empowering job seekers and students with the skills, strategies,
+            tools and insights they need to excel in today&apos;s competitive
+            and dynamic job market.
           </p>
           <Link href="/contact">
             <button className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl bg-white text-blue-900 font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 text-sm sm:text-base">
