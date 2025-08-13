@@ -3,6 +3,59 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesPage() {
+  const contentArray = [
+    {
+      title: "For Colleges & Universities",
+      description:
+        "Enhance your institution's placement readiness with our comprehensive training programs designed specifically for academic environments.",
+      points: [
+        "Campus placement training",
+        "Skill development workshops",
+        "Industry collaboration programs",
+      ],
+    },
+    {
+      title: "For Corporates",
+      description:
+        "Upskill your workforce with industry-specific training programs that drive productivity and innovation.",
+      points: [
+        "Employee skill development",
+        "Leadership training programs",
+        "Technical competency enhancement",
+      ],
+    },
+    {
+      title: "For Startups",
+      description:
+        "Accelerate your startup's growth with specialized training programs for entrepreneurs and early-stage teams.",
+      points: [
+        "Entrepreneurship bootcamps",
+        "Innovation workshops",
+        "Business strategy training",
+      ],
+    },
+    {
+      title: "For Schools",
+      description:
+        "Prepare students for future success with early career awareness and skill development programs.",
+      points: [
+        "Career guidance programs",
+        "Skill development workshops",
+        "Academic excellence support",
+      ],
+    },
+    {
+      title: "For Professionals",
+      description:
+        "Advance your career with targeted skill development and professional growth programs.",
+      points: [
+        "Career advancement training",
+        "Skill enhancement programs",
+        "Professional certification courses",
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
       {/* Decorative background elements */}
@@ -116,193 +169,42 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {/* For Colleges & Universities */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                🎓
-              </span>
-            </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Colleges & Universities
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Enhance your institution&apos;s placement readiness with our
-              comprehensive training programs designed specifically for academic
-              environments.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Campus placement training
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Skill development workshops
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Industry collaboration programs
-              </li>
-            </ul>
-            {/* <Link
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 h-full sm:gap-6 lg:gap-8">
+          {contentArray?.map((data, index) => (
+            <div key={index}>
+              <div className="flex flex-col justify-between h-full min-h-[420px] bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
+                <span>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold  text-gray-900 mb-3 sm:mb-4">
+                    {data?.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
+                    {data?.description}
+                  </p>
+                </span>
+                <span>
+                  <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                    {data?.points.map((data, index) => (
+                      <div key={index}>
+                        <li
+                          className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700"
+                          key={index}
+                        >
+                          <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                          {data}
+                        </li>
+                      </div>
+                    ))}
+                  </ul>
+                </span>
+                {/* <Link
               href="/contact"
               className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
             >
               Learn More
             </Link> */}
-          </div>
-
-          {/* For Corporates */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                🏢
-              </span>
+              </div>
             </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Corporates
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Upskill your workforce with industry-specific training programs
-              that drive productivity and innovation.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Employee skill development
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Leadership training programs
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Technical competency enhancement
-              </li>
-            </ul>
-          </div>
-
-          {/* For Startups */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                🚀
-              </span>
-            </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Startups
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Accelerate your startup&apos;s growth with specialized training
-              programs for entrepreneurs and early-stage teams.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Entrepreneurship bootcamps
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Innovation workshops
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Business strategy training
-              </li>
-            </ul>
-          </div>
-
-          {/* For Schools */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                🏫
-              </span>
-            </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Schools
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Prepare students for future success with early career awareness
-              and skill development programs.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Career guidance programs
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Skill development workshops
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Academic excellence support
-              </li>
-            </ul>
-          </div>
-
-          {/* For Professionals */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                👨‍💼
-              </span>
-            </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Professionals
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Advance your career with targeted skill development and
-              professional growth programs.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Career advancement training
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Skill enhancement programs
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Professional certification courses
-              </li>
-            </ul>
-          </div>
-
-          {/* For Individuals */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-              <span className="text-white text-lg sm:text-xl lg:text-2xl">
-                👤
-              </span>
-            </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              For Individuals
-            </h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
-              Personal development and skill enhancement programs tailored to
-              your individual goals and aspirations.
-            </p>
-            <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Personal skill development
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Hobby and interest courses
-              </li>
-              <li className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
-                Self-improvement programs
-              </li>
-            </ul>
-          </div>
+          ))}
         </div>
       </section>
 
