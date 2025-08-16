@@ -31,8 +31,8 @@ export default function ContactUs() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <div className="bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
               Contact Information
             </h2>
             <div className="space-y-4 sm:space-y-6">
@@ -41,10 +41,10 @@ export default function ContactUs() {
                   <FaMapMarkerAlt className="text-white text-sm sm:text-lg lg:text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white mb-1 sm:mb-2">
                     Address
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-200">
                     123 Training Center, Skill Development Hub
                     <br />
                     Bangalore, Karnataka 560001
@@ -59,10 +59,10 @@ export default function ContactUs() {
                   <FaPhone className="text-white text-sm sm:text-lg lg:text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white mb-1 sm:mb-2">
                     Phone
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-200">
                     +91 98765 43210
                     <br />
                     +91 87654 32109
@@ -75,10 +75,10 @@ export default function ContactUs() {
                   <FaEnvelope className="text-white text-sm sm:text-lg lg:text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white mb-1 sm:mb-2">
                     Email
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-200">
                     info@jcsilearn.com
                     <br />
                     support@jcsilearn.com
@@ -91,10 +91,10 @@ export default function ContactUs() {
                   <FaClock className="text-white text-sm sm:text-lg lg:text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white mb-1 sm:mb-2">
                     Business Hours
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-200">
                     Monday - Saturday: 9:00 AM - 5:00 PM
                     <br />
                     Sunday: 9:00 AM - 1:00 PM
@@ -105,8 +105,8 @@ export default function ContactUs() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <div className="bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
               Send us a Message
             </h2>
             <form className="space-y-3 sm:space-y-4 lg:space-y-6">
@@ -114,7 +114,7 @@ export default function ContactUs() {
                 <div>
                   <label
                     htmlFor="firstName"
-                    className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                    className="block text-xs sm:text-sm lg:text-base font-semibold text-white mb-1 sm:mb-2"
                   >
                     First Name
                   </label>
@@ -122,7 +122,7 @@ export default function ContactUs() {
                     type="text"
                     id="firstName"
                     name="firstName"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
                     placeholder="Enter your first name"
                     required
                   />
@@ -130,7 +130,7 @@ export default function ContactUs() {
                 <div>
                   <label
                     htmlFor="lastName"
-                    className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                    className="block text-xs sm:text-sm lg:text-base font-semibold text-white mb-1 sm:mb-2"
                   >
                     Last Name
                   </label>
@@ -138,7 +138,7 @@ export default function ContactUs() {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-gray-200 border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
                     placeholder="Enter your last name"
                     required
                   />
@@ -148,7 +148,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                  className="block text-xs sm:text-sm lg:text-base font-semibold text-white mb-1 sm:mb-2"
                 >
                   Email Address
                 </label>
@@ -156,7 +156,7 @@ export default function ContactUs() {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
                   placeholder="Enter your email address"
                   required
                 />
@@ -165,7 +165,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                  className="block text-xs sm:text-sm lg:text-base font-semibold  text-white mb-1 sm:mb-2"
                 >
                   Phone Number
                 </label>
@@ -173,7 +173,7 @@ export default function ContactUs() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -181,29 +181,41 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                  className="block text-xs sm:text-sm lg:text-base font-semibold text-white mb-1 sm:mb-2"
                 >
                   Subject
                 </label>
                 <select
                   id="subject"
                   name="subject"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border  text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
                   required
                 >
-                  <option value="">Select a subject</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="training">Training Programs</option>
-                  <option value="corporate">Corporate Training</option>
-                  <option value="partnership">Partnership Opportunities</option>
-                  <option value="support">Technical Support</option>
+                  <option value="" className="text-black">
+                    Select a subject
+                  </option>
+                  <option value="general" className="text-black">
+                    General Inquiry
+                  </option>
+                  <option value="training" className="text-black">
+                    Training Programs
+                  </option>
+                  <option value="corporate" className="text-black">
+                    Corporate Training
+                  </option>
+                  <option value="partnership" className="text-black">
+                    Partnership Opportunities
+                  </option>
+                  <option value="support" className="text-black">
+                    Technical Support
+                  </option>
                 </select>
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-xs sm:text-sm lg:text-base font-semibold text-gray-700 mb-1 sm:mb-2"
+                  className="block text-xs sm:text-sm lg:text-base font-semibold text-white mb-1 sm:mb-2"
                 >
                   Message
                 </label>
@@ -211,7 +223,7 @@ export default function ContactUs() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base resize-none"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base resize-none"
                   placeholder="Tell us about your requirements..."
                   required
                 ></textarea>
@@ -219,7 +231,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
+                className="w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl  bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
               >
                 Send Message
               </button>
