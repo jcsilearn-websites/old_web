@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 export default function Testimonial() {
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
@@ -16,9 +18,11 @@ export default function Testimonial() {
           {/* Testimonial 1 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://media.istockphoto.com/id/1135381120/photo/portrait-of-a-young-woman-outdoors-smiling.jpg?s=612x612&w=0&k=20&c=T5dukPD1r-o0BFqeqlIap7xzw07icucetwKaEC2Ms5M="
+              <Image
+                src="https://images.pexels.com/photos/5920775/pexels-photo-5920775.jpeg?_gl=1*1stboiw*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDc2ODQkajQ4JGwwJGgw"
                 alt="John Doe"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-pink-500 object-cover"
               />
               <div className="ml-3">
@@ -39,9 +43,11 @@ export default function Testimonial() {
           {/* Testimonial 2 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEhGOEOCMkJAlmD-r-TY4ThM6DKGGLh4vrQ&s"
+              <Image
+                src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?_gl=1*1t7gfbh*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDc3MjAkajEyJGwwJGgw"
                 alt="Jane Smith"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-purple-600 object-cover"
               />
               <div className="ml-3">
@@ -60,9 +66,11 @@ export default function Testimonial() {
           {/* Testimonial 3 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKQEzYXwq7UJvwfcN7NYJQYXXC8f2rPT42NmjKbJsCoSZk3r27huwFwSeb-WdCBPoptA&usqp=CAU"
+              <Image
+                src="https://images.pexels.com/photos/5905497/pexels-photo-5905497.jpeg?_gl=1*1y0yhiu*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDgxNTYkajQ5JGwwJGgw"
                 alt="Michael Lee"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-blue-600 object-cover"
               />
               <div className="ml-3">
@@ -83,9 +91,11 @@ export default function Testimonial() {
           {/* Testimonial 4 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD4g_gODjnPpsxLhBOy97gswVqX6u5SbNgJw&s"
+              <Image
+                src="https://images.pexels.com/photos/4567890/pexels-photo-4567890.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Sarah Johnson"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-green-500 object-cover"
               />
               <div className="ml-3">
@@ -106,9 +116,11 @@ export default function Testimonial() {
           {/* Testimonial 5 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KrqrhwzrzQ81SOUrEL6Z5E1X_y_uQg-T1Q&s"
+              <Image
+                src="https://images.pexels.com/photos/3783725/pexels-photo-3783725.jpeg?_gl=1*bzfg42*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDgxODgkajE3JGwwJGgw"
                 alt="David Kim"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover"
               />
               <div className="ml-3">
@@ -129,9 +141,11 @@ export default function Testimonial() {
           {/* Testimonial 6 */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
             <div className="flex items-center mb-4">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUvFfDHeAkxTlJ_eFkafjXgKuhzMLyCP0vA&s"
+              <Image
+                src="https://images.pexels.com/photos/6789012/pexels-photo-6789012.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Emily Carter"
+                width={48} // 👈 Required
+                height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-red-500 object-cover"
               />
               <div className="ml-3">

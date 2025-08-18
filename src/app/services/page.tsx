@@ -172,12 +172,12 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 h-full sm:gap-6 lg:gap-8">
           {contentArray?.map((data, index) => (
             <div key={index}>
-              <div className="flex flex-col justify-between h-full min-h-[420px] bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
+              <div className="flex flex-col justify-between h-full min-h-[420px] bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]   backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
                 <span>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold  text-gray-900 mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold  text-white mb-3 sm:mb-4">
                     {data?.title}
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-4 sm:mb-6">
+                  <p className="text-xs sm:text-sm lg:text-base text-white mb-4 sm:mb-6">
                     {data?.description}
                   </p>
                 </span>
@@ -186,10 +186,10 @@ export default function ServicesPage() {
                     {data?.points.map((data, index) => (
                       <div key={index}>
                         <li
-                          className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-gray-700"
+                          className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-white"
                           key={index}
                         >
-                          <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                          <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                           {data}
                         </li>
                       </div>

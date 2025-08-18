@@ -12,6 +12,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import Link from "next/link";
+import whyChooseUs from "../../../public/whyChooseUs.jpg";
 
 export default function SkillBoost() {
   return (
@@ -136,7 +137,7 @@ export default function SkillBoost() {
           {/* Image Section */}
           <div className="relative order-first lg:order-last">
             <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src={whyChooseUs}
               alt="Students learning and collaborating"
               width={500}
               height={600}
