@@ -66,7 +66,7 @@ export default function AboutPage() {
           </div>
           <div className="relative order-first lg:order-last">
             <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?_gl=1*t0tl6b*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDUyMTkkajYwJGwwJGgw"
               alt="Students collaborating on projects"
               width={500}
               height={600}
@@ -142,7 +142,7 @@ export default function AboutPage() {
         <section className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="relative order-first lg:order-last">
             <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+              src="https://images.pexels.com/photos/7437488/pexels-photo-7437488.jpeg?_gl=1*v3yemn*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDUxNTkkajYwJGwwJGgw"
               alt="Team collaboration meeting"
               width={500}
               height={400}

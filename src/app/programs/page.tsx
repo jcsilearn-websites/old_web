@@ -2,6 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import CommunicationImage from "../../../public/CommunicationImage.jpg";
+import AptitudeImage from "../../../public/aptitudeImage.jpg";
+import placementImage from "../../../public/placementImage.jpg";
+import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
 
 export default function ProgramsPage() {
   const [activeFilter, setActiveFilter] = useState("All Programs");
@@ -14,7 +18,7 @@ export default function ProgramsPage() {
     "Placement & Recruitment",
     "Career Planning",
     "Corporate Readiness",
-    "School Enrichment Module",
+    "School Enrichment",
   ];
 
   const programs = [
@@ -95,26 +99,11 @@ export default function ProgramsPage() {
     },
     {
       id: 6,
-      title: "iLearn Stack - Full Stack Development",
-      category: "School Enrichment Module",
-      description:
-        "Hands-on web development from frontend to backend using modern tech stacks and real-world projects.",
-      instructor: "David Kim - Full Stack Developer",
-      duration: "12 weeks",
-      price: 599,
-      originalPrice: 799,
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-indigo-500",
-      accentColor: "text-teal-600",
-    },
-    {
-      id: 7,
       title: "iLearn Pathcraft - Career Awareness Program for School Students",
-      category: "School Enrichment Module",
+      category: "School Enrichment",
       description:
         "Inspire young minds through interactive sessions on careers, college choices and self-discovery.",
-      instructor: "Crafting your career path - Schools",
+      instructor: "David Kim - Full Stack Developer",
       duration: "12 weeks",
       price: 599,
       originalPrice: 799,
@@ -159,6 +148,412 @@ export default function ProgramsPage() {
     activeFilter === "All Programs"
       ? programs
       : programs.filter((program) => program.category === activeFilter);
+
+  const customStyleEven = (
+    activeFilter: string | null | undefined
+  ): boolean => {
+    if (!activeFilter) return false;
+    const activeIndex = filters.indexOf(activeFilter);
+    if (activeIndex === -1) return false;
+    return activeIndex % 2 === 0;
+  };
+
+  const dynamicContent = (activeFilter: string) => {
+    switch (activeFilter) {
+      case "Soft Skills":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our Soft Skills & Communication programs empower learners to
+                  express themselves confidently, collaborate effectively, and
+                  adapt to diverse professional environments. Designed for
+                  students and professionals alike, the module covers public
+                  speaking, interpersonal communication, teamwork, and emotional
+                  intelligence. In today’s fast-paced world, strong
+                  communication is not just a complementary skill—it’s a career
+                  essential.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our training blends theory with role-plays, group discussions,
+                  and real-world scenarios, enabling participants to master
+                  clarity, persuasion, and active listening.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  By enhancing these skills, learners can build meaningful
+                  relationships, influence positively, and stand out in
+                  interviews, workplaces, and leadership roles, ensuring
+                  sustained career growth and personal development.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src={CommunicationImage}
+                alt="Soft Skills Training"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-none"
+              />
+            </div>
+          </div>
+        );
+
+      case "Technical Skills":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                The Technical Skills Module equips learners with
+                industry-relevant expertise to meet the demands of evolving
+                technologies. From programming languages and web development to
+                data analysis and emerging tools, the curriculum ensures a
+                strong technical foundation that matches real-world
+                requirements. With hands-on projects, coding challenges, and
+                guided mentorship, participants gain the practical
+                problem-solving skills essential in today’s competitive job
+                market. As technology reshapes every industry, being technically
+                proficient is no longer optional—it’s a decisive advantage. Our
+                training bridges academic knowledge with industry application,
+                empowering learners to create, innovate, and adapt quickly to
+                new tools, platforms, and methodologies for sustained career
+                success.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src={technialSkillsImage}
+                alt="Technical Skills Training"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+
+      case "Aptitude & Reasoning":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                Our Aptitude & Reasoning Module develops the analytical thinking
+                and problem-solving skills crucial for competitive exams,
+                placement tests, and corporate assessments. Covering numerical
+                ability, logical reasoning, and verbal aptitude, the program
+                sharpens mental agility through structured practice and proven
+                strategies. These skills go beyond test preparation—they enhance
+                decision-making, time management, and adaptability in real-life
+                scenarios. As recruitment processes increasingly rely on
+                aptitude evaluations, our module ensures learners are
+                well-prepared to perform with confidence. Through mock tests,
+                interactive exercises, and personalized feedback, participants
+                not only master problem-solving techniques but also build the
+                focus and speed required for high-pressure, time-bound
+                challenges.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src={AptitudeImage}
+                alt="Aptitude Training"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+
+      case "Placement & Recruitment":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                The Placement & Recruitment Module prepares students to excel in
+                campus drives, walk-ins, and professional interviews. We focus
+                on resume building, personal branding, group discussion
+                strategies, and mock interviews aligned with current industry
+                expectations. By simulating real recruitment scenarios, learners
+                gain the confidence and competence to navigate hiring processes
+                successfully. In a competitive job market, standing out is
+                critical—our program ensures candidates are not just job-ready
+                but career-ready. With insights from industry experts and
+                recruiters, participants learn to present their skills
+                effectively, handle challenging questions, and demonstrate
+                professionalism, increasing their chances of securing
+                high-quality job offers and sustained career growth.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src={placementImage}
+                alt="Placement Training"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+
+      case "Career Planning":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                Our Career Planning & Personal Growth Module helps individuals
+                define clear goals, align their skills with aspirations, and
+                take purposeful steps toward long-term success. Through
+                self-assessment tools, mentorship sessions, and structured
+                action plans, participants gain clarity on career paths that
+                match their strengths and passions. Beyond choosing a
+                profession, we emphasize resilience, adaptability, and
+                continuous learning—qualities that sustain growth in an
+                unpredictable job landscape. By addressing both mindset and
+                skill set, the program empowers learners to overcome challenges,
+                seize opportunities, and craft a fulfilling career journey. The
+                result is not just professional success, but personal
+                satisfaction and self-mastery.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Career Planning"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+
+      case "Corporate Readiness":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                Our Corporate Readiness & Compliance Module ensures
+                professionals can integrate seamlessly into organizational
+                environments while adhering to workplace ethics, protocols, and
+                legal requirements. Covering topics like professional etiquette,
+                workplace communication, time management, and compliance
+                awareness, the program bridges the gap between academic learning
+                and corporate expectations. In an era where cultural fit and
+                ethical conduct are valued as highly as technical skills, this
+                module equips participants to thrive responsibly in any
+                professional setting. Real-life case studies, role-plays, and
+                compliance simulations prepare learners to contribute
+                effectively from day one, enhancing both their employability and
+                long-term career progression in corporate environments.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?_gl=1*nc270h*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzAkdDE3NTU1NDM5OTQkajYwJGwwJGgw"
+                alt="Corporate Training"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+
+      case "School Enrichment":
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {` About ${activeFilter} programs`}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                The School Enrichment Module is designed to nurture essential
+                life skills, critical thinking, and communication abilities in
+                young learners, preparing them for academic and personal
+                success. With engaging, activity-based sessions, we focus on
+                creativity, leadership, time management, and digital
+                literacy—skills increasingly vital in today’s world. By
+                introducing these competencies early, students develop
+                confidence, adaptability, and a proactive mindset that supports
+                both academic performance and overall personality development.
+                Our approach blends fun learning with meaningful skill-building,
+                ensuring students grow into well-rounded individuals capable of
+                meeting future challenges with resilience, curiosity, and the
+                ability to make positive contributions to society.
+              </p>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                alt="School Enrichment"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        );
+      default:
+        return (
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div
+              className={
+                customStyleEven(activeFilter)
+                  ? "order-1 lg:order-1"
+                  : "order-2 lg:order-2"
+              }
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                🧠 About Our Programs
+              </h2>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  At JCS iLearn, we believe that impactful education isn't
+                  one-size-fits-all — it's modular, tailored and deeply
+                  outcome-driven.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  That's why we've designed JCS iLearn as a curated suite of 25+
+                  training programs, each carefully crafted to develop a
+                  specific skill set, career goal or learning outcome.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Whether you're a student looking to build a strong technical
+                  foundation or an institution aiming to boost campus placement
+                  readiness, our offerings are structured to serve your goals
+                  with focus and flexibility.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`relative ${
+                customStyleEven(activeFilter)
+                  ? "order-2 lg:order-2"
+                  : "order-1 lg:order-1"
+              }`}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                alt="Students learning and collaborating"
+                width={500}
+                height={400}
+                className="rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-none"
+              />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-xl border border-white/20">
+                <p className="text-gray-700 font-semibold italic text-xs sm:text-sm lg:text-base">
+                  "Modular, tailored, and outcome-driven learning"
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
@@ -335,8 +730,15 @@ export default function ProgramsPage() {
 
       {/* About Our Programs */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div>
+        {dynamicContent(activeFilter)}
+        {/* <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div
+            className={
+              customStyleEven(activeFilter)
+                ? "order-1 lg:order-1"
+                : "order-2 lg:order-2"
+            }
+          >
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
               🧠 About Our Programs
             </h2>
@@ -359,7 +761,13 @@ export default function ProgramsPage() {
               </p>
             </div>
           </div>
-          <div className="relative order-first lg:order-last">
+          <div
+            className={`relative ${
+              customStyleEven(activeFilter)
+                ? "order-2 lg:order-2"
+                : "order-1 lg:order-1"
+            }`}
+          >
             <Image
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
               alt="Students learning and collaborating"
@@ -373,7 +781,7 @@ export default function ProgramsPage() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* What Makes Us Unique */}

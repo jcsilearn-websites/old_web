@@ -15,9 +15,6 @@ export default function JourneyPage() {
       {/* Header Section */}
       <section className="relative pt-20 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
-            Our Journey
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             The Story Behind JCS iLearn
           </h1>
@@ -55,7 +52,7 @@ export default function JourneyPage() {
           <div className="relative">
             {/* Need too Check the image */}
             <Image
-              src=""
+              src="https://images.pexels.com/photos/8199134/pexels-photo-8199134.jpeg?_gl=1*1rntfqy*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDUzMDQkajQzJGwwJGgw"
               alt="Classroom with students learning"
               width={500}
               height={400}
@@ -153,7 +150,7 @@ export default function JourneyPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-br from-pink-500 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center">
+        <section className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] rounded-3xl p-8 md:p-12 text-white text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Join Our Journey</h2>
             <p className="text-pink-100 leading-relaxed mb-8">
@@ -163,19 +160,19 @@ export default function JourneyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/"
-                className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
+                className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Back to Home
               </Link>
               <Link
                 href="/about"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Back to About Us
               </Link>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Get Started Today
               </Link>

@@ -15,9 +15,9 @@ export default function FoundersPage() {
       {/* Header Section */}
       <section className="relative pt-20 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
+          {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
             Leadership
-          </div>
+          </div> */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Meet Our Founders
           </h1>
@@ -29,53 +29,65 @@ export default function FoundersPage() {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 pb-20 space-y-20">
-        
         {/* Founder */}
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <Image 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-              alt="Founder portrait" 
-              width={500} 
-              height={600} 
-              className="rounded-3xl shadow-2xl" 
+            <Image
+              src="https://images.pexels.com/photos/5756659/pexels-photo-5756659.jpeg?_gl=1*12wqdlr*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDUzODEkajUxJGwwJGgw"
+              alt="Founder portrait"
+              width={500}
+              height={600}
+              className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl p-4 text-white">
               <p className="font-semibold">Founder & CEO</p>
             </div>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">From the Founder's Desk</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              From the Founder's Desk
+            </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                The spark for JCS iLearn was ignited during one of my entrepreneurship workshops. A curious student asked:
+                The spark for JCS iLearn was ignited during one of my
+                entrepreneurship workshops. A curious student asked:
               </p>
               <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-4 border border-pink-200">
                 <p className="text-gray-700 font-medium italic">
-                  "You speak so passionately about entrepreneurship—why haven't you started your own company?"
+                  "You speak so passionately about entrepreneurship—why haven't
+                  you started your own company?"
                 </p>
               </div>
               <p>
-                That question hit home. It wasn't just a passing thought—it was a powerful reflection. If I truly believed in entrepreneurship, why not live it?
+                That question hit home. It wasn't just a passing thought—it was
+                a powerful reflection. If I truly believed in entrepreneurship,
+                why not live it?
+              </p>
+              <p>That moment became my turning point.</p>
+              <p>
+                Fueled by a deep passion for teaching and a desire to create
+                meaningful impact, I founded JCS iLearn—a platform where
+                education is not just shared, but experienced, and where
+                learning opens doors to real opportunity.
               </p>
               <p>
-                That moment became my turning point.
+                Our tagline, "I Learn, I Earn," isn't just a slogan—it's our
+                philosophy.
               </p>
               <p>
-                Fueled by a deep passion for teaching and a desire to create meaningful impact, I founded JCS iLearn—a platform where education is not just shared, but experienced, and where learning opens doors to real opportunity.
+                We believe education should lead to empowerment, and knowledge
+                should create opportunities for growth and success.
               </p>
               <p>
-                Our tagline, "I Learn, I Earn," isn't just a slogan—it's our philosophy.
-              </p>
-              <p>
-                We believe education should lead to empowerment, and knowledge should create opportunities for growth and success.
-              </p>
-              <p>
-                This company is my answer to that student's question—and proof that with the right support, learning becomes a launchpad for life.
+                This company is my answer to that student's question—and proof
+                that with the right support, learning becomes a launchpad for
+                life.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-gray-200">
-              <p className="text-gray-700 font-semibold">— Founder, JCS iLearn</p>
+              <p className="text-gray-700 font-semibold">
+                — Founder, JCS iLearn
+              </p>
             </div>
           </div>
         </section>
@@ -83,38 +95,46 @@ export default function FoundersPage() {
         {/* Co-Founder */}
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Message from the Co-Founder</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Message from the Co-Founder
+            </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                At JCS iLearn, we believe that skill is the foundation of transformation—not just for individuals, but for industries, communities, and the future.
+                At JCS iLearn, we believe that skill is the foundation of
+                transformation—not just for individuals, but for industries,
+                communities, and the future.
               </p>
               <p>
-                Our vision is to close the gap between education and employability by equipping learners with practical, future-ready skills. We're committed to building high-impact, accessible learning experiences that go beyond upskilling—they inspire growth, confidence, and clarity.
+                Our vision is to close the gap between education and
+                employability by equipping learners with practical, future-ready
+                skills. We're committed to building high-impact, accessible
+                learning experiences that go beyond upskilling—they inspire
+                growth, confidence, and clarity.
               </p>
+              <p>As Co-Founder, I assure you that our mission is personal.</p>
               <p>
-                As Co-Founder, I assure you that our mission is personal.
+                Every program we design is created with care, relevance, and a
+                deep understanding of the challenges today's learners face.
               </p>
+              <p>Thank you for trusting us.</p>
               <p>
-                Every program we design is created with care, relevance, and a deep understanding of the challenges today's learners face.
-              </p>
-              <p>
-                Thank you for trusting us.
-              </p>
-              <p>
-                Together, let's unlock potential—and build a skilled, forward-thinking generation.
+                Together, let's unlock potential—and build a skilled,
+                forward-thinking generation.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-gray-200">
-              <p className="text-gray-700 font-semibold">— Co-Founder, JCS iLearn</p>
+              <p className="text-gray-700 font-semibold">
+                — Co-Founder, JCS iLearn
+              </p>
             </div>
           </div>
           <div className="relative">
-            <Image 
-              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=800&q=80"
-              alt="Co-Founder portrait" 
-              width={500} 
-              height={600} 
-              className="rounded-3xl shadow-2xl" 
+            <Image
+              src="https://images.pexels.com/photos/2191123/pexels-photo-2191123.jpeg?_gl=1*1otqxyp*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDYyNDIkajI3JGwwJGgw"
+              alt="Co-Founder portrait"
+              width={500}
+              height={600}
+              className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-4 text-white">
               <p className="font-semibold">Co-Founder & COO</p>
@@ -124,13 +144,17 @@ export default function FoundersPage() {
 
         {/* Leadership Values */}
         <section className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Leadership Values</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Our Leadership Values
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white">🎯</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Purpose-Driven</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Purpose-Driven
+              </h3>
               <p className="text-gray-600 text-sm">
                 Every decision is guided by our mission to empower learners
               </p>
@@ -139,7 +163,9 @@ export default function FoundersPage() {
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white">💡</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Innovation</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Innovation
+              </h3>
               <p className="text-gray-600 text-sm">
                 Continuously evolving our approach to meet changing needs
               </p>
@@ -148,7 +174,9 @@ export default function FoundersPage() {
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white">🤝</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Collaboration</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Collaboration
+              </h3>
               <p className="text-gray-600 text-sm">
                 Working together to achieve greater impact
               </p>
@@ -157,7 +185,9 @@ export default function FoundersPage() {
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-white">🌟</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Excellence</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Excellence
+              </h3>
               <p className="text-gray-600 text-sm">
                 Striving for the highest quality in everything we do
               </p>
@@ -166,28 +196,29 @@ export default function FoundersPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center">
+        <section className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] rounded-3xl p-8 md:p-12 text-white text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Join Our Mission</h2>
             <p className="text-blue-100 leading-relaxed mb-8">
-              Be part of a team that's passionate about transforming education and creating opportunities for learners worldwide.
+              Be part of a team that's passionate about transforming education
+              and creating opportunities for learners worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/"
-                className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
+                className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Back to Home
               </Link>
-              <Link 
+              <Link
                 href="/about"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Back to About Us
               </Link>
-              <Link 
+              <Link
                 href="/contact"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Get in Touch
               </Link>
@@ -197,4 +228,4 @@ export default function FoundersPage() {
       </div>
     </div>
   );
-} 
+}

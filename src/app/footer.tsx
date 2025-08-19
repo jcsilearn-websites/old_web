@@ -3,22 +3,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import logo from "../../public/logo.png";
+// import logo from "../../public/logo.png";
+import footer_logo from "../../public/footer_logo.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-400 via-blue-900 to-purple-900 text-white">
+    <footer className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-3 sm:space-y-4">
-            <div className="flex items-center gap-2 sm:gap-3">
-              <Image
-                src={logo}
-                alt="JCS iLearn Logo"
-                height={48}
-                className="h-6 sm:h-8 lg:h-10 xl:h-12 w-auto object-contain drop-shadow-md"
-              />
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="h-full flex justify-start items-start w-full">
+                <Image
+                  src={footer_logo}
+                  alt="JCS iLearn Logo"
+                  height={700}
+                  className="h-52 sm:h-44 lg:h-64 xl:h-72 w-auto object-contain drop-shadow-xl"
+                />
+              </div>
               {/* <span className="text-lg sm:text-xl font-bold">JCS iLearn</span> */}
             </div>
 
@@ -88,14 +91,14 @@ export default function Footer() {
                   Our Programs
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/careers"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Careers
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
