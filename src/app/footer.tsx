@@ -13,16 +13,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-3 sm:space-y-4">
-            <div className="flex items-start gap-2 sm:gap-3">
-              <div className="h-full flex justify-start items-start w-full">
+            <div className="flex justify-center lg:justify-start">
+              <div className="flex items-center justify-center">
                 <Image
                   src={footer_logo}
                   alt="JCS iLearn Logo"
                   height={700}
-                  className="h-52 sm:h-44 lg:h-64 xl:h-72 w-auto object-contain drop-shadow-xl"
+                  className="h-32 sm:h-36 lg:h-40 w-auto object-contain drop-shadow-xl"
                 />
               </div>
-              {/* <span className="text-lg sm:text-xl font-bold">JCS iLearn</span> */}
             </div>
 
             <div className="flex gap-2 sm:gap-3">
@@ -142,20 +141,20 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1 sm:space-y-2 lg:space-y-3">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/privacy"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/terms"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -201,18 +200,18 @@ export default function Footer() {
               skill development.
             </p>
             <div className="flex gap-3 sm:gap-4 lg:gap-6">
-              <a
-                href="#"
+              <Link
+                href="/privacy"
                 className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/terms"
                 className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Terms of Service
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
