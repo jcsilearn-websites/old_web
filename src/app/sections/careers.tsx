@@ -9,42 +9,46 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import Image from "next/image";
+import CommunicationImage from "../../../public/CommunicationImage.jpg";
+import AptitudeImage from "../../../public/aptitudeImage.jpg";
+import placementImage from "../../../public/placementImage.jpg";
+import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
 
 const courses = [
   {
-    title: "Soft Skills & Communication Module",
+    title: "Soft Skills & Communication",
     desc: "Strong communication and interpersonal skills are essential in every career. This module builds confidence, clarity, and emotional intelligence to help you collaborate and lead effectively",
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    img: CommunicationImage,
   },
   {
-    title: "Aptitude & Reasoning Module",
+    title: "Aptitude & Reasoning",
     desc: "Logical thinking and problem-solving are key in competitive exams and job interviews. This module sharpens your analytical skills, speed, and accuracy to help you crack aptitude tests with ease.",
-    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    img: AptitudeImage,
   },
   {
-    title: "Technical Skills Module",
+    title: "Technical Skills",
     desc: "In a tech-driven world, domain knowledge is non-negotiable. This module offers hands-on learning in programming, tools, and platforms to align with industry needs and job roles.",
-    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    img: technialSkillsImage,
   },
   {
-    title: "Placement & Recruitment Module",
+    title: "Placement & Recruitment",
     desc: "Get job-ready with expert guidance on resumes, group discussions, interviews, and HR rounds. This module prepares you to confidently face every stage of the hiring process.",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+    img: placementImage,
   },
   {
-    title: "Corporate Readiness & Compliance Module",
+    title: "Corporate Readiness & Compliance",
     desc: "Learn the professional etiquette, email writing, time management, and workplace ethics required to succeed and sustain in a corporate environment.",
-    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    img: "https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?_gl=1*nc270h*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzAkdDE3NTU1NDM5OTQkajYwJGwwJGgw",
   },
   {
-    title: "Career Planning & Personal Growth Module",
+    title: "Career Planning & Personal Growth",
     desc: "Discover your strengths, set career goals, and develop essential life skills. This module helps you make informed choices and grow personally and professionally.",
-    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+    img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "School Enrichment Module",
+    title: "School Enrichment",
     desc: "Early exposure to communication, leadership, and learning strategies fosters a strong foundation. This module empowers school students with skills for academic and life success.",
-    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

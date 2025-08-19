@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CommunicationImage from "../../../public/CommunicationImage.jpg";
 import AptitudeImage from "../../../public/aptitudeImage.jpg";
 import placementImage from "../../../public/placementImage.jpg";
@@ -9,6 +9,21 @@ import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
 
 export default function ProgramsPage() {
   const [activeFilter, setActiveFilter] = useState("All Programs");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const storedFilter = localStorage.getItem("defaultFilter");
+
+    if (storedFilter) {
+      setActiveFilter(storedFilter);
+      // simulate loading only once
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+
+      return () => clearTimeout(timer); // cleanup on unmount
+    }
+  }, []);
 
   const filters = [
     "All Programs",
@@ -24,123 +39,307 @@ export default function ProgramsPage() {
   const programs = [
     {
       id: 1,
-      title: "iLearn Skillora - Soft Skills Mastery",
+      title: "iLearn Skillora",
       category: "Soft Skills",
       description:
-        "Master essential soft skills to shine with confidence. Build interpersonal confidence and workplace-ready behavior.",
-      instructor: "Sarah Johnson - Soft Skills Expert",
-      duration: "4 weeks",
-      price: 299,
-      originalPrice: 399,
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-teal-500",
-      accentColor: "text-orange-500",
+        "Boost communication, teamwork, leadership, and emotional intelligence through immersive, real-world soft skills training. Build interpersonal confidence and workplace-ready behavior.",
+      icon: "/deal.png",
+      topicsCovered: [
+        "Communication & Presentation Skills",
+        "Emotional Intelligence",
+        "Group Discussion & JAM Techniques",
+        "Teamwork & Collaboration",
+        "Time Management & Etiquette",
+        "Public Speaking & Confidence Building",
+      ],
     },
     {
       id: 2,
-      title: "iLearn AptEdge - Quantitative Aptitude",
+      title: "iLearn AptEdge",
       category: "Aptitude & Reasoning",
       description:
         "Structured training in arithmetic, data interpretation and analytical thinking to excel in aptitude tests.",
-      instructor: "Dr. Michael Chen - Aptitude Specialist",
-      duration: "6 weeks",
-      price: 349,
-      originalPrice: 449,
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-orange-400",
-      accentColor: "text-teal-600",
+      icon: "/calculator.png",
+      topicsCovered: [
+        "Number system",
+        "Time and work",
+        "Percentages, SI & CI",
+        "Time, Speed & Distance",
+        "Ratio & Proportion",
+        "Speed Math",
+      ],
     },
     {
       id: 3,
-      title: "iLearn CodePro - Core Programming & DSA",
-      category: "Technical Skills",
+      title: "iLearn CrackIt",
+      category: "Aptitude & Reasoning",
       description:
-        "In-depth training in Java programming, algorithms and data structures with problem-solving drills.",
-      instructor: "Alex Rodriguez - Senior Software Engineer",
-      duration: "8 weeks",
-      price: 449,
-      originalPrice: 599,
-      image:
-        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-blue-400",
-      accentColor: "text-orange-500",
+        "Build problem-solving strength with puzzles, patterns, critical thinking exercises and strategy-based learning.",
+      icon: "/puzzle.png",
+      topicsCovered: [
+        "Data Arrangements & Blood Relation",
+        "Coding & Decoding",
+        "Clocks & Calendars",
+        "Data Interpretation & Data Sufficiency",
+        "Cryptarithmetic",
+      ],
     },
     {
       id: 4,
-      title: "iLearn Prime - Company-Specific Training",
-      category: "Placement & Recruitment",
+      title: "iLearn Ace",
+      category: "Aptitude & Reasoning",
       description:
-        "Customized sessions aligned with top recruiters' expectations – TCS, Infosys, Wipro, Capgemini & more.",
-      instructor: "Priya Sharma - HR & Recruitment Expert",
-      duration: "3 weeks",
-      price: 399,
-      originalPrice: 499,
-      image:
-        "https://images.unsplash.com/photo-1523240794102-9ebd0b167d56?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-green-600",
-      accentColor: "text-teal-600",
+        "Grammar, vocabulary, reading comprehension and sentence correction for top-tier language performance.",
+      icon: "/open-book.png",
+      topicsCovered: [
+        "Reading Comprehension",
+        "Sentence Correction",
+        "Sentence Completion & Para jumbles",
+        "Voices & Speech",
+        "Error spotting",
+        "Critical Reasoning",
+      ],
     },
     {
       id: 5,
-      title: "iLearn TalkPro - Communication Skills",
-      category: "Corporate Readiness",
+      title: "iLearn Byte",
+      category: "Technical Skills",
       description:
-        "Build clarity, fluency, and effectiveness in both spoken and written English for professional success.",
-      instructor: "Emma Wilson - Communication Coach",
-      duration: "5 weeks",
-      price: 279,
-      originalPrice: 379,
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-purple-500",
-      accentColor: "text-orange-500",
+        "Fundamentals of Python, web basics, and logical thinking tailored for absolute beginners.",
+      icon: "/byte.png",
+      topicsCovered: ["Python Basics", "Web Fundamentals", "Logic Building"],
     },
     {
       id: 6,
-      title: "iLearn Pathcraft - Career Awareness Program for School Students",
-      category: "School Enrichment",
+      title: "iLearn Codevita",
+      category: "Technical Skills",
       description:
-        "Inspire young minds through interactive sessions on careers, college choices and self-discovery.",
-      instructor: "David Kim - Full Stack Developer",
-      duration: "12 weeks",
-      price: 599,
-      originalPrice: 799,
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-indigo-500",
-      accentColor: "text-teal-600",
+        "Designed for coding contests and technical interviews using C, C++, Java or Python.",
+      icon: "/monitor.png",
+      topicsCovered: ["Competitive Programming (C, C++, Java, Python)"],
+    },
+    {
+      id: 7,
+      title: "iLearn CodePro",
+      category: "Technical Skills",
+      description:
+        "In-depth training in Java programming, algorithms and data structures with problem-solving drills.",
+      icon: "/curly-bracket.png",
+      topicsCovered: [
+        "Core Programming",
+        "Data Structures & Algorithms (Java)",
+      ],
     },
     {
       id: 8,
-      title: "iLearn Careerly - Career Planning & LinkedIn",
-      category: "Career Planning",
+      title: "iLearn Stack",
+      category: "Technical Skills",
       description:
-        "Build a standout professional profile and get interview-ready with career coaching and digital presence tips.",
-      instructor: "Lisa Thompson - Career Strategist",
-      duration: "4 weeks",
-      price: 329,
-      originalPrice: 429,
-      image:
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-pink-500",
-      accentColor: "text-orange-500",
+        "Hands-on web development from frontend to backend using modern tech stacks.",
+      icon: "/computer.png",
+      topicsCovered: ["Full Stack Development"],
     },
     {
       id: 9,
-      title: "iLearn MockUp - Interview Preparation",
+      title: "iLearn Codegenix",
+      category: "Technical Skills",
+      description:
+        "Project-based learning with tools and techniques in Machine Learning, AI and Data Science.",
+      icon: "/robot.png",
+      topicsCovered: [
+        "ML/DS/AI projects",
+        "Emerging Tools & Technologies (AI, Data Analytics, Cloud Basics)",
+      ],
+    },
+    {
+      id: 10,
+      title: "iLearn Prime",
       category: "Placement & Recruitment",
       description:
-        "Live practice rounds with detailed evaluation, scorecards and personalized feedback for GD & PI.",
-      instructor: "Rajesh Kumar - Interview Coach",
-      duration: "2 weeks",
-      price: 199,
-      originalPrice: 299,
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
-      bgColor: "bg-yellow-500",
-      accentColor: "text-teal-600",
+        "Customized sessions aligned with top recruiters' expectations – TCS, Infosys, Wipro, Capgemini & more.",
+      icon: "/businessman.png",
+      topicsCovered: [
+        "Company Specific Training (TCS, Infosys, Wipro, etc.)",
+        "JD Orientation",
+      ],
+    },
+    {
+      id: 11,
+      title: "iLearn Innovate",
+      category: "Career Planning",
+      description:
+        "Ignite innovation with idea validation, lean business models, pitch decks and problem-solving workshops. Ignite ideas. Build ventures.",
+      icon: "/light-bulb.png",
+      topicsCovered: ["Entrepreneurship & Innovation Bootcamps"],
+    },
+    {
+      id: 12,
+      title: "iLearn Inspire",
+      category: "Corporate Readiness",
+      description:
+        "Industry speakers, entrepreneurs, and change-makers sharing stories, strategies and wisdom.",
+      icon: "/chat.png",
+      topicsCovered: [
+        "Guest Lectures & Expert Talks",
+        "By Industry Experts & Domain Leaders",
+        "Topics: Startup, Career Trends, Tech Insights",
+      ],
+    },
+    {
+      id: 13,
+      title: "iLearn TalkPro",
+      category: "Soft Skills",
+      description:
+        "Build clarity, fluency, and effectiveness in both spoken and written English.",
+      icon: "/icons/soft-skills.svg",
+      topicsCovered: ["Communication Skills"],
+    },
+    {
+      id: 14,
+      title: "iLearn Voicely",
+      category: "Soft Skills",
+      description:
+        "Neutralize accents, improve clarity and speak globally with confidence.",
+      icon: "/voice.png",
+    },
+    {
+      id: 15,
+      title: "iLearn Corp",
+      category: "Corporate Readiness",
+      description:
+        "Grooming, ethics, email culture, professional behavior and the essentials of workplace excellence.",
+      icon: "/id-card.png",
+      topicsCovered: [
+        "Corporate Readiness, Etiquette & Workplace Skills",
+        "Email Etiquette",
+        "Corporate Communication Skills",
+        "POSH Compliance & Awareness",
+        "Leadership & Team Building",
+        "Outbound Learning & Corporate Engagement",
+        "Custom Onboarding & Induction Programs",
+        "Workplace Culture & Ethics",
+      ],
+    },
+    {
+      id: 16,
+      title: "iLearn Examly",
+      category: "Aptitude & Reasoning",
+      description:
+        "Time management, study plans, memory techniques and mindset training for academic excellence.",
+      icon: "/notes.png",
+      topicsCovered: ["TOEFL", "IELTS", "GRE", "Exam Strategy & Study Skills"],
+    },
+    {
+      id: 17,
+      title: "iLearn MockUp",
+      category: "Placement & Recruitment",
+      description:
+        "Live practice rounds with detailed evaluation, scorecards and personalized feedback. Practice, perform, and perfect your pitch.",
+      icon: "/theater-mask.png",
+      topicsCovered: [
+        "Mock GD & PI",
+        "Skill Evaluation & Feedback Reports",
+        "Interview Preparation (HR & Technical)",
+      ],
+    },
+    {
+      id: 18,
+      title: "iLearn PitchPro",
+      category: "Placement & Recruitment",
+      description:
+        "Train for impactful self-introduction, logical arguments and professional pitching under pressure.",
+      icon: "/arrow.png",
+      topicsCovered: ["Group Discussion Training", "Interview Orientation"],
+    },
+    {
+      id: 19,
+      title: "iLearn Careerly",
+      category: "Career Planning",
+      description:
+        "Build a standout professional profile and get interview-ready with career coaching and digital presence tips.",
+      icon: "/career.png",
+      topicsCovered: [
+        "Career Counseling & Mentorship",
+        "LinkedIn Optimization & Resume Building",
+        "Career Track Selection",
+        "Personal Finance Awareness",
+        "Portfolio Creation & Branding",
+        "Strength Mapping & Confidence Building",
+      ],
+    },
+    {
+      id: 20,
+      title: "iLearn Pathcraft",
+      category: "School Enrichment",
+      description:
+        "Inspire young minds through interactive sessions on careers, college choices and self-discovery.",
+      icon: "/compass.png",
+      topicsCovered: [
+        "Career Discovery Workshops",
+        "Entrance Exam Strategy (Class 9–12)",
+        "Artistic Techniques (Art, Expression, Creativity)",
+        "Study Strategy & Time Management",
+        "Subject-Specific Foundation Programs",
+      ],
+    },
+    {
+      id: 21,
+      title: "iLearn SpeakUp",
+      category: "Soft Skills",
+      description:
+        "Build confidence, clarity, and charisma on stage through dynamic exercises in speech structure, voice modulation and impactful delivery. Ideal for anchoring, debates and public events.",
+      icon: "/marketing.png",
+      topicsCovered: [
+        "Public Speaking",
+        "Group Discussions",
+        "Interview Mastery Sessions",
+      ],
+    },
+    {
+      id: 22,
+      title: "iLearn Elevate",
+      category: "Soft Skills",
+      description:
+        "A transformational program focused on unlocking leadership potential, collaboration, decision-making and problem-solving in real-world team settings.",
+      icon: "/rocket.png",
+      topicsCovered: ["Leadership Training", "Teamwork Skills"],
+    },
+    {
+      id: 23,
+      title: "iLearn PlacEdge",
+      category: "Placement & Recruitment",
+      description:
+        "A sharp, fast-paced program covering resumes, aptitude tricks, GD strategies and interview hacks to give students an edge during placement season.",
+      icon: "/dollar.png",
+      topicsCovered: [
+        "Resume Writing",
+        "Aptitude Tricks",
+        "Group Discussion Strategies",
+        "Interview Hacks",
+      ],
+    },
+    {
+      id: 24,
+      title: "iLearn Persona",
+      category: "Placement & Recruitment",
+      description:
+        "Self-discovery through standardized tests that reveal personality types, learning styles and career fit — followed by interpretation sessions for clarity and guidance.",
+      icon: "/growth.png",
+      topicsCovered: ["Psychometric Tests", "Personality Profiling"],
+    },
+    {
+      id: 25,
+      title: "iLearn AssessIQ",
+      category: "Aptitude & Reasoning",
+      description:
+        "Comprehensive aptitude, reasoning and communication tests with detailed analytics, benchmarking and improvement plans — ideal for colleges tracking student preparedness.",
+      icon: "/graph-bar.png",
+      topicsCovered: [
+        "Aptitude Tests",
+        "Reasoning Tests",
+        "Communication Skills Assessment",
+        "Analytics & Benchmarking",
+      ],
     },
   ];
 
@@ -156,6 +355,14 @@ export default function ProgramsPage() {
     const activeIndex = filters.indexOf(activeFilter);
     if (activeIndex === -1) return false;
     return activeIndex % 2 === 0;
+  };
+
+  const FullPageLoader = () => {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
   };
 
   const dynamicContent = (activeFilter: string) => {
@@ -556,182 +763,173 @@ export default function ProgramsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-200/20 rounded-full blur-3xl" />
-      </div>
+    <>
+      {loading && (
+        <div>
+          <FullPageLoader />
+        </div>
+      )}
 
-      {/* Header Section */}
-      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
+          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-200/20 rounded-full blur-3xl" />
+        </div>
+
+        {/* Header Section */}
+        <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
             Our Programs
           </div> */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
-            Our Products & Signature Programs — JCS iLearn
-          </h1>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
-            Empowering learners with skill-based, career-aligned and
-            industry-ready modules.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="text-lg sm:text-xl lg:text-2xl">📍</span>
-              <span className="text-xs sm:text-sm lg:text-base">
-                Offline | Online | Hybrid
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-lg sm:text-xl lg:text-2xl">📅</span>
-              <span className="text-xs sm:text-sm lg:text-base">
-                1-day workshops to full-year integration
-              </span>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+              Our Products & Signature Programs — JCS iLearn
+            </h1>
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
+              Empowering learners with skill-based, career-aligned and
+              industry-ready modules.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 text-gray-600">
+              <div className="flex items-center gap-2">
+                <span className="text-lg sm:text-xl lg:text-2xl">📍</span>
+                <span className="text-xs sm:text-sm lg:text-base">
+                  Offline | Online | Hybrid
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-lg sm:text-xl lg:text-2xl">📅</span>
+                <span className="text-xs sm:text-sm lg:text-base">
+                  1-day workshops to full-year integration
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Filter Buttons */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm lg:text-base ${
-                activeFilter === filter
-                  ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
-                  : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white hover:shadow-md border border-gray-200"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* Popular Programs Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Popular Programs
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600">
-            Choose from our curated selection of industry-leading programs
-          </p>
-        </div>
-
-        {/* Program Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredPrograms.map((program, index) => {
-            // Random color combinations for each card
-            const colorSchemes = [
-              { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
-              { bg: "from-green-100 to-green-300", text: "text-green-800" },
-              { bg: "from-teal-100 to-teal-300", text: "text-teal-800" },
-              { bg: "from-purple-100 to-purple-300", text: "text-purple-800" },
-              { bg: "from-pink-100 to-pink-300", text: "text-pink-800" },
-              { bg: "from-indigo-100 to-indigo-300", text: "text-indigo-800" },
-              { bg: "from-yellow-100 to-yellow-300", text: "text-yellow-800" },
-              { bg: "from-red-100 to-red-300", text: "text-red-800" },
-              { bg: "from-violet-100 to-violet-300", text: "text-violet-800" },
-              { bg: "from-orange-100 to-orange-300", text: "text-orange-800" },
-              {
-                bg: "from-emerald-100 to-emerald-300",
-                text: "text-emerald-800",
-              },
-              { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
-            ];
-
-            // Use program ID to generate random but consistent color for each program
-            const colorScheme = colorSchemes[program.id % colorSchemes.length];
-
-            return (
-              <div
-                key={program.id}
-                className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+        {/* Filter Buttons */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm lg:text-base ${
+                  activeFilter === filter
+                    ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
+                    : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white hover:shadow-md border border-gray-200"
+                }`}
               >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        {/* Popular Programs Section */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Popular Programs
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600">
+              Choose from our curated selection of industry-leading programs
+            </p>
+          </div>
+
+          {/* Program Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {filteredPrograms.map((program) => {
+              const colorSchemes = [
+                { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
+                { bg: "from-green-100 to-green-300", text: "text-green-800" },
+                { bg: "from-teal-100 to-teal-300", text: "text-teal-800" },
+                {
+                  bg: "from-purple-100 to-purple-300",
+                  text: "text-purple-800",
+                },
+                { bg: "from-pink-100 to-pink-300", text: "text-pink-800" },
+                {
+                  bg: "from-indigo-100 to-indigo-300",
+                  text: "text-indigo-800",
+                },
+                {
+                  bg: "from-yellow-100 to-yellow-300",
+                  text: "text-yellow-800",
+                },
+                { bg: "from-red-100 to-red-300", text: "text-red-800" },
+                {
+                  bg: "from-violet-100 to-violet-300",
+                  text: "text-violet-800",
+                },
+                {
+                  bg: "from-orange-100 to-orange-300",
+                  text: "text-orange-800",
+                },
+                {
+                  bg: "from-emerald-100 to-emerald-300",
+                  text: "text-emerald-800",
+                },
+                { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
+              ];
+
+              // Use program ID to generate random but consistent color for each program
+              const colorScheme =
+                colorSchemes[program.id % colorSchemes.length];
+
+              return (
                 <div
-                  className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg} h-full flex flex-col justify-center`}
+                  key={program.id}
+                  className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
                 >
-                  <div className="text-center">
-                    {/* Icon based on category */}
-                    <div className="mb-6">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-full flex items-center justify-center mx-auto">
-                        {program.category === "Soft Skills" ? (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                          </svg>
-                        ) : program.category === "Technical Skills" ? (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
-                          </svg>
-                        ) : program.category === "Aptitude & Reasoning" ? (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                          </svg>
-                        ) : program.category === "Placement & Recruitment" ? (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                          </svg>
-                        ) : program.category === "Career Planning" ? (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                          </svg>
-                        ) : (
-                          <svg
-                            className="w-10 h-10 sm:w-12 sm:h-12 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                          </svg>
-                        )}
+                  <div
+                    className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg} h-full flex flex-col justify-center`}
+                  >
+                    <div className="text-center">
+                      {/* Icon */}
+                      <div className="mb-6">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center mx-auto">
+                          <Image
+                            src={program.icon}
+                            alt={program.category}
+                            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                            width={40}
+                            height={40}
+                          />
+                        </div>
                       </div>
+                      <div>
+                        <h3
+                          className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}
+                        >
+                          {program.title}
+                        </h3>
+                        <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3 ">
+                          {program.description}
+                        </p>
+                      </div>
+                      {program?.topicsCovered && (
+                        <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                          {program?.topicsCovered.map((topic, index) => (
+                            <li key={index} className="pl-1">
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                    <h3
-                      className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}
-                    >
-                      {program.title.split(" - ")[1] || program.title}
-                    </h3>
-                    <p className="text-black text-sm sm:text-base font-medium leading-relaxed mb-3">
-                      {program.description}
-                    </p>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
 
-      {/* About Our Programs */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-        {dynamicContent(activeFilter)}
-        {/* <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        {/* About Our Programs */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+          {dynamicContent(activeFilter)}
+          {/* <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div
             className={
               customStyleEven(activeFilter)
@@ -782,104 +980,105 @@ export default function ProgramsPage() {
             </div>
           </div>
         </div> */}
-      </section>
+        </section>
 
-      {/* What Makes Us Unique */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-white/20">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-            🎯 What Makes JCS iLearn Unique?
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                  1
-                </span>
-              </div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
-                Program-Based Learning
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm">
-                Each module follows a structured curriculum with defined goals,
-                activities and outcomes.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                  2
-                </span>
-              </div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
-                Product-Style Delivery
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm">
-                Every iLearn module functions as a standalone product that can
-                be deployed individually or bundled.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                  3
-                </span>
-              </div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
-                Tiered Flexibility
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm">
-                Our modules come in Lite, Pro, and Plus formats — letting you
-                choose the depth and duration.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                  4
-                </span>
-                {/* from-pink-500 to-purple-600 */}
-              </div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
-                Cross-Domain Ecosystem
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm">
-                From coding and soft skills to career readiness and innovation,
-                iLearn covers it all seamlessly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
-              Ready to Choose Your Program?
+        {/* What Makes Us Unique */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-white/20">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+              🎯 What Makes JCS iLearn Unique?
             </h2>
-            <p className="text-blue-100 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
-              Explore our comprehensive suite of 25+ programs designed to
-              transform your learning journey and career prospects.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                href="/"
-                className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 text-sm sm:text-base"
-              >
-                Back to Home
-              </Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
+                    1
+                  </span>
+                </div>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
+                  Program-Based Learning
+                </h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Each module follows a structured curriculum with defined
+                  goals, activities and outcomes.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
+                    2
+                  </span>
+                </div>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
+                  Product-Style Delivery
+                </h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Every iLearn module functions as a standalone product that can
+                  be deployed individually or bundled.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
+                    3
+                  </span>
+                </div>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
+                  Tiered Flexibility
+                </h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  Our modules come in Lite, Pro, and Plus formats — letting you
+                  choose the depth and duration.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
+                    4
+                  </span>
+                  {/* from-pink-500 to-purple-600 */}
+                </div>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
+                  Cross-Domain Ecosystem
+                </h3>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  From coding and soft skills to career readiness and
+                  innovation, iLearn covers it all seamlessly.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+          <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
+                Ready to Choose Your Program?
+              </h2>
+              <p className="text-blue-100 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
+                Explore our comprehensive suite of 25+ programs designed to
+                transform your learning journey and career prospects.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  href="/"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 text-sm sm:text-base"
+                >
+                  Back to Home
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

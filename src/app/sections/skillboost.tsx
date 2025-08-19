@@ -1,16 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import {
-  FaBriefcase,
-  FaUsers,
-  FaLightbulb,
-  FaRocket,
-  FaPeopleCarry,
-  FaBookReader,
-  FaBrain,
-  FaChartLine,
-} from "react-icons/fa";
+import { FaBriefcase, FaUsers, FaLightbulb, FaRocket } from "react-icons/fa";
 import Link from "next/link";
 import whyChooseUs from "../../../public/whyChooseUs.jpg";
 
