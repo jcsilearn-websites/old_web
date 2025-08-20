@@ -5,6 +5,13 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 
+type NavItem = {
+  label: string;
+  href: string;
+  section?: string;
+  menuClick?: boolean;
+};
+
 const navLinks = [
   {
     label: "About Us",
@@ -40,39 +47,46 @@ const navLinks = [
     type: "dropdown",
     items: [
       {
-        label: "Soft Skills & Communication Module",
+        label: "Soft Skills",
         href: "/programs",
         section: "#soft-skills",
+        menuClick: true,
       },
       {
-        label: "Technical Skills Module",
+        label: "Technical Skills",
         href: "/programs",
         section: "#technical-skills",
+        menuClick: true,
       },
       {
-        label: "Aptitude & Reasoning Module",
+        label: "Aptitude & Reasoning",
         href: "/programs",
         section: "#aptitude",
+        menuClick: true,
       },
       {
-        label: "Placement & Recruitment Module",
+        label: "Placement & Recruitment",
         href: "/programs",
         section: "#placement",
+        menuClick: true,
       },
       {
-        label: "Career Planning & Personal Growth Module",
+        label: "Career Planning",
         href: "/programs",
         section: "#career-planning",
+        menuClick: true,
       },
       {
-        label: "Corporate Readiness & Compliance Module",
+        label: "Corporate Readiness",
         href: "/programs",
         section: "#corporate-readiness",
+        menuClick: true,
       },
       {
-        label: "School Enrichment Module",
+        label: "School Enrichment",
         href: "/programs",
         section: "#school-enrichment",
+        menuClick: true,
       },
     ],
   },
@@ -162,6 +176,14 @@ const Header = () => {
     setOpenDropdown(null);
   };
 
+  const menuSelect = (item: NavItem) => {
+    if (item.menuClick) {
+      localStorage.setItem("defaultFilter", item.label);
+    } else {
+      localStorage.removeItem("defaultFilter");
+    }
+  };
+
   return (
     <header
       ref={headerRef}
@@ -218,7 +240,10 @@ const Header = () => {
                               key={item.label}
                               href={item.href}
                               className="block px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-100   transition-colors duration-150"
-                              onClick={closeDropdown}
+                              onClick={() => {
+                                closeDropdown();
+                                menuSelect(item);
+                              }}
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.05 }}

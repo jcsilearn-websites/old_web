@@ -9,8 +9,6 @@ import {
   FaUser,
   FaHands,
   FaCompactDisc,
-  FaHighlighter,
-  FaStudiovinari,
 } from "react-icons/fa";
 
 const subjects = [
