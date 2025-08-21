@@ -839,8 +839,14 @@ export default function ProgramsPage() {
           </div>
 
           {/* Program Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredPrograms.map((program) => {
+          <div
+            className={`grid gap-6 sm:gap-8 ${
+              filteredPrograms.length === 5
+                ? "grid-cols-6" // staggered layout
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" // normal layout
+            }`}
+          >
+            {(filteredPrograms ?? []).map((program, index) => {
               const colorSchemes = [
                 { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
                 { bg: "from-green-100 to-green-300", text: "text-green-800" },
@@ -874,14 +880,27 @@ export default function ProgramsPage() {
                 { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
               ];
 
-              // Use program ID to generate random but consistent color for each program
               const colorScheme =
                 colorSchemes[program.id % colorSchemes.length];
+
+              // Default class for normal grid
+              let cardClasses = "";
+
+              if (filteredPrograms.length === 5) {
+                // staggered card placement
+                if (index < 3) {
+                  cardClasses = "col-span-6 md:col-span-2";
+                } else if (index === 3) {
+                  cardClasses = "col-span-6 md:col-start-2 md:col-span-2";
+                } else if (index === 4) {
+                  cardClasses = "col-span-6 md:col-start-4 md:col-span-2";
+                }
+              }
 
               return (
                 <div
                   key={program.id}
-                  className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+                  className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${cardClasses}`}
                 >
                   <div
                     className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg} h-full flex flex-col justify-center`}
@@ -905,14 +924,14 @@ export default function ProgramsPage() {
                         >
                           {program.title}
                         </h3>
-                        <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3 ">
+                        <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3">
                           {program.description}
                         </p>
                       </div>
                       {program?.topicsCovered && (
                         <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
-                          {program?.topicsCovered.map((topic, index) => (
-                            <li key={index} className="pl-1">
+                          {program?.topicsCovered.map((topic, idx) => (
+                            <li key={idx} className="pl-1">
                               {topic}
                             </li>
                           ))}
