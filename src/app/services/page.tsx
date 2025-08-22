@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import WhyChooseUsImage from "../../../public/whyChooseUsServicePage.jpeg";
 
 export default function ServicesPage() {
   const contentArray = [
@@ -143,7 +144,7 @@ export default function ServicesPage() {
           <div className="relative order-first lg:order-last">
             {/* Need to change image */}
             <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src={WhyChooseUsImage}
               alt="College students in classroom"
               width={500}
               height={600}
