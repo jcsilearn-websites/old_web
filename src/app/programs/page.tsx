@@ -39,7 +39,7 @@ export default function ProgramsPage() {
   const programs = [
     {
       id: 1,
-      title: "iLearn Skillora",
+      title: "Skillora",
       category: "Soft Skills",
       description:
         "Boost communication, teamwork, leadership, and emotional intelligence through immersive, real-world soft skills training. Build interpersonal confidence and workplace-ready behavior.",
@@ -55,7 +55,7 @@ export default function ProgramsPage() {
     },
     {
       id: 2,
-      title: "iLearn AptEdge",
+      title: "AptEdge",
       category: "Aptitude & Reasoning",
       description:
         "Structured training in arithmetic, data interpretation and analytical thinking to excel in aptitude tests.",
@@ -71,7 +71,7 @@ export default function ProgramsPage() {
     },
     {
       id: 3,
-      title: "iLearn CrackIt",
+      title: "CrackIt",
       category: "Aptitude & Reasoning",
       description:
         "Build problem-solving strength with puzzles, patterns, critical thinking exercises and strategy-based learning.",
@@ -86,7 +86,7 @@ export default function ProgramsPage() {
     },
     {
       id: 4,
-      title: "iLearn Ace",
+      title: "Ace",
       category: "Aptitude & Reasoning",
       description:
         "Grammar, vocabulary, reading comprehension and sentence correction for top-tier language performance.",
@@ -102,7 +102,7 @@ export default function ProgramsPage() {
     },
     {
       id: 5,
-      title: "iLearn Byte",
+      title: "Byte",
       category: "Technical Skills",
       description:
         "Fundamentals of Python, web basics, and logical thinking tailored for absolute beginners.",
@@ -111,7 +111,7 @@ export default function ProgramsPage() {
     },
     {
       id: 6,
-      title: "iLearn Codevita",
+      title: "Codevita",
       category: "Technical Skills",
       description:
         "Designed for coding contests and technical interviews using C, C++, Java or Python.",
@@ -120,7 +120,7 @@ export default function ProgramsPage() {
     },
     {
       id: 7,
-      title: "iLearn CodePro",
+      title: "CodePro",
       category: "Technical Skills",
       description:
         "In-depth training in Java programming, algorithms and data structures with problem-solving drills.",
@@ -132,7 +132,7 @@ export default function ProgramsPage() {
     },
     {
       id: 8,
-      title: "iLearn Stack",
+      title: "Stack",
       category: "Technical Skills",
       description:
         "Hands-on web development from frontend to backend using modern tech stacks.",
@@ -141,7 +141,7 @@ export default function ProgramsPage() {
     },
     {
       id: 9,
-      title: "iLearn Codegenix",
+      title: "Codegenix",
       category: "Technical Skills",
       description:
         "Project-based learning with tools and techniques in Machine Learning, AI and Data Science.",
@@ -153,7 +153,7 @@ export default function ProgramsPage() {
     },
     {
       id: 10,
-      title: "iLearn Prime",
+      title: "Prime",
       category: "Placement & Recruitment",
       description:
         "Customized sessions aligned with top recruiters' expectations – TCS, Infosys, Wipro, Capgemini & more.",
@@ -165,7 +165,7 @@ export default function ProgramsPage() {
     },
     {
       id: 11,
-      title: "iLearn Innovate",
+      title: "Innovate",
       category: "Career Planning",
       description:
         "Ignite innovation with idea validation, lean business models, pitch decks and problem-solving workshops. Ignite ideas. Build ventures.",
@@ -174,7 +174,7 @@ export default function ProgramsPage() {
     },
     {
       id: 12,
-      title: "iLearn Inspire",
+      title: "Inspire",
       category: "Corporate Readiness",
       description:
         "Industry speakers, entrepreneurs, and change-makers sharing stories, strategies and wisdom.",
@@ -187,7 +187,7 @@ export default function ProgramsPage() {
     },
     {
       id: 13,
-      title: "iLearn TalkPro",
+      title: "TalkPro",
       category: "Soft Skills",
       description:
         "Build clarity, fluency, and effectiveness in both spoken and written English.",
@@ -196,7 +196,7 @@ export default function ProgramsPage() {
     },
     {
       id: 14,
-      title: "iLearn Voicely",
+      title: "Voicely",
       category: "Soft Skills",
       description:
         "Neutralize accents, improve clarity and speak globally with confidence.",
@@ -204,7 +204,7 @@ export default function ProgramsPage() {
     },
     {
       id: 15,
-      title: "iLearn Corp",
+      title: "Corp",
       category: "Corporate Readiness",
       description:
         "Grooming, ethics, email culture, professional behavior and the essentials of workplace excellence.",
@@ -222,7 +222,7 @@ export default function ProgramsPage() {
     },
     {
       id: 16,
-      title: "iLearn Examly",
+      title: "Examly",
       category: "Aptitude & Reasoning",
       description:
         "Time management, study plans, memory techniques and mindset training for academic excellence.",
@@ -231,7 +231,7 @@ export default function ProgramsPage() {
     },
     {
       id: 17,
-      title: "iLearn MockUp",
+      title: "MockUp",
       category: "Placement & Recruitment",
       description:
         "Live practice rounds with detailed evaluation, scorecards and personalized feedback. Practice, perform, and perfect your pitch.",
@@ -244,7 +244,7 @@ export default function ProgramsPage() {
     },
     {
       id: 18,
-      title: "iLearn PitchPro",
+      title: "PitchPro",
       category: "Placement & Recruitment",
       description:
         "Train for impactful self-introduction, logical arguments and professional pitching under pressure.",
@@ -253,7 +253,7 @@ export default function ProgramsPage() {
     },
     {
       id: 19,
-      title: "iLearn Careerly",
+      title: "Careerly",
       category: "Career Planning",
       description:
         "Build a standout professional profile and get interview-ready with career coaching and digital presence tips.",
@@ -269,7 +269,7 @@ export default function ProgramsPage() {
     },
     {
       id: 20,
-      title: "iLearn Pathcraft",
+      title: "Pathcraft",
       category: "School Enrichment",
       description:
         "Inspire young minds through interactive sessions on careers, college choices and self-discovery.",
@@ -284,7 +284,7 @@ export default function ProgramsPage() {
     },
     {
       id: 21,
-      title: "iLearn SpeakUp",
+      title: "SpeakUp",
       category: "Soft Skills",
       description:
         "Build confidence, clarity, and charisma on stage through dynamic exercises in speech structure, voice modulation and impactful delivery. Ideal for anchoring, debates and public events.",
@@ -297,7 +297,7 @@ export default function ProgramsPage() {
     },
     {
       id: 22,
-      title: "iLearn Elevate",
+      title: "Elevate",
       category: "Soft Skills",
       description:
         "A transformational program focused on unlocking leadership potential, collaboration, decision-making and problem-solving in real-world team settings.",
@@ -306,7 +306,7 @@ export default function ProgramsPage() {
     },
     {
       id: 23,
-      title: "iLearn PlacEdge",
+      title: "PlacEdge",
       category: "Placement & Recruitment",
       description:
         "A sharp, fast-paced program covering resumes, aptitude tricks, GD strategies and interview hacks to give students an edge during placement season.",
@@ -320,7 +320,7 @@ export default function ProgramsPage() {
     },
     {
       id: 24,
-      title: "iLearn Persona",
+      title: "Persona",
       category: "Placement & Recruitment",
       description:
         "Self-discovery through standardized tests that reveal personality types, learning styles and career fit — followed by interpretation sessions for clarity and guidance.",
@@ -329,7 +329,7 @@ export default function ProgramsPage() {
     },
     {
       id: 25,
-      title: "iLearn AssessIQ",
+      title: "AssessIQ",
       category: "Aptitude & Reasoning",
       description:
         "Comprehensive aptitude, reasoning and communication tests with detailed analytics, benchmarking and improvement plans — ideal for colleges tracking student preparedness.",
@@ -355,6 +355,19 @@ export default function ProgramsPage() {
     const activeIndex = filters.indexOf(activeFilter);
     if (activeIndex === -1) return false;
     return activeIndex % 2 === 0;
+  };
+
+  const getGridClasses = (length: number) => {
+    if (length === 5) {
+      return "grid grid-cols-6 gap-6 sm:gap-8"; // staggered layout
+    }
+    if (length === 1) {
+      return "grid grid-cols-1 gap-6 sm:gap-8 w-fit mx-auto"; // 1 centered
+    }
+    if (length === 2) {
+      return "grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 w-fit mx-auto";
+    }
+    return "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"; // normal layout
   };
 
   const FullPageLoader = () => {
@@ -435,22 +448,29 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                The Technical Skills Module equips learners with
-                industry-relevant expertise to meet the demands of evolving
-                technologies. From programming languages and web development to
-                data analysis and emerging tools, the curriculum ensures a
-                strong technical foundation that matches real-world
-                requirements. With hands-on projects, coding challenges, and
-                guided mentorship, participants gain the practical
-                problem-solving skills essential in today’s competitive job
-                market. As technology reshapes every industry, being technically
-                proficient is no longer optional—it’s a decisive advantage. Our
-                training bridges academic knowledge with industry application,
-                empowering learners to create, innovate, and adapt quickly to
-                new tools, platforms, and methodologies for sustained career
-                success.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  The Technical Skills Module equips learners with
+                  industry-relevant expertise to meet the demands of evolving
+                  technologies. From programming languages and web development
+                  to data analysis and emerging tools, the curriculum ensures a
+                  strong technical foundation that matches real-world
+                  requirements.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  With hands-on projects, coding challenges, and guided
+                  mentorship, participants gain the practical problem-solving
+                  skills essential in today’s competitive job market. As
+                  technology reshapes every industry, being technically
+                  proficient is no longer optional—it’s a decisive advantage.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our training bridges academic knowledge with industry
+                  application, empowering learners to create, innovate, and
+                  adapt quickly to new tools, platforms, and methodologies for
+                  sustained career success.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -483,22 +503,29 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                Our Aptitude & Reasoning Module develops the analytical thinking
-                and problem-solving skills crucial for competitive exams,
-                placement tests, and corporate assessments. Covering numerical
-                ability, logical reasoning, and verbal aptitude, the program
-                sharpens mental agility through structured practice and proven
-                strategies. These skills go beyond test preparation—they enhance
-                decision-making, time management, and adaptability in real-life
-                scenarios. As recruitment processes increasingly rely on
-                aptitude evaluations, our module ensures learners are
-                well-prepared to perform with confidence. Through mock tests,
-                interactive exercises, and personalized feedback, participants
-                not only master problem-solving techniques but also build the
-                focus and speed required for high-pressure, time-bound
-                challenges.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our Aptitude & Reasoning Module develops the analytical
+                  thinking and problem-solving skills crucial for competitive
+                  exams, placement tests, and corporate assessments. Covering
+                  numerical ability, logical reasoning, and verbal aptitude, the
+                  program sharpens mental agility through structured practice
+                  and proven strategies.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  These skills go beyond test preparation—they enhance
+                  decision-making, time management, and adaptability in
+                  real-life scenarios. As recruitment processes increasingly
+                  rely on aptitude evaluations, our module ensures learners are
+                  well-prepared to perform with confidence.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Through mock tests, interactive exercises, and personalized
+                  feedback, participants not only master problem-solving
+                  techniques but also build the focus and speed required for
+                  high-pressure, time-bound challenges.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -531,21 +558,29 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                The Placement & Recruitment Module prepares students to excel in
-                campus drives, walk-ins, and professional interviews. We focus
-                on resume building, personal branding, group discussion
-                strategies, and mock interviews aligned with current industry
-                expectations. By simulating real recruitment scenarios, learners
-                gain the confidence and competence to navigate hiring processes
-                successfully. In a competitive job market, standing out is
-                critical—our program ensures candidates are not just job-ready
-                but career-ready. With insights from industry experts and
-                recruiters, participants learn to present their skills
-                effectively, handle challenging questions, and demonstrate
-                professionalism, increasing their chances of securing
-                high-quality job offers and sustained career growth.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  The Placement & Recruitment Module prepares students to excel
+                  in campus drives, walk-ins, and professional interviews. We
+                  focus on resume building, personal branding, group discussion
+                  strategies, and mock interviews aligned with current industry
+                  expectations.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  By simulating real recruitment scenarios, learners gain the
+                  confidence and competence to navigate hiring processes
+                  successfully. In a competitive job market, standing out is
+                  critical—our program ensures candidates are not just job-ready
+                  but career-ready.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  With insights from industry experts and recruiters,
+                  participants learn to present their skills effectively, handle
+                  challenging questions, and demonstrate professionalism,
+                  increasing their chances of securing high-quality job offers
+                  and sustained career growth.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -578,21 +613,28 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                Our Career Planning & Personal Growth Module helps individuals
-                define clear goals, align their skills with aspirations, and
-                take purposeful steps toward long-term success. Through
-                self-assessment tools, mentorship sessions, and structured
-                action plans, participants gain clarity on career paths that
-                match their strengths and passions. Beyond choosing a
-                profession, we emphasize resilience, adaptability, and
-                continuous learning—qualities that sustain growth in an
-                unpredictable job landscape. By addressing both mindset and
-                skill set, the program empowers learners to overcome challenges,
-                seize opportunities, and craft a fulfilling career journey. The
-                result is not just professional success, but personal
-                satisfaction and self-mastery.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our Career Planning & Personal Growth Module helps individuals
+                  define clear goals, align their skills with aspirations, and
+                  take purposeful steps toward long-term success.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Through self-assessment tools, mentorship sessions, and
+                  structured action plans, participants gain clarity on career
+                  paths that match their strengths and passions. Beyond choosing
+                  a profession, we emphasize resilience, adaptability, and
+                  continuous learning—qualities that sustain growth in an
+                  unpredictable job landscape.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  By addressing both mindset and skill set, the program empowers
+                  learners to overcome challenges, seize opportunities, and
+                  craft a fulfilling career journey. The result is not just
+                  professional success, but personal satisfaction and
+                  self-mastery.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -625,21 +667,29 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                Our Corporate Readiness & Compliance Module ensures
-                professionals can integrate seamlessly into organizational
-                environments while adhering to workplace ethics, protocols, and
-                legal requirements. Covering topics like professional etiquette,
-                workplace communication, time management, and compliance
-                awareness, the program bridges the gap between academic learning
-                and corporate expectations. In an era where cultural fit and
-                ethical conduct are valued as highly as technical skills, this
-                module equips participants to thrive responsibly in any
-                professional setting. Real-life case studies, role-plays, and
-                compliance simulations prepare learners to contribute
-                effectively from day one, enhancing both their employability and
-                long-term career progression in corporate environments.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our Corporate Readiness & Compliance Module ensures
+                  professionals can integrate seamlessly into organizational
+                  environments while adhering to workplace ethics, protocols,
+                  and legal requirements.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Covering topics like professional etiquette, workplace
+                  communication, time management, and compliance awareness, the
+                  program bridges the gap between academic learning and
+                  corporate expectations. In an era where cultural fit and
+                  ethical conduct are valued as highly as technical skills, this
+                  module equips participants to thrive responsibly in any
+                  professional setting.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Real-life case studies, role-plays, and compliance simulations
+                  prepare learners to contribute effectively from day one,
+                  enhancing both their employability and long-term career
+                  progression in corporate environments.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -672,21 +722,30 @@ export default function ProgramsPage() {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 {` About ${activeFilter} programs`}
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                The School Enrichment Module is designed to nurture essential
-                life skills, critical thinking, and communication abilities in
-                young learners, preparing them for academic and personal
-                success. With engaging, activity-based sessions, we focus on
-                creativity, leadership, time management, and digital
-                literacy—skills increasingly vital in today’s world. By
-                introducing these competencies early, students develop
-                confidence, adaptability, and a proactive mindset that supports
-                both academic performance and overall personality development.
-                Our approach blends fun learning with meaningful skill-building,
-                ensuring students grow into well-rounded individuals capable of
-                meeting future challenges with resilience, curiosity, and the
-                ability to make positive contributions to society.
-              </p>
+              <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg">
+                  The School Enrichment Module is designed to nurture essential
+                  life skills, critical thinking, and communication abilities in
+                  young learners, preparing them for academic and personal
+                  success.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  With engaging, activity-based sessions, we focus on
+                  creativity, leadership, time management, and digital
+                  literacy—skills increasingly vital in today’s world. By
+                  introducing these competencies early, students develop
+                  confidence, adaptability, and a proactive mindset that
+                  supports both academic performance and overall personality
+                  development.
+                </p>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  Our approach blends fun learning with meaningful
+                  skill-building, ensuring students grow into well-rounded
+                  individuals capable of meeting future challenges with
+                  resilience, curiosity, and the ability to make positive
+                  contributions to society.
+                </p>
+              </div>
             </div>
             <div
               className={`relative ${
@@ -779,7 +838,7 @@ export default function ProgramsPage() {
         </div>
 
         {/* Header Section */}
-        <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 mt-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
             Our Programs
@@ -814,7 +873,10 @@ export default function ProgramsPage() {
             {filters.map((filter) => (
               <button
                 key={filter}
-                onClick={() => setActiveFilter(filter)}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  localStorage.setItem("defaultFilter", filter);
+                }}
                 className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm lg:text-base ${
                   activeFilter === filter
                     ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
@@ -839,13 +901,7 @@ export default function ProgramsPage() {
           </div>
 
           {/* Program Cards Grid */}
-          <div
-            className={`grid gap-6 sm:gap-8 ${
-              filteredPrograms.length === 5
-                ? "grid-cols-6" // staggered layout
-                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" // normal layout
-            }`}
-          >
+          <div className={getGridClasses(filteredPrograms.length)}>
             {(filteredPrograms ?? []).map((program, index) => {
               const colorSchemes = [
                 { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
@@ -900,12 +956,14 @@ export default function ProgramsPage() {
               return (
                 <div
                   key={program.id}
-                  className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${cardClasses}`}
+                  className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[450px]  justify-center min-h-[350px] ${cardClasses}`}
+
+                  // className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[400px] flex col-span-6 md:col-span-2  ${cardClasses}`}
                 >
                   <div
-                    className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg} h-full flex flex-col justify-center`}
+                    className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg}  h-full w-full flex flex-col justify-center`}
                   >
-                    <div className="text-center">
+                    <div className="text-center flex flex-col h-full">
                       {/* Icon */}
                       <div className="mb-6">
                         <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center mx-auto">
@@ -918,17 +976,25 @@ export default function ProgramsPage() {
                           />
                         </div>
                       </div>
-                      <div>
-                        <h3
-                          className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}
-                        >
-                          {program.title}
-                        </h3>
-                        <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3">
-                          {program.description}
-                        </p>
+                      <div className="flex flex-col h-full">
+                        {/* Title Section */}
+                        <div>
+                          <h3
+                            className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}
+                          >
+                            {program.title}
+                          </h3>
+                        </div>
+
+                        {/* Push description to bottom */}
+                        <div className="mt-auto">
+                          <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3">
+                            {program.description}
+                          </p>
+                        </div>
                       </div>
-                      {program?.topicsCovered && (
+
+                      {/* {program?.topicsCovered && (
                         <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
                           {program?.topicsCovered.map((topic, idx) => (
                             <li key={idx} className="pl-1">
@@ -936,7 +1002,7 @@ export default function ProgramsPage() {
                             </li>
                           ))}
                         </ul>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>
@@ -1010,8 +1076,14 @@ export default function ProgramsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                    1
+                  <span
+                    className="inline-flex items-center justify-center 
+  w-12 h-12 rounded-full p-[3px] 
+  bg-gradient-to-r from-[#05063d] via-[#0a0b68] to-[#05063d]"
+                  >
+                    <span className="w-full h-full flex items-center justify-center rounded-full bg-white text-lg sm:text-xl lg:text-2xl text-black">
+                      1
+                    </span>
                   </span>
                 </div>
                 <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
@@ -1024,8 +1096,14 @@ export default function ProgramsPage() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                    2
+                  <span
+                    className="inline-flex items-center justify-center 
+  w-12 h-12 rounded-full p-[3px] 
+  bg-gradient-to-r from-[#05063d] via-[#0a0b68] to-[#05063d]"
+                  >
+                    <span className="w-full h-full flex items-center justify-center rounded-full bg-white text-lg sm:text-xl lg:text-2xl text-black">
+                      2
+                    </span>
                   </span>
                 </div>
                 <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
@@ -1038,8 +1116,14 @@ export default function ProgramsPage() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                    3
+                  <span
+                    className="inline-flex items-center justify-center 
+  w-12 h-12 rounded-full p-[3px] 
+  bg-gradient-to-r from-[#05063d] via-[#0a0b68] to-[#05063d]"
+                  >
+                    <span className="w-full h-full flex items-center justify-center rounded-full bg-white text-lg sm:text-xl lg:text-2xl text-black">
+                      3
+                    </span>
                   </span>
                 </div>
                 <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-2">
@@ -1052,8 +1136,14 @@ export default function ProgramsPage() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r  rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-lg sm:text-xl lg:text-2xl text-black">
-                    4
+                  <span
+                    className="inline-flex items-center justify-center 
+  w-12 h-12 rounded-full p-[3px] 
+  bg-gradient-to-r from-[#05063d] via-[#0a0b68] to-[#05063d]"
+                  >
+                    <span className="w-full h-full flex items-center justify-center rounded-full bg-white text-lg sm:text-xl lg:text-2xl text-black">
+                      4
+                    </span>
                   </span>
                   {/* from-pink-500 to-purple-600 */}
                 </div>
@@ -1071,7 +1161,7 @@ export default function ProgramsPage() {
 
         {/* Call to Action */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
-          <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
+          <div className="bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
                 Ready to Choose Your Program?

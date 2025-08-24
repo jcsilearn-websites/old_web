@@ -13,7 +13,7 @@ export default function FoundersPage() {
       </div>
 
       {/* Header Section */}
-      <section className="relative pt-20 pb-16 px-4">
+      <section className="relative pt-20 pb-16 px-4 mt-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
             Leadership
@@ -136,7 +136,7 @@ export default function FoundersPage() {
               height={600}
               className="rounded-3xl shadow-2xl"
             />
-            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-4 text-white">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-700 via-indigo-800 to-blue-900 rounded-2xl p-4 text-white">
               <p className="font-semibold">Co-Founder & COO</p>
             </div>
           </div>

@@ -2,8 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import WhyChooseUsImage from "../../../public/whyChooseUsServicePage.jpeg";
+import { useEffect, useState } from "react";
 
 export default function ServicesPage() {
+  const [activeBox, setActiveBox] = useState<string | null>(null);
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -100; // adjust this value to your header height
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   const contentArray = [
     {
       title: "For Colleges & Universities",
@@ -16,7 +28,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: "For Corporates",
+      title: "For Companies & Corporates",
       description:
         "Upskill your workforce with industry-specific training programs that drive productivity and innovation.",
       points: [
@@ -57,6 +69,29 @@ export default function ServicesPage() {
     },
   ];
 
+  // Read from localStorage on mount
+  useEffect(() => {
+    const storedTopic = localStorage.getItem("defaultFilter");
+    if (storedTopic !== null) {
+      scrollToSection(storedTopic);
+      setActiveBox(storedTopic);
+    }
+  }, []);
+
+  const DynamicStyleCard = (title: string) => {
+    const baseClasses =
+      "flex flex-col justify-between h-full min-h-[420px] backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl  hover:shadow-2xl transition-all duration-300";
+
+    const activeClasses =
+      "bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] shadow-[0_20px_40px_rgba(0,0,0,0.4)] scale-110 -translate-y-1 z-10 border-8 border-[#FFD700] rounded-3xl p-4 sm:p-6 lg:p-8 transition-all duration-300";
+    const inactiveClasses =
+      "bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]  border border-white/20";
+
+    return `${baseClasses} ${
+      activeBox === title ? activeClasses : inactiveClasses
+    }`;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
       {/* Decorative background elements */}
@@ -67,9 +102,9 @@ export default function ServicesPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl   2xl:text-6xl font-bold bg-gradient-to-r  from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Comprehensive Training Solutions
           </h1>
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
@@ -89,7 +124,7 @@ export default function ServicesPage() {
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-sky-600 via-indigo-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm sm:text-lg lg:text-xl">
                     🎯
                   </span>
@@ -106,7 +141,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-sky-600 via-indigo-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm sm:text-lg lg:text-xl">
                     👥
                   </span>
@@ -123,7 +158,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-sky-600 via-indigo-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm sm:text-lg lg:text-xl">
                     📊
                   </span>
@@ -169,48 +204,52 @@ export default function ServicesPage() {
             Comprehensive training solutions for every need
           </p>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 h-full">
+          {contentArray?.map((data, index) => {
+            let cardClasses = "";
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 h-full sm:gap-6 lg:gap-8">
-          {contentArray?.map((data, index) => (
-            <div key={index}>
-              <div className="flex flex-col justify-between h-full min-h-[420px] bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]   backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
-                <span>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold  text-white mb-3 sm:mb-4">
-                    {data?.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-white mb-4 sm:mb-6">
-                    {data?.description}
-                  </p>
-                </span>
-                <span>
-                  <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-                    {data?.points.map((data, index) => (
-                      <div key={index}>
+            if (index === 0) cardClasses = "sm:col-span-2"; // card 1
+            if (index === 1) cardClasses = "sm:col-span-2"; // card 2
+            if (index === 2) cardClasses = "sm:col-span-2"; // card 3
+            if (index === 3) cardClasses = "sm:col-start-2 sm:col-span-2"; // card 4 → starts under the gap
+            if (index === 4) cardClasses = "sm:col-span-2"; // card 5
+
+            return (
+              <div key={index} className={cardClasses} id={data?.title}>
+                <div className={`${DynamicStyleCard(data?.title)}`}>
+                  <span>
+                    <h3
+                      className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4"
+                      // style={{ scrollMarginBottom: "150px" }}
+                    >
+                      {data?.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm lg:text-base text-white mb-4 sm:mb-6">
+                      {data?.description}
+                    </p>
+                  </span>
+                  <span>
+                    <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                      {data?.points.map((point, i) => (
                         <li
+                          key={i}
                           className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-white"
-                          key={index}
                         >
                           <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                          {data}
+                          {point}
                         </li>
-                      </div>
-                    ))}
-                  </ul>
-                </span>
-                {/* <Link
-              href="/contact"
-              className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-xs sm:text-sm lg:text-base"
-            >
-              Learn More
-            </Link> */}
+                      ))}
+                    </ul>
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
       {/* Why This Matters Section */}
-      <section className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
+      <section className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] rounded-3xl p-8 md:p-12 text-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
             💬 Why This Matters

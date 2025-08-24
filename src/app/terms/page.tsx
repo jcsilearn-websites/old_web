@@ -12,7 +12,7 @@ export default function TermsPage() {
       </div>
 
       {/* Header Section */}
-      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Terms and Conditions

@@ -14,7 +14,7 @@ export default function VisionPage() {
       </div>
 
       {/* Header Section */}
-      <section className="relative pt-20 pb-16 px-4">
+      <section className="relative pt-20 pb-16 px-4 mt-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-6">
             Our Vision
