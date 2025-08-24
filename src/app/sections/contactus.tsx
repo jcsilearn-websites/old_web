@@ -45,9 +45,9 @@ export default function ContactUs() {
                     Address
                   </h3>
                   <p className="text-xs sm:text-sm lg:text-base text-gray-200">
-                    123 Training Center, Skill Development Hub
+                    No.10, Udayampalayam Main Road, Sowripalayam
                     <br />
-                    Bangalore, Karnataka 560001
+                    Coimbatore, Tamil Nadu - 641028
                     <br />
                     India
                   </p>
@@ -95,9 +95,9 @@ export default function ContactUs() {
                     Business Hours
                   </h3>
                   <p className="text-xs sm:text-sm lg:text-base text-gray-200">
-                    Monday - Saturday: 9:00 AM - 5:00 PM
+                    Monday - Friday: 9:00 AM - 5:00 PM
                     <br />
-                    Sunday: 9:00 AM - 1:00 PM
+                    Saturday: 9:00 AM - 1:00 PM
                   </p>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import aboutus1 from "../../../public/aboutus1.jpg";
+// import aboutus1 from "../../../public/aboutus1.jpg";
 
 const AboutUs = () => {
   return (
@@ -10,10 +10,11 @@ const AboutUs = () => {
 
       <div className="flex-1 flex items-center justify-center relative w-full md:w-1/2 h-full z-10 order-2 md:order-1">
         <Image
-          src={aboutus1}
+          src="https://images.pexels.com/photos/2284169/pexels-photo-2284169.jpeg"
+          // src={aboutus1}
           alt="About Us"
-          height={500}
-          width={500}
+          height={700}
+          width={700}
           className="rounded-3xl shadow-2xl object-cover w-full max-w-sm sm:max-w-md lg:max-w-none"
         />
       </div>

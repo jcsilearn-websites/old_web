@@ -38,7 +38,7 @@ export default function SkillBoost() {
               </h3>
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] rounded-xl flex items-center justify-center flex-shrink-0">
                     <FaBriefcase className="text-white text-lg sm:text-xl" />
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export default function SkillBoost() {
                 </div>
 
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] rounded-xl flex items-center justify-center flex-shrink-0">
                     <FaUsers className="text-white text-lg sm:text-xl" />
                   </div>
                   <div>
@@ -68,7 +68,7 @@ export default function SkillBoost() {
                 </div>
 
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] rounded-xl flex items-center justify-center flex-shrink-0">
                     <FaLightbulb className="text-white text-lg sm:text-xl" />
                   </div>
                   <div>
@@ -83,7 +83,7 @@ export default function SkillBoost() {
                 </div>
 
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] rounded-xl flex items-center justify-center flex-shrink-0">
                     <FaRocket className="text-white text-lg sm:text-xl" />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export default function SkillBoost() {
             <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20">
               <div className="text-center">
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1">
-                  500+
+                  15000+
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600">
                   Students Trained

@@ -11,10 +11,10 @@ export default function Page() {
     <>
       <Home />
       <AboutUs />
-      <SkillBoost />
-      <Testimonial />
       <ServicesCarousel />
       <Careers />
+      <SkillBoost />
+      <Testimonial />
       <ContactUs />
     </>
   );

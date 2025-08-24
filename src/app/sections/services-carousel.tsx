@@ -15,35 +15,35 @@ const subjects = [
   {
     icon: <FaBook />,
     title: "For Colleges & Universities",
-    desc: "Strong communication and interpersonal skills are essential in every career. This module builds confidence, clarity, and emotional intelligence to help you collaborate and lead effectively.",
+    desc: "Empowering students for campus success.Practical training programs that boost placement outcomes and bridge the industry-academia gap.",
     color: "from-purple-200 to-purple-100",
     bgColor: "bg-purple-50",
   },
   {
     icon: <FaUser />,
     title: "For Companies & Corporates",
-    desc: "Logical thinking and problem-solving are key in competitive exams and job interviews. This module sharpens your analytical skills, speed, and accuracy to help you crack aptitude tests with ease.",
+    desc: "Build a future-ready workforce.Tailored learning solutions that strengthen skills, leadership, and workplace performance.",
     color: "from-pink-200 to-pink-100",
     bgColor: "bg-pink-50",
   },
   {
     icon: <FaHands />,
     title: "For Startups",
-    desc: "In a tech-driven world, domain knowledge is non-negotiable. This module offers hands-on learning in programming, tools, and platforms to align with industry needs and job roles.",
+    desc: "Turn ideas into impact.Specialized workshops to sharpen entrepreneurial skills, drive innovation and fuel business growth.",
     color: "from-yellow-200 to-yellow-100",
     bgColor: "bg-yellow-50",
   },
   {
     icon: <FaGraduationCap />,
     title: "For Schools",
-    desc: "Get job-ready with expert guidance on resumes, group discussions, interviews, and HR rounds. This module prepares you to confidently face every stage of the hiring process.",
+    desc: "Shaping young minds for tomorrow.Early career guidance and life skills programs that prepare students for academic and personal success.",
     color: "from-blue-200 to-blue-100",
     bgColor: "bg-blue-50",
   },
   {
     icon: <FaCompactDisc />,
     title: "For Professionals",
-    desc: "Learn the professional etiquette, email writing, time management, and workplace ethics required to succeed and sustain in a corporate environment.",
+    desc: "Grow faster in your career.Focused skill enhancement and certification programs designed to help professionals upskill and advance.",
     color: "from-red-200 to-white-100",
     bgColor: "bg-grey-50",
   },
@@ -115,7 +115,7 @@ export default function ServicesCarousel() {
               >
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl border border-blue-200 p-6 sm:p-8 lg:p-10 min-h-[350px] sm:min-h-[400px] lg:min-h-[450px] flex flex-col justify-center">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 shadow-lg flex-shrink-0">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-2xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] shadow-lg flex-shrink-0">
                       <div className="text-2xl sm:text-3xl lg:text-4xl text-white">
                         {subjects[currentIndex].icon}
                       </div>

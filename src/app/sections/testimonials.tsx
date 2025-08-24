@@ -20,14 +20,14 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/5920775/pexels-photo-5920775.jpeg?_gl=1*1stboiw*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDc2ODQkajQ4JGwwJGgw"
-                alt="John Doe"
+                alt="Santhosh"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-pink-500 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  John Doe
+                  Santhosh
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">
                   Software Engineer
@@ -45,14 +45,14 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?_gl=1*1t7gfbh*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDc3MjAkajEyJGwwJGgw"
-                alt="Jane Smith"
+                alt="Haripriya"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-purple-600 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  Jane Smith
+                  Haripriya
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">Data Analyst</p>
               </div>
@@ -68,14 +68,14 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/5905497/pexels-photo-5905497.jpeg?_gl=1*1y0yhiu*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDgxNTYkajQ5JGwwJGgw"
-                alt="Michael Lee"
+                alt="Karthick"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-blue-600 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  Michael Lee
+                  Karthick
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">
                   UI/UX Designer
@@ -93,17 +93,17 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/4567890/pexels-photo-4567890.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Sarah Johnson"
+                alt="Nimalan"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-green-500 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  Sarah Johnson
+                  Nimalan
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">
-                  Marketing Specialist
+                  Mechanical Engineer
                 </p>
               </div>
             </div>
@@ -118,14 +118,14 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/3783725/pexels-photo-3783725.jpeg?_gl=1*bzfg42*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDgxODgkajE3JGwwJGgw"
-                alt="David Kim"
+                alt="Divya"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  David Kim
+                  Divya
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">
                   Full Stack Developer
@@ -143,14 +143,14 @@ export default function Testimonial() {
             <div className="flex items-center mb-4">
               <Image
                 src="https://images.pexels.com/photos/6789012/pexels-photo-6789012.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Emily Carter"
+                alt="Nivetha"
                 width={48} // 👈 Required
                 height={48} // 👈 Required
                 className="w-12 h-12 rounded-full border-2 border-red-500 object-cover"
               />
               <div className="ml-3">
                 <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">
-                  Emily Carter
+                  Nivetha
                 </h4>
                 <p className="text-xs sm:text-sm text-gray-500">
                   Project Manager

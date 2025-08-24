@@ -99,26 +99,31 @@ const navLinks = [
         label: "For Colleges & Universities",
         href: "/services",
         section: "#colleges-universities",
+        menuClick: true,
       },
       {
         label: "For Companies & Corporates",
         href: "/services",
         section: "#corporates",
+        menuClick: true,
       },
       {
         label: "For Startups",
         href: "/services",
         section: "#startups",
+        menuClick: true,
       },
       {
         label: "For Schools",
         href: "/services",
         section: "#schools",
+        menuClick: true,
       },
       {
         label: "For Professionals",
         href: "/services",
         section: "#professionals",
+        menuClick: true,
       },
     ],
   },
@@ -257,13 +262,22 @@ const Header = () => {
                   </AnimatePresence>
                 </>
               ) : (
-                <a
-                  href={link.href}
-                  // className="font-semibold text-xs lg:text-sm xl:text-base bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg hover:from-blue-600 hover:to-blue-700 transform hover:scale-[1.02] transition-all duration-300"
-                  className="font-semibold text-xs lg:text-sm xl:text-base bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300"
-                >
-                  {link.label}
-                </a>
+                <>
+                  <button
+                    className="inline-flex items-center justify-center 
+  font-semibold text-xs lg:text-sm xl:text-base 
+  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] 
+  text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg 
+  transition-all duration-300 transform 
+  hover:scale-[1.02] hover:shadow-xl   
+  hover:cursor-pointer"
+                    onClick={() => {
+                      window.location.href = link.href;
+                    }}
+                  >
+                    {link.label}
+                  </button>
+                </>
               )}
             </div>
           ))}
