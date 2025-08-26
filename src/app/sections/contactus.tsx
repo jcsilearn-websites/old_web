@@ -74,7 +74,7 @@ export default function ContactUs() {
         },
         error: (err) => {
           setLoading(false);
-          console.error("FAILED...", err.text);
+          console.error("FAILED...", err);
           return "Failed to Submit... ❌ Try Again";
         },
       },

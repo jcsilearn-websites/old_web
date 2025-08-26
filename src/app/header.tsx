@@ -18,27 +18,10 @@ const navLinks = [
     href: "/about",
     type: "dropdown",
     items: [
-      {
-        label: "About Us",
-        href: "/about",
-      },
-      {
-        label: "Our Journey",
-        href: "/about/journey",
-      },
-      {
-        label: "Our Founders",
-        href: "/about/founders",
-      },
-      {
-        label: "Our Vision",
-        href: "/about/vision",
-      },
-      // {
-      //   label: "Our Identity",
-      //   href: "/about/identity",
-      // },
-      //Removed as per documentation
+      { label: "About Us", href: "/about" },
+      { label: "Our Journey", href: "/about/journey" },
+      { label: "Our Founders", href: "/about/founders" },
+      { label: "Our Vision", href: "/about/vision" },
     ],
   },
   {
@@ -135,7 +118,11 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null); // desktop dropdown
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // mobile menu
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(
+    null
+  ); // mobile submenu
   const [currentSection, setCurrentSection] = useState("");
   const headerRef = useRef<HTMLElement>(null);
 
@@ -150,7 +137,6 @@ const Header = () => {
 
         if (scrollPosition >= sectionTop - sectionHeight / 2) {
           setCurrentSection(section.id);
-          console.log(currentSection);
         }
       });
     };
@@ -173,12 +159,21 @@ const Header = () => {
     };
   }, [currentSection]);
 
+  // Desktop
   const toggleDropdown = (label: string) => {
     setOpenDropdown(openDropdown === label ? null : label);
   };
-
   const closeDropdown = () => {
     setOpenDropdown(null);
+  };
+
+  // Mobile
+  const toggleMobileSubmenu = (label: string) => {
+    setOpenMobileSubmenu(openMobileSubmenu === label ? null : label);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setOpenMobileSubmenu(null);
   };
 
   const menuSelect = (item: NavItem) => {
@@ -210,7 +205,7 @@ const Header = () => {
           />
         </div>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-3 lg:gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <div key={link.label} className="relative">
@@ -244,7 +239,7 @@ const Header = () => {
                             <motion.a
                               key={item.label}
                               href={item.href}
-                              className="block px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-100   transition-colors duration-150"
+                              className="block px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-100 transition-colors duration-150"
                               onClick={() => {
                                 closeDropdown();
                                 menuSelect(item);
@@ -262,22 +257,20 @@ const Header = () => {
                   </AnimatePresence>
                 </>
               ) : (
-                <>
-                  <button
-                    className="inline-flex items-center justify-center 
-  font-semibold text-xs lg:text-sm xl:text-base 
-  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] 
-  text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg 
-  transition-all duration-300 transform 
-  hover:scale-[1.02] hover:shadow-xl   
-  hover:cursor-pointer"
-                    onClick={() => {
-                      window.location.href = link.href;
-                    }}
-                  >
-                    {link.label}
-                  </button>
-                </>
+                <button
+                  className="inline-flex items-center justify-center 
+                    font-semibold text-xs lg:text-sm xl:text-base 
+                    bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] 
+                    text-white px-3 lg:px-4 xl:px-6 py-2 rounded-xl shadow-lg 
+                    transition-all duration-300 transform 
+                    hover:scale-[1.02] hover:shadow-xl   
+                    hover:cursor-pointer"
+                  onClick={() => {
+                    window.location.href = link.href;
+                  }}
+                >
+                  {link.label}
+                </button>
               )}
             </div>
           ))}
@@ -286,28 +279,22 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden p-1 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          onClick={() =>
-            setOpenDropdown(openDropdown === "mobile" ? null : "mobile")
-          }
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <div className="w-5 h-5 sm:w-6 sm:h-6 flex flex-col justify-center items-center">
             <span
               className={`block w-4 sm:w-5 h-0.5 bg-gray-600 transition-all duration-300 ${
-                openDropdown === "mobile"
-                  ? "rotate-45 translate-y-1"
-                  : "-translate-y-1"
+                isMobileMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
               }`}
             ></span>
             <span
               className={`block w-4 sm:w-5 h-0.5 bg-gray-600 transition-all duration-300 ${
-                openDropdown === "mobile" ? "opacity-0" : "opacity-100"
+                isMobileMenuOpen ? "opacity-0" : "opacity-100"
               }`}
             ></span>
             <span
               className={`block w-4 sm:w-5 h-0.5 bg-gray-600 transition-all duration-300 ${
-                openDropdown === "mobile"
-                  ? "-rotate-45 -translate-y-1"
-                  : "translate-y-1"
+                isMobileMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
               }`}
             ></span>
           </div>
@@ -316,7 +303,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {openDropdown === "mobile" && (
+        {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
@@ -331,19 +318,17 @@ const Header = () => {
                     <div>
                       <button
                         className="w-full text-left font-semibold text-sm sm:text-base text-gray-700 py-2 flex items-center justify-between"
-                        onClick={() => toggleDropdown(`mobile-${link.label}`)}
+                        onClick={() => toggleMobileSubmenu(link.label)}
                       >
                         {link.label}
                         <FaChevronDown
                           className={`w-3 h-3 transition-transform duration-200 ${
-                            openDropdown === `mobile-${link.label}`
-                              ? "rotate-180"
-                              : ""
+                            openMobileSubmenu === link.label ? "rotate-180" : ""
                           }`}
                         />
                       </button>
                       <AnimatePresence>
-                        {openDropdown === `mobile-${link.label}` && (
+                        {openMobileSubmenu === link.label && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
@@ -356,7 +341,10 @@ const Header = () => {
                                 key={item.label}
                                 href={item.href}
                                 className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 py-1"
-                                onClick={closeDropdown}
+                                onClick={() => {
+                                  menuSelect(item);
+                                  closeMobileMenu();
+                                }}
                               >
                                 {item.label}
                               </a>
@@ -369,7 +357,7 @@ const Header = () => {
                     <a
                       href={link.href}
                       className="block font-semibold text-sm sm:text-base text-gray-700 hover:text-pink-600 py-2"
-                      onClick={closeDropdown}
+                      onClick={closeMobileMenu}
                     >
                       {link.label}
                     </a>
