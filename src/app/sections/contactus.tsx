@@ -1,17 +1,111 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactUs() {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("");
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, ""); // only digits
+    if (value.length <= 10) {
+      setPhone(value);
+    }
+  };
+
+  //Emailjs Function
+  const EmailCall = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Current date in dd:mm:yyyy format
+    const date = new Date().toLocaleDateString("en-GB").replace(/\//g, ":");
+    const CurrentYear = new Date().getFullYear().toString(); // make sure it's string
+
+    // Add a hidden input field dynamically for date
+    if (formRef.current) {
+      let hiddenInput =
+        formRef.current.querySelector<HTMLInputElement>("input[name='date']");
+      let yearInput =
+        formRef.current.querySelector<HTMLInputElement>("input[name='year']");
+
+      // Create date input if it doesn't exist
+      if (!hiddenInput) {
+        hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "date";
+        formRef.current.appendChild(hiddenInput);
+      }
+
+      // Create year input if it doesn't exist
+      if (!yearInput) {
+        yearInput = document.createElement("input");
+        yearInput.type = "hidden";
+        yearInput.name = "year";
+        formRef.current.appendChild(yearInput);
+      }
+
+      // ✅ assign values
+      hiddenInput.value = date;
+      yearInput.value = CurrentYear;
+    }
+
+    setLoading(true);
+
+    toast.promise(
+      emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        }
+      ),
+      {
+        loading: "Submitting form... 🚀",
+        success: () => {
+          formRef.current?.reset();
+          setPhone("");
+          setLoading(false);
+          return "Submitted Successfully 🎉";
+        },
+        error: (err) => {
+          setLoading(false);
+          console.error("FAILED...", err.text);
+          return "Failed to Submit... ❌ Try Again";
+        },
+      },
+      {
+        position: "top-center", // optional toast position
+        style: {
+          background:
+            "linear-gradient(to right, #0a0b68ff, #1026b3ff, #0a0b68ff)",
+          color: "#ffffff", // white text works best on dark bg
+          fontWeight: "600",
+          borderRadius: "12px",
+          padding: "12px 16px",
+          boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+        },
+        iconTheme: {
+          primary: "#FFD700", // gold background for icon
+          secondary: "#0a0b68", // dark navy checkmark
+        },
+      }
+    );
+  };
+
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
+      <Toaster /> {/* Toast container */}
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
         <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-200/20 rounded-full blur-3xl" />
       </div>
-
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -103,13 +197,16 @@ export default function ContactUs() {
               </div>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-white/20">
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
               Send us a Message
             </h2>
-            <form className="space-y-3 sm:space-y-4 lg:space-y-6">
+            <form
+              className="space-y-3 sm:space-y-4 lg:space-y-6"
+              ref={formRef}
+              onSubmit={EmailCall}
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                 <div>
                   <label
@@ -119,10 +216,15 @@ export default function ContactUs() {
                     First Name
                   </label>
                   <input
+                    disabled={loading}
+                    autoComplete="off"
                     type="text"
                     id="firstName"
                     name="firstName"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
                     placeholder="Enter your first name"
                     required
                   />
@@ -135,16 +237,20 @@ export default function ContactUs() {
                     Last Name
                   </label>
                   <input
+                    disabled={loading}
+                    autoComplete="off"
                     type="text"
                     id="lastName"
                     name="lastName"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-gray-200 border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
                     placeholder="Enter your last name"
                     required
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="email"
@@ -153,15 +259,19 @@ export default function ContactUs() {
                   Email Address
                 </label>
                 <input
+                  disabled={loading}
+                  autoComplete="off"
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
                   placeholder="Enter your email address"
                   required
                 />
               </div>
-
               <div>
                 <label
                   htmlFor="phone"
@@ -170,11 +280,22 @@ export default function ContactUs() {
                   Phone Number
                 </label>
                 <input
-                  type="tel"
+                  disabled={loading}
+                  autoComplete="off"
+                  type="text"
                   id="phone"
                   name="phone"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
-                  placeholder="Enter your phone number"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  minLength={10}
+                  maxLength={10}
+                  pattern="[6-9][0-9]{9}"
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+                  placeholder="+91 XXXXXXXXXX"
+                  required
                 />
               </div>
 
@@ -186,9 +307,13 @@ export default function ContactUs() {
                   Subject
                 </label>
                 <select
+                  disabled={loading}
                   id="subject"
                   name="subject"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border  text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base"
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
                   required
                 >
                   <option value="" className="text-black">
@@ -220,20 +345,32 @@ export default function ContactUs() {
                   Message
                 </label>
                 <textarea
+                  disabled={loading}
+                  autoComplete="off"
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 text-xs sm:text-sm lg:text-base resize-none"
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border text-gray-200 border-gray-300 
+              focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 
+              text-xs sm:text-sm lg:text-base 
+              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
                   placeholder="Tell us about your requirements..."
                   required
                 ></textarea>
               </div>
+              <input type="hidden" name="date" />
+              <input type="hidden" name="year" />
 
               <button
                 type="submit"
-                className="w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl  bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:from-pink-600 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300"
+                disabled={loading}
+                className={`w-full py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold text-sm sm:text-base lg:text-lg shadow-lg transform hover:scale-[1.02] transition-all duration-300 ${
+                  loading
+                    ? "opacity-70 cursor-not-allowed"
+                    : "hover:from-pink-600 hover:to-purple-700"
+                }`}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
