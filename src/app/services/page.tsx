@@ -18,7 +18,7 @@ export default function ServicesPage() {
 
   const contentArray = [
     {
-      title: "For Colleges & Universities",
+      title: "For Universities",
       description:
         "Enhance your institution's placement readiness with our comprehensive training programs designed specifically for academic environments.",
       points: [
@@ -28,7 +28,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: "For Companies & Corporates",
+      title: "For Corporates",
       description:
         "Upskill your workforce with industry-specific training programs that drive productivity and innovation.",
       points: [
@@ -83,7 +83,7 @@ export default function ServicesPage() {
       "flex flex-col justify-between h-full min-h-[420px] backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl  hover:shadow-2xl transition-all duration-300";
 
     const activeClasses =
-      "bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] shadow-[0_20px_40px_rgba(0,0,0,0.4)] scale-110 -translate-y-1 z-10 border-8 border-[#FFD700] rounded-3xl p-4 sm:p-6 lg:p-8 transition-all duration-300";
+      "bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] shadow-[0_20px_40px_rgba(0,0,0,0.4)] scale-110 -translate-y-1 z-10  rounded-3xl p-4 sm:p-6 lg:p-8 transition-all duration-300";
     const inactiveClasses =
       "bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]  border border-white/20";
 
@@ -104,7 +104,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl   2xl:text-6xl font-bold bg-gradient-to-r  from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h1 className="inline-block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
             Comprehensive Training Solutions
           </h1>
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
@@ -285,13 +285,13 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold rounded-xl hover:transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
             >
               Contact Us Today
             </Link>
             <Link
               href="/"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-pink-500 text-pink-600 font-semibold rounded-xl hover:bg-pink-500 hover:text-white transition-all duration-300 text-sm sm:text-base"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold rounded-xl hover:transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
             >
               Back to Home
             </Link>

@@ -79,13 +79,13 @@ const navLinks = [
     type: "dropdown",
     items: [
       {
-        label: "For Colleges & Universities",
+        label: "For Universities",
         href: "/services",
         section: "#colleges-universities",
         menuClick: true,
       },
       {
-        label: "For Companies & Corporates",
+        label: "For Corporates",
         href: "/services",
         section: "#corporates",
         menuClick: true,

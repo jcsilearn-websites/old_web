@@ -14,14 +14,14 @@ import {
 const subjects = [
   {
     icon: <FaBook />,
-    title: "For Colleges & Universities",
+    title: "For Universities",
     desc: "Empowering students for campus success.Practical training programs that boost placement outcomes and bridge the industry-academia gap.",
     color: "from-purple-200 to-purple-100",
     bgColor: "bg-purple-50",
   },
   {
     icon: <FaUser />,
-    title: "For Companies & Corporates",
+    title: "For Corporates",
     desc: "Build a future-ready workforce.Tailored learning solutions that strengthen skills, leadership, and workplace performance.",
     color: "from-pink-200 to-pink-100",
     bgColor: "bg-pink-50",

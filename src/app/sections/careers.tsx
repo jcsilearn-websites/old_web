@@ -201,7 +201,7 @@ export default function Careers() {
                         <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-1 leading-relaxed">
                           {course.desc.replace(/"/g, "&quot;")}
                         </p>
-                        <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
+                        <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
                           Apply Now
                         </button>
                       </div>
@@ -222,150 +222,8 @@ export default function Careers() {
             </div>
           </div>
         </div>
-
-        {/* Two Column Layout for How to Apply & Join Us */}
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
-          {/* How to Apply Card */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 flex flex-col justify-center">
-            <div className="flex items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
-              {/* Left side (icon + title) */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <FaEnvelope className="text-white text-lg sm:text-xl" />
-                </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                  How to Apply
-                </h3>
-              </div>
-
-              {/* Right side (toggle button) */}
-              <div>
-                <button
-                  onClick={() => setIsToggled(!isToggled)}
-                  className={`relative inline-flex h-8 w-[80px] items-center rounded-full transition-colors duration-300 focus:outline-none
-          ${
-            isToggled
-              ? "bg-gradient-to-r from-purple-500 to-pink-600"
-              : "bg-gray-300"
-          }`}
-                >
-                  {/* Circle */}
-                  <span
-                    className={`absolute left-1 top-1 h-6 w-6 rounded-full bg-white shadow-md transition-transform duration-300
-            ${isToggled ? "translate-x-[49px]" : "translate-x-0"}`}
-                  />
-
-                  {/* Text inside toggle */}
-                  <span
-                    className={`absolute inset-0 flex items-center justify-center text-xs font-semibold transition-colors duration-300 select-none
-            ${isToggled ? "text-white" : "text-gray-700"}`}
-                  >
-                    {isToggled ? "Trainer" : "Intern"}
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            {/* Switchable Content */}
-            <div className="space-y-3 sm:space-y-4">
-              {!isToggled ? (
-                <>
-                  {/* Internship Content */}
-                  <span className="text-lg sm:text-l lg:text-xl font-semibold text-gray-800">
-                    Student Internship (Content Creator / Digital Marketer /
-                    Graphic Designer)
-                  </span>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                    <span className="font-semibold">Type:</span> Remote, 1 Month
-                    |<span className="font-semibold ml-2">For:</span> Students
-                    (2nd Year / Pre-final Year)
-                  </p>
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-3 sm:p-4 border border-blue-100">
-                    <ul className="list-disc list-inside space-y-1 text-gray-700 text-xs sm:text-sm">
-                      <li>
-                        Send your resume + cover letter to{" "}
-                        <a
-                          href="mailto:instituteoflearn@gmail.com"
-                          className="inline text-blue-600 hover:text-blue-700 font-semibold underline transition-colors duration-300"
-                        >
-                          instituteoflearn@gmail.com
-                        </a>
-                      </li>
-                      <li>
-                        Subject Line:
-                        <span className="ml-0.5 italic">
-                          “Student Intern Application – [Your Name]”
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Trainer Role Content */}
-                  <span className="text-lg sm:text-l lg:text-xl font-semibold text-gray-800">
-                    Trainer Role (Aptitude / Logical / Verbal / Soft Skills /
-                    Technical / DSA)
-                  </span>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                    <span className="font-semibold">Type:</span>{" "}
-                    Part-time/Contract |{" "}
-                    <span className="font-semibold ml-2">For:</span>{" "}
-                    Freshers/Experienced Trainers
-                  </p>
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-3 sm:p-4 border border-blue-100">
-                    <p className="text-gray-700 text-xs sm:text-sm">
-                      • Fill out the online application form (link below)
-                      <br />• Upload your resume directly in the form
-                    </p>
-                    <a
-                      href="https://forms.gle/iZayqCsNpr1MzZXT6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 px-4 py-2 text-sm font-semibold text-white rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition"
-                    >
-                      Apply for Trainer Role
-                    </a>
-                  </div>
-                </>
-              )}
-              <span className="text-l sm:text-l lg:text-1xl font-semibold text-gray-800">
-                Current Openings
-              </span>
-              <span className="px-4 py-1.5 rounded-full m-2 text-g sm:text-l font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
-                {count}
-              </span>
-            </div>
-          </div>
-
-          {/* Join Us Card */}
-          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-center">
-            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <FaUsers className="text-white text-lg sm:text-xl" />
-              </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
-                Start Your Path to Success
-              </h3>
-            </div>
-            <div className="space-y-3 sm:space-y-4">
-              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
-                Whether you are a student preparing to enter the workforce or a
-                professional seeking to enhance your skills, JCS iLEARN is your
-                trusted partner in career development.
-              </p>
-              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
-                Join us and take the first step towards a successful and
-                fulfilling career.
-              </p>
-              <button className="mt-3 sm:mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit text-sm sm:text-base">
-                Get Started Today
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-purple-100 via-blue-50/40 to-transparent pointer-events-none"></div>
+      {/* <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-purple-100 via-blue-50/40 to-transparent pointer-events-none"></div> */}
     </section>
   );
 }

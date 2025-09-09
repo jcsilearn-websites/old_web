@@ -52,13 +52,15 @@ export default function ProgramsPage() {
         "Time Management & Etiquette",
         "Public Speaking & Confidence Building",
       ],
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
     },
     {
       id: 2,
       title: "AptEdge",
       category: "Aptitude & Reasoning",
       description:
-        "Structured training in arithmetic, data interpretation and analytical thinking to excel in aptitude tests.",
+        "Sharpen quantitative skills, logical reasoning and analytical thinking through structured practice designed to build speed, accuracy and test confidence.",
       icon: "/calculator.png",
       topicsCovered: [
         "Number system",
@@ -68,13 +70,15 @@ export default function ProgramsPage() {
         "Ratio & Proportion",
         "Speed Math",
       ],
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
     },
     {
       id: 3,
       title: "CrackIt",
       category: "Aptitude & Reasoning",
       description:
-        "Build problem-solving strength with puzzles, patterns, critical thinking exercises and strategy-based learning.",
+        "Strengthen problem-solving skills through engaging puzzles, pattern recognition, critical thinking exercises, and strategy-based challenges designed to boost analytical abilities effectively.",
       icon: "/puzzle.png",
       topicsCovered: [
         "Data Arrangements & Blood Relation",
@@ -83,13 +87,15 @@ export default function ProgramsPage() {
         "Data Interpretation & Data Sufficiency",
         "Cryptarithmetic",
       ],
+      bgColor: "from-teal-100 to-teal-300",
+      textColor: "text-teal-800",
     },
     {
       id: 4,
       title: "Ace",
       category: "Aptitude & Reasoning",
       description:
-        "Grammar, vocabulary, reading comprehension and sentence correction for top-tier language performance.",
+        "Master grammar, expand vocabulary, enhance reading comprehension, and perfect sentence correction skills to achieve top-tier language proficiency and confident communication.",
       icon: "/open-book.png",
       topicsCovered: [
         "Reading Comprehension",
@@ -99,115 +105,137 @@ export default function ProgramsPage() {
         "Error spotting",
         "Critical Reasoning",
       ],
+      bgColor: "from-purple-100 to-purple-300",
+      textColor: "text-purple-800",
     },
     {
       id: 5,
       title: "Byte",
       category: "Technical Skills",
       description:
-        "Fundamentals of Python, web basics, and logical thinking tailored for absolute beginners.",
+        "Learn Python fundamentals, web basics, and logical problem-solving through beginner-friendly training designed to build a strong technical foundation.",
       icon: "/byte.png",
       topicsCovered: ["Python Basics", "Web Fundamentals", "Logic Building"],
+      bgColor: "from-pink-100 to-pink-300",
+      textColor: "text-pink-800",
     },
     {
       id: 6,
       title: "Codevita",
       category: "Technical Skills",
       description:
-        "Designed for coding contests and technical interviews using C, C++, Java or Python.",
+        "Sharpen coding skills for contests and technical interviews with focused training in C, C++, Java, and Python problem-solving techniques.",
       icon: "/monitor.png",
       topicsCovered: ["Competitive Programming (C, C++, Java, Python)"],
+      bgColor: "from-yellow-100 to-yellow-300",
+      textColor: "text-yellow-800",
     },
     {
       id: 7,
       title: "CodePro",
       category: "Technical Skills",
       description:
-        "In-depth training in Java programming, algorithms and data structures with problem-solving drills.",
+        "Gain in-depth expertise in Java programming, algorithms, and data structures through hands-on problem-solving drills and practical coding exercises.",
       icon: "/curly-bracket.png",
       topicsCovered: [
         "Core Programming",
         "Data Structures & Algorithms (Java)",
       ],
+      bgColor: "from-indigo-100 to-indigo-300",
+      textColor: "text-indigo-800",
     },
     {
       id: 8,
       title: "Stack",
       category: "Technical Skills",
       description:
-        "Hands-on web development from frontend to backend using modern tech stacks.",
+        "Master hands-on web development from frontend to backend, mastering modern technologies and frameworks to build complete, real-world applications.",
       icon: "/computer.png",
       topicsCovered: ["Full Stack Development"],
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
     },
     {
       id: 9,
       title: "Codegenix",
       category: "Technical Skills",
       description:
-        "Project-based learning with tools and techniques in Machine Learning, AI and Data Science.",
+        "Learn Machine Learning, AI, and Data Science through project-based sessions, mastering essential tools, techniques, and real-world applications.",
       icon: "/robot.png",
       topicsCovered: [
         "ML/DS/AI projects",
         "Emerging Tools & Technologies (AI, Data Analytics, Cloud Basics)",
       ],
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
     },
     {
       id: 10,
       title: "Prime",
       category: "Placement & Recruitment",
       description:
-        "Customized sessions aligned with top recruiters' expectations – TCS, Infosys, Wipro, Capgemini & more.",
+        "Get customized training sessions tailored to top recruiters’ expectations, including TCS, Infosys, Wipro, Capgemini, and other leading companies.",
       icon: "/businessman.png",
       topicsCovered: [
         "Company Specific Training (TCS, Infosys, Wipro, etc.)",
         "JD Orientation",
       ],
+      bgColor: "from-orange-100 to-orange-300",
+      textColor: "text-orange-800",
     },
     {
       id: 11,
       title: "Innovate",
       category: "Career Planning",
       description:
-        "Ignite innovation with idea validation, lean business models, pitch decks and problem-solving workshops. Ignite ideas. Build ventures.",
+        "Spark creativity through idea validation, lean business models, pitch deck creation, and problem-solving workshops. Transform ideas into successful ventures.",
       icon: "/light-bulb.png",
       topicsCovered: ["Entrepreneurship & Innovation Bootcamps"],
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
     },
     {
       id: 12,
       title: "Inspire",
       category: "Corporate Readiness",
       description:
-        "Industry speakers, entrepreneurs, and change-makers sharing stories, strategies and wisdom.",
+        "Learn from industry leaders, entrepreneurs, and change-makers as they share impactful stories, strategies, and valuable wisdom to fuel growth and motivation.",
       icon: "/chat.png",
       topicsCovered: [
         "Guest Lectures & Expert Talks",
         "By Industry Experts & Domain Leaders",
         "Topics: Startup, Career Trends, Tech Insights",
       ],
+      bgColor: "from-violet-100 to-violet-300",
+      textColor: "text-violet-800",
     },
     {
       id: 13,
       title: "TalkPro",
       category: "Soft Skills",
       description:
-        "Build clarity, fluency, and effectiveness in both spoken and written English.",
-      icon: "/icons/soft-skills.svg",
+        "Master fluency, clarity and precision in both spoken and written English to communicate confidently across academic, professional and global settings.",
+      icon: "/speaking.png",
       topicsCovered: ["Communication Skills"],
+      bgColor: "from-yellow-100 to-yellow-300",
+      textColor: "text-yellow-800",
     },
     {
       id: 14,
       title: "Voicely",
       category: "Soft Skills",
       description:
-        "Neutralize accents, improve clarity and speak globally with confidence.",
+        "Refine pronunciation, neutralize accents and enhance speech clarity to communicate with confidence and connect effectively in global environments.",
       icon: "/voice.png",
+      bgColor: "from-pink-100 to-pink-300",
+      textColor: "text-pink-800",
     },
     {
       id: 15,
       title: "Corp",
       category: "Corporate Readiness",
       description:
-        "Grooming, ethics, email culture, professional behavior and the essentials of workplace excellence.",
+        "Master workplace excellence through grooming, professional ethics, email etiquette, effective behavior, and essential skills for thriving in corporate environments.",
       icon: "/id-card.png",
       topicsCovered: [
         "Corporate Readiness, Etiquette & Workplace Skills",
@@ -219,44 +247,52 @@ export default function ProgramsPage() {
         "Custom Onboarding & Induction Programs",
         "Workplace Culture & Ethics",
       ],
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
     },
     {
       id: 16,
       title: "Examly",
       category: "Aptitude & Reasoning",
       description:
-        "Time management, study plans, memory techniques and mindset training for academic excellence.",
+        "Enhance academic performance with effective time management, personalized study plans, memory techniques, and mindset training for consistent excellence.",
       icon: "/notes.png",
       topicsCovered: ["TOEFL", "IELTS", "GRE", "Exam Strategy & Study Skills"],
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
     },
     {
       id: 17,
       title: "MockUp",
       category: "Placement & Recruitment",
       description:
-        "Live practice rounds with detailed evaluation, scorecards and personalized feedback. Practice, perform, and perfect your pitch.",
+        "Experience live practice rounds with detailed evaluations, scorecards, and personalized feedback to refine skills, boost confidence, and perfect your pitch.",
       icon: "/theater-mask.png",
       topicsCovered: [
         "Mock GD & PI",
         "Skill Evaluation & Feedback Reports",
         "Interview Preparation (HR & Technical)",
       ],
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
     },
     {
       id: 18,
       title: "PitchPro",
       category: "Placement & Recruitment",
       description:
-        "Train for impactful self-introduction, logical arguments and professional pitching under pressure.",
+        "Master impactful self-introductions, craft logical arguments, and deliver professional pitches confidently, even under high-pressure situations for maximum impact.",
       icon: "/arrow.png",
       topicsCovered: ["Group Discussion Training", "Interview Orientation"],
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
     },
     {
       id: 19,
       title: "Careerly",
       category: "Career Planning",
       description:
-        "Build a standout professional profile and get interview-ready with career coaching and digital presence tips.",
+        "Develop a standout professional profile, enhance your digital presence, and get fully interview-ready with personalized career coaching and guidance.",
       icon: "/career.png",
       topicsCovered: [
         "Career Counseling & Mentorship",
@@ -266,13 +302,15 @@ export default function ProgramsPage() {
         "Portfolio Creation & Branding",
         "Strength Mapping & Confidence Building",
       ],
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
     },
     {
       id: 20,
       title: "Pathcraft",
       category: "School Enrichment",
       description:
-        "Inspire young minds through interactive sessions on careers, college choices and self-discovery.",
+        "Engage young minds with interactive sessions on career guidance, college selection, and self-discovery to empower informed and confident choices.",
       icon: "/compass.png",
       topicsCovered: [
         "Career Discovery Workshops",
@@ -281,6 +319,8 @@ export default function ProgramsPage() {
         "Study Strategy & Time Management",
         "Subject-Specific Foundation Programs",
       ],
+      bgColor: "from-orange-100 to-orange-300",
+      textColor: "text-orange-800",
     },
     {
       id: 21,
@@ -294,6 +334,8 @@ export default function ProgramsPage() {
         "Group Discussions",
         "Interview Mastery Sessions",
       ],
+      bgColor: "from-indigo-100 to-indigo-300",
+      textColor: "text-indigo-800",
     },
     {
       id: 22,
@@ -303,6 +345,8 @@ export default function ProgramsPage() {
         "A transformational program focused on unlocking leadership potential, collaboration, decision-making and problem-solving in real-world team settings.",
       icon: "/rocket.png",
       topicsCovered: ["Leadership Training", "Teamwork Skills"],
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
     },
     {
       id: 23,
@@ -317,6 +361,8 @@ export default function ProgramsPage() {
         "Group Discussion Strategies",
         "Interview Hacks",
       ],
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
     },
     {
       id: 24,
@@ -326,6 +372,8 @@ export default function ProgramsPage() {
         "Self-discovery through standardized tests that reveal personality types, learning styles and career fit — followed by interpretation sessions for clarity and guidance.",
       icon: "/growth.png",
       topicsCovered: ["Psychometric Tests", "Personality Profiling"],
+      bgColor: "from-teal-100 to-teal-300",
+      textColor: "text-teal-800",
     },
     {
       id: 25,
@@ -340,6 +388,8 @@ export default function ProgramsPage() {
         "Communication Skills Assessment",
         "Analytics & Benchmarking",
       ],
+      bgColor: "from-cyan-100 to-cyan-300",
+      textColor: "text-cyan-800",
     },
   ];
 
@@ -840,11 +890,8 @@ export default function ProgramsPage() {
         {/* Header Section */}
         <section className="relative pt-20 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 mt-10">
           <div className="max-w-6xl mx-auto text-center">
-            {/* <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-full mb-4 sm:mb-6">
-            Our Programs
-          </div> */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
-              Our Products & Signature Programs — JCS iLearn
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight inline-block bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+              Our Products & Signature Programs
             </h1>
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
               Empowering learners with skill-based, career-aligned and
@@ -903,41 +950,41 @@ export default function ProgramsPage() {
           {/* Program Cards Grid */}
           <div className={getGridClasses(filteredPrograms.length)}>
             {(filteredPrograms ?? []).map((program, index) => {
-              const colorSchemes = [
-                { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
-                { bg: "from-green-100 to-green-300", text: "text-green-800" },
-                { bg: "from-teal-100 to-teal-300", text: "text-teal-800" },
-                {
-                  bg: "from-purple-100 to-purple-300",
-                  text: "text-purple-800",
-                },
-                { bg: "from-pink-100 to-pink-300", text: "text-pink-800" },
-                {
-                  bg: "from-indigo-100 to-indigo-300",
-                  text: "text-indigo-800",
-                },
-                {
-                  bg: "from-yellow-100 to-yellow-300",
-                  text: "text-yellow-800",
-                },
-                { bg: "from-red-100 to-red-300", text: "text-red-800" },
-                {
-                  bg: "from-violet-100 to-violet-300",
-                  text: "text-violet-800",
-                },
-                {
-                  bg: "from-orange-100 to-orange-300",
-                  text: "text-orange-800",
-                },
-                {
-                  bg: "from-emerald-100 to-emerald-300",
-                  text: "text-emerald-800",
-                },
-                { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
-              ];
+              // const colorSchemes = [
+              //   { bg: "from-blue-100 to-blue-300", text: "text-blue-800" },
+              //   { bg: "from-green-100 to-green-300", text: "text-green-800" },
+              //   { bg: "from-teal-100 to-teal-300", text: "text-teal-800" },
+              //   {
+              //     bg: "from-purple-100 to-purple-300",
+              //     text: "text-purple-800",
+              //   },
+              //   { bg: "from-pink-100 to-pink-300", text: "text-pink-800" },
+              //   {
+              //     bg: "from-indigo-100 to-indigo-300",
+              //     text: "text-indigo-800",
+              //   },
+              //   {
+              //     bg: "from-yellow-100 to-yellow-300",
+              //     text: "text-yellow-800",
+              //   },
+              //   { bg: "from-red-100 to-red-300", text: "text-red-800" },
+              //   {
+              //     bg: "from-violet-100 to-violet-300",
+              //     text: "text-violet-800",
+              //   },
+              //   {
+              //     bg: "from-orange-100 to-orange-300",
+              //     text: "text-orange-800",
+              //   },
+              //   {
+              //     bg: "from-emerald-100 to-emerald-300",
+              //     text: "text-emerald-800",
+              //   },
+              //   { bg: "from-cyan-100 to-cyan-300", text: "text-cyan-800" },
+              // ];
 
-              const colorScheme =
-                colorSchemes[program.id % colorSchemes.length];
+              // const colorScheme =
+              //   colorSchemes[program.id % colorSchemes.length];
 
               // Default class for normal grid
               let cardClasses = "";
@@ -956,53 +1003,36 @@ export default function ProgramsPage() {
               return (
                 <div
                   key={program.id}
-                  className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[450px]  justify-center min-h-[350px] ${cardClasses}`}
-
-                  // className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[400px] flex col-span-6 md:col-span-2  ${cardClasses}`}
+                  className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[450px] justify-center min-h-[350px] ${cardClasses}`}
                 >
                   <div
-                    className={`p-8 sm:p-10 bg-gradient-to-b ${colorScheme.bg}  h-full w-full flex flex-col justify-center`}
+                    className={`p-8 sm:p-10 bg-gradient-to-b ${program.bgColor} h-full w-full flex flex-col`}
                   >
-                    <div className="text-center flex flex-col h-full">
+                    <div className="flex flex-col items-center">
                       {/* Icon */}
                       <div className="mb-6">
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center mx-auto">
+                        <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full flex items-center justify-center mx-auto">
                           <Image
                             src={program.icon}
                             alt={program.category}
-                            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-                            width={40}
-                            height={40}
+                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                            width={80} // updated
+                            height={80} // updated
                           />
                         </div>
                       </div>
-                      <div className="flex flex-col h-full">
-                        {/* Title Section */}
-                        <div>
-                          <h3
-                            className={`text-lg sm:text-xl font-bold mb-3 ${colorScheme.text} leading-tight`}
-                          >
-                            {program.title}
-                          </h3>
-                        </div>
 
-                        {/* Push description to bottom */}
-                        <div className="mt-auto">
-                          <p className="text-black text-sm sm:text-base font-medium leading-normal mb-3">
-                            {program.description}
-                          </p>
-                        </div>
-                      </div>
+                      {/* Title */}
+                      <h2
+                        className={`text-xl sm:text-2xl font-bold mb-3 ${program.textColor} text-center leading-tight`}
+                      >
+                        {program.title}
+                      </h2>
 
-                      {/* {program?.topicsCovered && (
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
-                          {program?.topicsCovered.map((topic, idx) => (
-                            <li key={idx} className="pl-1">
-                              {topic}
-                            </li>
-                          ))}
-                        </ul>
-                      )} */}
+                      {/* Description */}
+                      <p className="text-black text-sm sm:text-base font-medium text-center leading-normal mt-16">
+                        {program.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1014,57 +1044,6 @@ export default function ProgramsPage() {
         {/* About Our Programs */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
           {dynamicContent(activeFilter)}
-          {/* <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div
-            className={
-              customStyleEven(activeFilter)
-                ? "order-1 lg:order-1"
-                : "order-2 lg:order-2"
-            }
-          >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-              🧠 About Our Programs
-            </h2>
-            <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
-              <p className="text-sm sm:text-base lg:text-lg">
-                At JCS iLearn, we believe that impactful education isn't
-                one-size-fits-all — it's modular, tailored and deeply
-                outcome-driven.
-              </p>
-              <p className="text-sm sm:text-base lg:text-lg">
-                That's why we've designed JCS iLearn as a curated suite of 25+
-                training programs, each carefully crafted to develop a specific
-                skill set, career goal or learning outcome.
-              </p>
-              <p className="text-sm sm:text-base lg:text-lg">
-                Whether you're a student looking to build a strong technical
-                foundation or an institution aiming to boost campus placement
-                readiness, our offerings are structured to serve your goals with
-                focus and flexibility.
-              </p>
-            </div>
-          </div>
-          <div
-            className={`relative ${
-              customStyleEven(activeFilter)
-                ? "order-2 lg:order-2"
-                : "order-1 lg:order-1"
-            }`}
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-              alt="Students learning and collaborating"
-              width={500}
-              height={400}
-              className="rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-none"
-            />
-            <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-xl border border-white/20">
-              <p className="text-gray-700 font-semibold italic text-xs sm:text-sm lg:text-base">
-                "Modular, tailored, and outcome-driven learning"
-              </p>
-            </div>
-          </div>
-        </div> */}
         </section>
 
         {/* What Makes Us Unique */}
@@ -1173,13 +1152,13 @@ export default function ProgramsPage() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm sm:text-base"
                 >
                   Get Started Today
                 </Link>
                 <Link
                   href="/"
-                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 text-sm sm:text-base"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm sm:text-base"
                 >
                   Back to Home
                 </Link>

@@ -49,7 +49,7 @@ const AboutUs = () => {
           onClick={() => {
             window.location.href = "/about";
           }}
-          className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 w-fit text-sm sm:text-base"
+          className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 w-fit text-sm sm:text-base"
         >
           Learn More
           <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
