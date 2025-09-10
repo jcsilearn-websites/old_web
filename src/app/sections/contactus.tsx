@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
+import * as emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactUs() {
@@ -55,13 +55,29 @@ export default function ContactUs() {
 
     setLoading(true);
 
+    // Check if EmailJS is configured
+    if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+      toast.error("Email service not configured. Please contact us directly.", {
+        position: "top-center",
+        style: {
+          background: "linear-gradient(to right, #ef4444, #dc2626)",
+          color: "#ffffff",
+          fontWeight: "600",
+          borderRadius: "12px",
+          padding: "12px 16px",
+        },
+      });
+      setLoading(false);
+      return;
+    }
+
     toast.promise(
       emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         formRef.current!,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
         }
       ),
       {
