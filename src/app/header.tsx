@@ -112,7 +112,7 @@ const navLinks = [
   },
   {
     label: "Get Started",
-    href: "/cta",
+    href: "/contact",
     type: "button",
   },
 ];

@@ -85,12 +85,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/corporate-partnerships"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Corporate Partnerships
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -118,36 +118,36 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1 sm:space-y-2 lg:space-y-3">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/career-guides"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Career Guides
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/student-handbook"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Student Handbook
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/faq"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/support-center"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Support Center
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -175,12 +175,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/refund-policy"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Refund Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
