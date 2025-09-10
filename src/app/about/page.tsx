@@ -52,13 +52,13 @@ export default function AboutPage() {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href="/about/journey"
-                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold rounded-xl hover:transition-all duration-300 text-sm sm:text-base"
               >
                 Learn About Our Journey
               </Link>
               <Link
                 href="/"
-                className="inline-block px-4 sm:px-6 py-2 sm:py-3 border-2 border-pink-500 text-pink-600 font-semibold rounded-xl hover:bg-pink-500 hover:text-white transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white font-semibold rounded-xl hover:transition-all duration-300 text-sm sm:text-base"
               >
                 Back to Home
               </Link>
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <div className="mt-4 sm:mt-6">
                 <Link
                   href="/about/vision"
-                  className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
+                  className="inline-block px-4 sm:px-6 py-2 sm:py-3  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold rounded-xl hover:scale-[1.02] hover:shadow-xl   hover:cursor-pointer transition-all duration-300 text-sm sm:text-base"
                 >
                   Explore Our Vision
                 </Link>
@@ -178,7 +178,8 @@ export default function AboutPage() {
             <div className="mt-4 sm:mt-6">
               <Link
                 href="/about/founders"
-                className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-4 sm:px-6 py-2 sm:py-3  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold rounded-xl                     hover:scale-[1.02] hover:shadow-xl   
+                    hover:cursor-pointer transition-all duration-300 text-sm sm:text-base"
               >
                 Read Full Messages
               </Link>
@@ -187,7 +188,7 @@ export default function AboutPage() {
         </section>
 
         {/* Call to Action Section */}
-        <section className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
+        <section className="bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
               🚀 Ready to Start Your Journey?
@@ -200,13 +201,13 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/about/identity"
-                className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 text-sm sm:text-base"
+                className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Learn More About Us
               </Link>

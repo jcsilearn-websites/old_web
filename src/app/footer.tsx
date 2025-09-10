@@ -2,9 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 // import logo from "../../public/logo.png";
-import footer_logo from "../../public/footer_logo.svg";
+import footerlogonew from "../../public/footer-logo-new.svg";
 
 export default function Footer() {
   return (
@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex justify-center lg:justify-start">
               <div className="flex items-center justify-center">
                 <Image
-                  src={footer_logo}
+                  src={footerlogonew}
                   alt="JCS iLearn Logo"
                   height={700}
                   className="h-32 sm:h-36 lg:h-40 w-auto object-contain drop-shadow-xl"
@@ -36,6 +36,12 @@ export default function Footer() {
                 className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
               >
                 <FaInstagram className="text-white text-xs sm:text-sm lg:text-base" />
+              </a>
+              <a
+                href="#"
+                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+              >
+                <FaYoutube className="text-white text-xs sm:text-sm lg:text-base" />
               </a>
             </div>
           </div>

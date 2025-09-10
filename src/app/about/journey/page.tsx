@@ -15,7 +15,7 @@ export default function JourneyPage() {
       {/* Header Section */}
       <section className="relative pt-20 pb-16 px-4 mt-10">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             The Story Behind JCS iLearn
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
