@@ -15,35 +15,35 @@ const subjects = [
   {
     icon: <FaBook />,
     title: "For Universities",
-    desc: "Empowering students for campus success.Practical training programs that boost placement outcomes and bridge the industry-academia gap.",
+    desc: "Empowering students for campus success. Practical training programs that boost placement outcomes and bridge the industry-academia gap.",
     color: "from-purple-200 to-purple-100",
     bgColor: "bg-purple-50",
   },
   {
     icon: <FaUser />,
     title: "For Corporates",
-    desc: "Build a future-ready workforce.Tailored learning solutions that strengthen skills, leadership, and workplace performance.",
+    desc: "Build a future-ready workforce. Tailored learning solutions that strengthen skills, leadership, and workplace performance.",
     color: "from-pink-200 to-pink-100",
     bgColor: "bg-pink-50",
   },
   {
     icon: <FaHands />,
     title: "For Startups",
-    desc: "Turn ideas into impact.Specialized workshops to sharpen entrepreneurial skills, drive innovation and fuel business growth.",
+    desc: "Turn ideas into impact. Specialized workshops to sharpen entrepreneurial skills, drive innovation and fuel business growth.",
     color: "from-yellow-200 to-yellow-100",
     bgColor: "bg-yellow-50",
   },
   {
     icon: <FaGraduationCap />,
     title: "For Schools",
-    desc: "Shaping young minds for tomorrow.Early career guidance and life skills programs that prepare students for academic and personal success.",
+    desc: "Shaping young minds for tomorrow. Early career guidance and life skills programs that prepare students for academic and personal success.",
     color: "from-blue-200 to-blue-100",
     bgColor: "bg-blue-50",
   },
   {
     icon: <FaCompactDisc />,
     title: "For Professionals",
-    desc: "Grow faster in your career.Focused skill enhancement and certification programs designed to help professionals upskill and advance.",
+    desc: "Grow faster in your career. Focused skill enhancement and certification programs designed to help professionals upskill and advance.",
     color: "from-red-200 to-white-100",
     bgColor: "bg-grey-50",
   },
@@ -77,7 +77,7 @@ export default function ServicesCarousel() {
             <FaGraduationCap className="text-purple-600" />
             Our Services
           </span>
-          <h2 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold pb-1 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-8">
             Comprehensive Training Solutions
           </h2>
           <p className="max-2-3xl text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">

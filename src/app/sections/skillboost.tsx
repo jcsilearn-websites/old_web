@@ -4,8 +4,11 @@ import Image from "next/image";
 import { FaBriefcase, FaUsers, FaLightbulb, FaRocket } from "react-icons/fa";
 import Link from "next/link";
 import whyChooseUs from "../../../public/whyChooseUs.jpg";
+import { useIsMobile } from "../components/MobileScreen";
 
 export default function SkillBoost() {
+  const isMobile = useIsMobile();
+
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
       {/* Decorative background elements */}
@@ -19,13 +22,32 @@ export default function SkillBoost() {
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
-            Boost Your Skills, Accelerate Your Career
+            Boost Your Skills. Accelerate Your Career
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive training programs designed to bridge the gap between
-            education and employability, equipping you with the skills needed to
-            thrive in today&apos;s competitive job market.
-          </p>
+          {isMobile ? (
+            <>
+              <p
+                className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 mx-auto leading-relaxed text-center"
+                style={{
+                  maxWidth: "65ch", // controls width roughly to 3 lines on large screens
+                }}
+              >
+                Comprehensive training programs designed to bridge the gap
+                between education and employability, equipping you with the
+                skills needed to thrive in today's competitive job market.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-center">
+                Comprehensive training programs designed to bridge the gap
+                between <br />
+                education and employability, equipping you with the skills
+                needed to thrive in <br />
+                today&apos;s competitive job market.
+              </p>
+            </>
+          )}
         </div>
 
         {/* Main Content Grid */}
@@ -103,6 +125,9 @@ export default function SkillBoost() {
             <div className="pt-4 sm:pt-6">
               <Link
                 href="/programs"
+                onClick={() => {
+                  localStorage.setItem("defaultFilter", "All Programs");
+                }}
                 className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff]   text-white font-semibold shadow-lg hover:from-pink-600 hover:to-purple-700 text-sm sm:text-base lg:text-lg transform hover:scale-[1.02] transition-all duration-300"
               >
                 Explore Our Programs

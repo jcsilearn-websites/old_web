@@ -12,7 +12,8 @@ export default function ProgramsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const storedFilter = localStorage.getItem("defaultFilter");
+    const storedFilter =
+      localStorage.getItem("defaultFilter") || "All Programs";
 
     if (storedFilter) {
       setActiveFilter(storedFilter);
@@ -441,7 +442,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -496,7 +497,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -551,7 +552,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -606,7 +607,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -661,7 +662,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -715,7 +716,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -770,7 +771,7 @@ export default function ProgramsPage() {
               }
             >
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                {` About ${activeFilter} programs`}
+                {` About ${activeFilter} Programs`}
               </h2>
               <div className="space-y-3 sm:space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-sm sm:text-base lg:text-lg">
@@ -1012,12 +1013,13 @@ export default function ProgramsPage() {
                       {/* Icon */}
                       <div className="mb-6">
                         <div className="w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full flex items-center justify-center mx-auto">
+                          {" "}
                           <Image
                             src={program.icon}
                             alt={program.category}
-                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
-                            width={80} // updated
-                            height={80} // updated
+                            className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+                            width={50}
+                            height={50}
                           />
                         </div>
                       </div>

@@ -1,18 +1,41 @@
 "use client";
 import Image from "next/image";
+import { useIsMobile } from "../components/MobileScreen";
 export default function Testimonial() {
+  const isMobile = useIsMobile();
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6 leading-tight pb-1">
             Listen what People Say about Us!
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            "Hear from our learners who have transformed their careers through
-            our expert-led training. Their success stories reflect the impact of
-            our programs on real-world growth and opportunities."
-          </p>
+          {isMobile ? (
+            <>
+              <p
+                className="text-sm sm:text-base lg:text-lg xl:text-xl
+                text-gray-600 mx-auto leading-relaxed text-center"
+                style={{
+                  maxWidth: "65ch", // controls width roughly to 3 lines on large screens
+                }}
+              >
+                Hear from our learners who have transformed their careers
+                through our expert-led training. Their success stories reflect
+                the impact of our programs on real-world growth and
+                opportunities.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600  mx-auto leading-relaxed text-center">
+                Hear from our learners who have transformed their careers
+                through our <br />
+                expert-led training. Their success stories reflect the impact of
+                our programs on real-world <br />
+                growth and opportunities.
+              </p>
+            </>
+          )}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Testimonial 1 */}

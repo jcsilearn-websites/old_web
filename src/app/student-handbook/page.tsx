@@ -10,6 +10,7 @@ export default function StudentHandbookPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 mt-10">
             Student Handbook
           </h1>
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our Student Handbook is your go-to reference for all academic,
             training, and support-related information. It outlines policies,
@@ -72,7 +73,7 @@ export default function StudentHandbookPage() {
                 </li>
                 <li>
                   <strong>Aptitude Training</strong> – Logical reasoning,
-                  quantitative ability, and problem-solving.
+                  quantitative ability, Verbal Ability and problem-solving.
                 </li>
                 <li>
                   <strong>Recruitment Readiness</strong> – Resume building,
@@ -203,9 +204,9 @@ export default function StudentHandbookPage() {
                   contact forms.
                 </li>
               </ul>
-              <p className="text-gray-700 mt-4">
+              {/* <p className="text-gray-700 mt-4">
                 For queries, write to: <strong>support@jcsilearn.com</strong>
-              </p>
+              </p> */}
             </div>
 
             {/* Placement Support */}
@@ -263,6 +264,22 @@ export default function StudentHandbookPage() {
                   Your growth is our mission – let's learn and succeed together.
                 </p>
               </div>
+            </div>
+            <div className="mt-6 text-center">
+              <a
+                href="/student-handbook.pdf"
+                download
+                // className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 transition"
+                className="inline-flex items-center justify-center 
+                    font-semibold text-xs lg:text-sm xl:text-base 
+                    bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] 
+                    text-white px-6 lg:px-4 xl:px-6 py-3 rounded-xl shadow-lg 
+                    transition-all duration-300 transform 
+                    hover:scale-[1.02] hover:shadow-xl   
+                    hover:cursor-pointer"
+              >
+                Download Handbook (PDF)
+              </a>
             </div>
           </div>
         </div>

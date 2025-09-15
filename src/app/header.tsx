@@ -201,6 +201,7 @@ const Header = () => {
               if (window.location.pathname !== "/") {
                 window.location.href = "/";
               }
+              localStorage.removeItem("defaultFilter");
             }}
           />
         </div>

@@ -86,19 +86,21 @@ export default function SupportCenterPage() {
                 <div className="flex items-center">
                   <span className="text-blue-600 mr-3">📧</span>
                   <span className="text-lg font-semibold">
-                    Email: support@jcsilearn.com
+                    Email: jcsilearn@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-green-600 mr-3">📱</span>
                   <span className="text-lg font-semibold">
-                    WhatsApp Helpline: +91-XXXXXXXXXX
+                    WhatsApp Helpline: +91 75984 98451
                   </span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-purple-600 mr-3">🕒</span>
                   <span className="text-lg font-semibold">
-                    Office Hours: Monday - Friday, 9:00 AM - 6:00 PM
+                    Monday - Friday: 9:00 AM - 5:00 PM
+                    <br />
+                    Saturday: 9:00 AM - 1:00 PM{" "}
                   </span>
                 </div>
               </div>

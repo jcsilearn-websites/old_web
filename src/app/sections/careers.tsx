@@ -13,6 +13,7 @@ import CommunicationImage from "../../../public/CommunicationImage.jpg";
 import AptitudeImage from "../../../public/aptitudeImage.jpg";
 import placementImage from "../../../public/placementImage.jpg";
 import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
+import Link from "next/link";
 
 const courses = [
   {
@@ -128,7 +129,10 @@ export default function Careers() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16">
+      <div
+        className="relative z-10 max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16"
+        id="careers"
+      >
         {/* Header Section */}
         <motion.div
           initial="hidden"
@@ -141,11 +145,13 @@ export default function Careers() {
             <FaBriefcase className="text-purple-600" />
             Career Opportunities
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
-            Explore Our Popular
-            <br />
-            Career Programs
-          </h1>
+          <div className="sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+              Explore Our Popular
+              <br />
+              Career Programs
+            </h1>
+          </div>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your pathway to professional and personal growth through
             comprehensive training modules designed to bridge the gap between
@@ -201,9 +207,11 @@ export default function Careers() {
                         <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-1 leading-relaxed">
                           {course.desc.replace(/"/g, "&quot;")}
                         </p>
-                        <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
-                          Apply Now
-                        </button>
+                        <Link href="/contact">
+                          <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
+                            Apply Now
+                          </button>
+                        </Link>
                       </div>
                     </motion.div>
                   ))}

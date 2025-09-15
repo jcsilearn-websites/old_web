@@ -70,6 +70,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  onClick={() => {
+                    localStorage.setItem("defaultFilter", "All Programs");
+                  }}
                   href="/programs"
                   className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
                 >
