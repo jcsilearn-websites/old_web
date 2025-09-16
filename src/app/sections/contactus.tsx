@@ -56,7 +56,11 @@ export default function ContactUs() {
     setLoading(true);
 
     // Check if EmailJS is configured
-    if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+    if (
+      !process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ||
+      !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
+      !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    ) {
       toast.error("Email service not configured. Please contact us directly.", {
         position: "top-center",
         style: {
@@ -155,27 +159,25 @@ export default function ContactUs() {
                     Address
                   </h3>
                   <p className="text-xs sm:text-sm lg:text-base text-gray-200">
-                    No.10, Udayampalayam Main Road, Sowripalayam
+                    No.10, Udayampalayam Main Road,
                     <br />
-                    Coimbatore, Tamil Nadu - 641028
+                    Sowripalayam, Coimbatore,
                     <br />
-                    India
+                    Tamil Nadu, India - 641028
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <FaPhone className="text-white text-sm sm:text-lg lg:text-xl" />
+                  <FaPhone className="text-white text-sm sm:text-lg lg:text-xl transform -scale-x-100" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white mb-1 sm:mb-2">
                     Phone
                   </h3>
                   <p className="text-xs sm:text-sm lg:text-base text-gray-200">
-                    +91 98765 43210
-                    <br />
-                    +91 87654 32109
+                    +91 75984 98451
                   </p>
                 </div>
               </div>
@@ -189,9 +191,7 @@ export default function ContactUs() {
                     Email
                   </h3>
                   <p className="text-xs sm:text-sm lg:text-base text-gray-200">
-                    info@jcsilearn.com
-                    <br />
-                    support@jcsilearn.com
+                    jcsilearn@gmail.com
                   </p>
                 </div>
               </div>

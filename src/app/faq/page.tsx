@@ -7,9 +7,10 @@ export default function FAQPage() {
       {/* Header Section */}
       <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 mt-10">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 mt-10 leading-tight pb-1">
             Frequently Asked Questions
           </h1>
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Got questions? Our Frequently Asked Questions section covers the
             essentials — from enrollment and course details to internships,
@@ -102,11 +103,9 @@ export default function FAQPage() {
                 7. How can I register for a program?
               </h3>
               <p className="text-gray-700">
-                You can register by contacting us directly via:
-              </p>
-              <p className="text-gray-700 mt-2">📧 support@jcsilearn.com</p>
-              <p className="text-gray-700">
-                or through our online inquiry form on the website.
+                You can register by contacting us directly via : 📧
+                support@jcsilearn.com or through our online inquiry form on the
+                website.
               </p>
             </div>
 
@@ -136,11 +135,8 @@ export default function FAQPage() {
                 10. How can I contact support?
               </h3>
               <p className="text-gray-700 mb-3">
-                For any queries or issues, you can reach us at:
-              </p>
-              <p className="text-gray-700">📧 support@jcsilearn.com</p>
-              <p className="text-gray-700">
-                We'll get back to you within 24–48 hours.
+                For any queries or issues, you can reach us at : 📧
+                support@jcsilearn.com. We'll get back to you within 24–48 hours.
               </p>
             </div>
           </div>

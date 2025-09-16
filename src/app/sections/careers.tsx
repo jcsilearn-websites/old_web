@@ -13,6 +13,7 @@ import CommunicationImage from "../../../public/CommunicationImage.jpg";
 import AptitudeImage from "../../../public/aptitudeImage.jpg";
 import placementImage from "../../../public/placementImage.jpg";
 import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
+import Link from "next/link";
 
 const courses = [
   {
@@ -52,7 +53,15 @@ const courses = [
   },
 ];
 
-const visibleCards = 3;
+// Dynamic visible cards based on screen size
+const getVisibleCards = () => {
+  if (typeof window !== 'undefined') {
+    if (window.innerWidth < 640) return 1; // Mobile: 1 card
+    if (window.innerWidth < 1024) return 2; // Tablet: 2 cards
+    return 3; // Desktop: 3 cards
+  }
+  return 1; // Default for SSR
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -64,6 +73,7 @@ export default function Careers() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [count, setCount] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(1);
   const target = 85; // Your final count number
 
   useEffect(() => {
@@ -80,6 +90,17 @@ export default function Careers() {
 
     return () => clearInterval(timer);
   }, [isToggled]);
+
+  // Handle responsive visible cards
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      setVisibleCards(getVisibleCards());
+    };
+
+    updateVisibleCards();
+    window.addEventListener('resize', updateVisibleCards);
+    return () => window.removeEventListener('resize', updateVisibleCards);
+  }, []);
 
   const handlePrev = () => {
     setDirection(-1);
@@ -101,7 +122,7 @@ export default function Careers() {
 
   const variants: Variants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 400 : -400,
+      x: dir > 0 ? (visibleCards === 1 ? 300 : 400) : (visibleCards === 1 ? -300 : -400),
       opacity: 0,
       position: "absolute" as const,
       transition: { duration: 0.4, type: "tween" },
@@ -113,7 +134,7 @@ export default function Careers() {
       transition: { duration: 0.4, type: "tween" },
     },
     exit: (dir: number) => ({
-      x: dir > 0 ? -400 : 400,
+      x: dir > 0 ? (visibleCards === 1 ? -300 : -400) : (visibleCards === 1 ? 300 : 400),
       opacity: 0,
       position: "absolute" as const,
       transition: { duration: 0.4, type: "tween" },
@@ -128,7 +149,10 @@ export default function Careers() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16">
+      <div
+        className="relative z-10 max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16"
+        id="careers"
+      >
         {/* Header Section */}
         <motion.div
           initial="hidden"
@@ -141,11 +165,13 @@ export default function Careers() {
             <FaBriefcase className="text-purple-600" />
             Career Opportunities
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
-            Explore Our Popular
-            <br />
-            Career Programs
-          </h1>
+          <div className="sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+              Explore Our Popular
+              <br />
+              Career Programs
+            </h1>
+          </div>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your pathway to professional and personal growth through
             comprehensive training modules designed to bridge the gap between
@@ -156,69 +182,154 @@ export default function Careers() {
         {/* Carousel - Full Width */}
         <div className="w-full flex flex-col items-center mb-8 sm:mb-12">
           <div className="relative w-full flex flex-col items-center min-h-[400px] sm:min-h-[500px]">
-            <div className="w-full flex items-center justify-center relative min-h-[350px] sm:min-h-[440px] gap-2 sm:gap-4">
-              <button
-                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-2 sm:p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
-                onClick={handlePrev}
-                aria-label="Previous"
-              >
-                <FaChevronLeft
-                  size={16}
-                  className="text-gray-700 sm:w-5 sm:h-5"
-                />
-              </button>
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                  key={index}
-                  custom={direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.5, type: "tween" }}
-                  className="flex w-full gap-4 sm:gap-6 justify-center"
-                  style={{ minHeight: 320 }}
+            {/* Mobile Layout */}
+            <div className="block sm:hidden w-full">
+              <div className="relative w-full flex items-center justify-center min-h-[380px] px-2">
+                <button
+                  className="absolute left-2 z-20 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300"
+                  onClick={handlePrev}
+                  aria-label="Previous"
                 >
-                  {getVisible().map((course, i) => (
+                  <FaChevronLeft size={14} className="text-gray-700" />
+                </button>
+                
+                <div className="w-full px-12">
+                  <AnimatePresence initial={false} custom={direction}>
                     <motion.div
-                      key={course.title + i}
-                      className="flex flex-col overflow-hidden border border-gray-100 rounded-2xl bg-white/90 backdrop-blur-sm w-full max-w-xs mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                      key={index}
+                      custom={direction}
+                      variants={variants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ duration: 0.5, type: "tween" }}
+                      className="flex justify-center"
                     >
-                      <div className="relative overflow-hidden">
-                        <Image
-                          src={course.img}
-                          alt={course.title}
-                          width={400}
-                          height={224}
-                          className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                      </div>
-                      <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-3 flex-1">
-                        <h3 className="font-bold text-sm sm:text-base lg:text-lg text-gray-900 mb-1 sm:mb-2">
-                          {course.title}
-                        </h3>
-                        <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-1 leading-relaxed">
-                          {course.desc.replace(/"/g, "&quot;")}
-                        </p>
-                        <button className="mt-auto px-4 sm:px-6 py-2 sm:py-3 rounded-xl  bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-xs sm:text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
-                          Apply Now
-                        </button>
-                      </div>
+                      <motion.div className="w-full max-w-sm mx-auto">
+                        <div className="flex flex-col overflow-hidden border border-gray-100 rounded-2xl bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                          <div className="relative overflow-hidden">
+                            <Image
+                              src={courses[index].img}
+                              alt={courses[index].title}
+                              width={400}
+                              height={200}
+                              className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                          </div>
+                          <div className="p-5 flex flex-col gap-3 flex-1">
+                            <h3 className="font-bold text-lg text-gray-900 mb-2">
+                              {courses[index].title}
+                            </h3>
+                            <p className="text-gray-600 text-sm mb-4 flex-1 leading-relaxed">
+                              {courses[index].desc}
+                            </p>
+                            <Link href="/contact">
+                              <button className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300">
+                                Apply Now
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </motion.div>
                     </motion.div>
-                  ))}
-                </motion.div>
-              </AnimatePresence>
-              <button
-                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-2 sm:p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
-                onClick={handleNext}
-                aria-label="Next"
-              >
-                <FaChevronRight
-                  size={16}
-                  className="text-gray-700 sm:w-5 sm:h-5"
-                />
-              </button>
+                  </AnimatePresence>
+                </div>
+                
+                <button
+                  className="absolute right-2 z-20 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300"
+                  onClick={handleNext}
+                  aria-label="Next"
+                >
+                  <FaChevronRight size={14} className="text-gray-700" />
+                </button>
+              </div>
+              
+              {/* Mobile Indicators */}
+              <div className="flex justify-center gap-2 mt-6">
+                {courses.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      setDirection(i > index ? 1 : -1);
+                      setIndex(i);
+                    }}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      i === index ? 'bg-blue-600 w-6' : 'bg-gray-300'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Tablet & Desktop Layout */}
+            <div className="hidden sm:block w-full">
+              <div className="w-full flex items-center justify-center relative min-h-[440px] gap-4">
+                <button
+                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                  onClick={handlePrev}
+                  aria-label="Previous"
+                >
+                  <FaChevronLeft size={16} className="text-gray-700" />
+                </button>
+                
+                <AnimatePresence initial={false} custom={direction}>
+                  <motion.div
+                    key={index}
+                    custom={direction}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.5, type: "tween" }}
+                    className={`flex w-full justify-center ${
+                      visibleCards === 2 ? 'gap-6' : 'gap-8 lg:gap-12'
+                    }`}
+                    style={{ minHeight: 400 }}
+                  >
+                    {getVisible().map((course, i) => (
+                      <motion.div
+                        key={course.title + i}
+                        className={`flex flex-col overflow-hidden border border-gray-100 rounded-2xl bg-white/90 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 group ${
+                          visibleCards === 2 ? 'w-full max-w-sm' : 'w-full max-w-xs'
+                        }`}
+                      >
+                        <div className="relative overflow-hidden">
+                          <Image
+                            src={course.img}
+                            alt={course.title}
+                            width={400}
+                            height={224}
+                            className="w-full h-48 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                        </div>
+                        <div className="p-4 lg:p-6 flex flex-col gap-3 flex-1">
+                          <h3 className="font-bold text-base lg:text-lg text-gray-900 mb-2">
+                            {course.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm mb-4 flex-1 leading-relaxed">
+                            {course.desc}
+                          </p>
+                          <Link href="/contact">
+                            <button className="mt-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#0a0b68] via-[#1026b3] to-[#0a0b68] text-white font-semibold text-sm shadow-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-300 w-fit self-start">
+                              Apply Now
+                            </button>
+                          </Link>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </AnimatePresence>
+                
+                <button
+                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
+                  onClick={handleNext}
+                  aria-label="Next"
+                >
+                  <FaChevronRight size={16} className="text-gray-700" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

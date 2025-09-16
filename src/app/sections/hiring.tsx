@@ -14,6 +14,7 @@ import CommunicationImage from "../../../public/CommunicationImage.jpg";
 import AptitudeImage from "../../../public/aptitudeImage.jpg";
 import placementImage from "../../../public/placementImage.jpg";
 import technialSkillsImage from "../../../public/technialSkillsImage.jpg";
+import Link from "next/link";
 
 const courses = [
   {
@@ -61,13 +62,13 @@ const fadeUp = {
 };
 
 export default function Hiring() {
-  const [selectedRole, setSelectedRole] = useState("intern");
+  const [selectedRole, setSelectedRole] = useState("trainer");
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [count, setCount] = useState(0);
-  const target = 85; // Your final count number
 
   useEffect(() => {
+    const target = selectedRole === "intern" ? 15 : 40; // Your final count number
     let start = 0;
     const end = target;
     const duration = 2000; // in ms
@@ -136,7 +137,7 @@ export default function Hiring() {
             <FaBriefcase className="text-purple-600" />
             We’re Hiring
           </span> */}
-          <h2 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 sm:mb-6 leading-tight pb-1">
             Join Our Growing Team
           </h2>
           <p className="max-2-3xl text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
@@ -147,7 +148,7 @@ export default function Hiring() {
         </div>
 
         {/* Two Column Layout for How to Apply & Join Us */}
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto px-4 sm:px-6">
           {/* How to Apply Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-white/20 flex flex-col justify-between">
             {/* Header */}
@@ -161,14 +162,14 @@ export default function Hiring() {
             </div>
 
             {/* Switchable Content */}
-            <div className="space-y-3 sm:space-y-4 flex-1">
+            <div className="space-y-3 sm:space-y-4 flex-1 min-h-[250px] sm:min-h-[240px] lg:min-h-[260px]">
               {selectedRole === "intern" ? (
                 <>
                   <span className="text-lg sm:text-l lg:text-xl font-semibold text-gray-800">
                     Student Internship (Content Creator / Digital Marketer /
                     Graphic Designer)
                   </span>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mt-2">
                     <span className="font-semibold">Type:</span> Remote, 1 Month
                     |<span className="font-semibold ml-2">For:</span> Students
                     (2nd Year / Pre-final Year)
@@ -199,7 +200,7 @@ export default function Hiring() {
                     Trainer Role (Aptitude / Logical / Verbal / Soft Skills /
                     Technical / DSA)
                   </span>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mt-2">
                     <span className="font-semibold">Type:</span>{" "}
                     Part-time/Contract |
                     <span className="font-semibold ml-2">For:</span>{" "}
@@ -224,19 +225,9 @@ export default function Hiring() {
             </div>
 
             {/* Bottom buttons + Current Openings */}
-            <div className="flex items-center justify-between mt-6 gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-6 gap-4 sm:gap-3">
               {/* Role Buttons */}
               <div className="flex gap-2">
-                <button
-                  onClick={() => setSelectedRole("intern")}
-                  className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 ${
-                    selectedRole === "intern"
-                      ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 hover:text-white"
-                  }`}
-                >
-                  Intern
-                </button>
                 <button
                   onClick={() => setSelectedRole("trainer")}
                   className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 ${
@@ -247,14 +238,24 @@ export default function Hiring() {
                 >
                   Trainer
                 </button>
+                <button
+                  onClick={() => setSelectedRole("intern")}
+                  className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 ${
+                    selectedRole === "intern"
+                      ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white"
+                      : "bg-gray-200 text-gray-800 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 hover:text-white"
+                  }`}
+                >
+                  Intern
+                </button>
               </div>
 
               {/* Current Openings */}
-              <div className="flex items-center ml-4">
-                <span className="text-l sm:text-l lg:text-1xl font-semibold text-gray-800 mr-2">
+              <div className="flex items-center sm:ml-4 flex-nowrap whitespace-nowrap">
+                <span className="text-base sm:text-lg font-semibold text-gray-800 mr-2">
                   Current Openings
                 </span>
-                <span className="px-4 py-1.5 rounded-full text-g sm:text-l font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
+                <span className="px-5 py-1.5 rounded-full font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
                   {count}
                 </span>
               </div>
@@ -281,9 +282,11 @@ export default function Hiring() {
                 Join us and take the first step towards a successful and
                 fulfilling career.
               </p>
-              <button className="mt-3 sm:mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit text-sm sm:text-base">
-                Get Started Today
-              </button>
+              <Link href="contact">
+                <button className="mt-3 sm:mt-4 px-6 sm:px-8 py-2 sm:py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 w-fit text-sm sm:text-base">
+                  Get Started Today
+                </button>
+              </Link>
             </div>
           </div>
         </div>

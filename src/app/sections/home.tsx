@@ -3,6 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const scrollToCareers = () => {
+    const careersSection = document.getElementById("careers");
+    if (careersSection) {
+      careersSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] relative overflow-hidden">
       {/* Soft lighting/texture overlay */}
@@ -32,11 +39,12 @@ export default function Home() {
             tools and insights they need to excel in today&apos;s competitive
             and dynamic job market.
           </p>
-          <Link href="/contact">
-            <button className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl bg-white text-blue-900 font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 text-sm sm:text-base">
-              Explore More
-            </button>
-          </Link>
+          <button
+            className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-xl bg-white text-blue-900 font-semibold shadow-lg hover:bg-gray-100 transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+            onClick={scrollToCareers}
+          >
+            Explore More
+          </button>
         </div>
         <div className="flex-1 flex items-center justify-center w-full lg:w-auto mt-6 lg:mt-0">
           <Image

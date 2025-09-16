@@ -22,7 +22,7 @@ export default function AboutPage() {
             Learn more about us
           </h1>
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Welcome to JCS iLearn—where we turn learning into earning.
+            Welcome to JCS iLearn - where we turn learning into earning.
           </p>
         </div>
       </section>
