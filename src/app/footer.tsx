@@ -19,8 +19,8 @@ export default function Footer() {
                   src={footerlogonew}
                   alt="JCS iLearn Logo"
                   height={700}
-                  className="h-32 sm:h-36 lg:h-40 w-auto object-contain drop-shadow-xl"
-                />
+                  className="h-32 sm:h-36 lg:h-40 w-auto object-contain drop-shadow-xl lg:scale-160 lg:w-full lg:h-auto lg:object-contain"
+                  />
               </div>
             </div>
 

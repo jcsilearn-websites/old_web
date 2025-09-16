@@ -192,8 +192,8 @@ export default function ProgramsPage() {
         "Spark creativity through idea validation, lean business models, pitch deck creation, and problem-solving workshops. Transform ideas into successful ventures.",
       icon: "/light-bulb.png",
       topicsCovered: ["Entrepreneurship & Innovation Bootcamps"],
-      bgColor: "from-red-100 to-red-300",
-      textColor: "text-red-800",
+      bgColor: "from-emerald-100 to-emerald-300",
+      textColor: "text-emerald-800",
     },
     {
       id: 12,
