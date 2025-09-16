@@ -53,8 +53,9 @@ export default function ProgramsPage() {
         "Time Management & Etiquette",
         "Public Speaking & Confidence Building",
       ],
-      bgColor: "from-blue-100 to-blue-300",
-      textColor: "text-blue-800",
+      bgGradient: true,
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
     },
     {
       id: 2,
@@ -71,8 +72,9 @@ export default function ProgramsPage() {
         "Ratio & Proportion",
         "Speed Math",
       ],
-      bgColor: "from-green-100 to-green-300",
-      textColor: "text-green-800",
+      bgGradient: true,
+      bgColor: "from-teal-100 to-teal-300",
+      textColor: "text-teal-800",
     },
     {
       id: 3,
@@ -88,8 +90,9 @@ export default function ProgramsPage() {
         "Data Interpretation & Data Sufficiency",
         "Cryptarithmetic",
       ],
-      bgColor: "from-teal-100 to-teal-300",
-      textColor: "text-teal-800",
+      bgGradient: true,
+      bgColor: "from-purple-100 to-purple-300",
+      textColor: "text-purple-800",
     },
     {
       id: 4,
@@ -106,8 +109,10 @@ export default function ProgramsPage() {
         "Error spotting",
         "Critical Reasoning",
       ],
-      bgColor: "from-purple-100 to-purple-300",
-      textColor: "text-purple-800",
+      bgGradient: true,
+
+      bgColor: "from-pink-100 to-pink-300",
+      textColor: "text-pink-800",
     },
     {
       id: 5,
@@ -117,8 +122,9 @@ export default function ProgramsPage() {
         "Learn Python fundamentals, web basics, and logical problem-solving through beginner-friendly training designed to build a strong technical foundation.",
       icon: "/byte.png",
       topicsCovered: ["Python Basics", "Web Fundamentals", "Logic Building"],
-      bgColor: "from-pink-100 to-pink-300",
-      textColor: "text-pink-800",
+      bgColor: "from-indigo-100 to-indigo-300",
+      textColor: "text-indigo-800",
+      bgGradient: true,
     },
     {
       id: 6,
@@ -128,8 +134,9 @@ export default function ProgramsPage() {
         "Sharpen coding skills for contests and technical interviews with focused training in C, C++, Java, and Python problem-solving techniques.",
       icon: "/monitor.png",
       topicsCovered: ["Competitive Programming (C, C++, Java, Python)"],
-      bgColor: "from-yellow-100 to-yellow-300",
+      bgColor: "#dfff04ff",
       textColor: "text-yellow-800",
+      bgGradient: false,
     },
     {
       id: 7,
@@ -142,8 +149,9 @@ export default function ProgramsPage() {
         "Core Programming",
         "Data Structures & Algorithms (Java)",
       ],
-      bgColor: "from-indigo-100 to-indigo-300",
-      textColor: "text-indigo-800",
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
+      bgGradient: true,
     },
     {
       id: 8,
@@ -153,8 +161,9 @@ export default function ProgramsPage() {
         "Master hands-on web development from frontend to backend, mastering modern technologies and frameworks to build complete, real-world applications.",
       icon: "/computer.png",
       topicsCovered: ["Full Stack Development"],
-      bgColor: "from-green-100 to-green-300",
+      bgColor: "#29f400ff",
       textColor: "text-green-800",
+      bgGradient: false,
     },
     {
       id: 9,
@@ -167,8 +176,9 @@ export default function ProgramsPage() {
         "ML/DS/AI projects",
         "Emerging Tools & Technologies (AI, Data Analytics, Cloud Basics)",
       ],
-      bgColor: "from-blue-100 to-blue-300",
+      bgColor: "#00a3f4ff",
       textColor: "text-blue-800",
+      bgGradient: false,
     },
     {
       id: 10,
@@ -181,8 +191,9 @@ export default function ProgramsPage() {
         "Company Specific Training (TCS, Infosys, Wipro, etc.)",
         "JD Orientation",
       ],
-      bgColor: "from-orange-100 to-orange-300",
-      textColor: "text-orange-800",
+      bgColor: "from-emerald-100 to-emerald-300",
+      textColor: "text-emerald-800",
+      bgGradient: true,
     },
     {
       id: 11,
@@ -192,8 +203,9 @@ export default function ProgramsPage() {
         "Spark creativity through idea validation, lean business models, pitch deck creation, and problem-solving workshops. Transform ideas into successful ventures.",
       icon: "/light-bulb.png",
       topicsCovered: ["Entrepreneurship & Innovation Bootcamps"],
-      bgColor: "from-emerald-100 to-emerald-300",
-      textColor: "text-emerald-800",
+      bgColor: "from-red-100 to-red-300",
+      textColor: "text-red-800",
+      bgGradient: true,
     },
     {
       id: 12,
@@ -207,8 +219,9 @@ export default function ProgramsPage() {
         "By Industry Experts & Domain Leaders",
         "Topics: Startup, Career Trends, Tech Insights",
       ],
-      bgColor: "from-violet-100 to-violet-300",
-      textColor: "text-violet-800",
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
+      bgGradient: true,
     },
     {
       id: 13,
@@ -218,8 +231,9 @@ export default function ProgramsPage() {
         "Master fluency, clarity and precision in both spoken and written English to communicate confidently across academic, professional and global settings.",
       icon: "/speaking.png",
       topicsCovered: ["Communication Skills"],
-      bgColor: "from-yellow-100 to-yellow-300",
+      bgColor: "#dfff04ff",
       textColor: "text-yellow-800",
+      bgGradient: false,
     },
     {
       id: 14,
@@ -228,8 +242,9 @@ export default function ProgramsPage() {
       description:
         "Refine pronunciation, neutralize accents and enhance speech clarity to communicate with confidence and connect effectively in global environments.",
       icon: "/voice.png",
-      bgColor: "from-pink-100 to-pink-300",
-      textColor: "text-pink-800",
+      bgColor: "from-teal-100 to-teal-300",
+      textColor: "text-teal-800",
+      bgGradient: true,
     },
     {
       id: 15,
@@ -248,8 +263,9 @@ export default function ProgramsPage() {
         "Custom Onboarding & Induction Programs",
         "Workplace Culture & Ethics",
       ],
-      bgColor: "from-red-100 to-red-300",
+      bgColor: "#cd4300ff",
       textColor: "text-red-800",
+      bgGradient: false,
     },
     {
       id: 16,
@@ -259,8 +275,9 @@ export default function ProgramsPage() {
         "Enhance academic performance with effective time management, personalized study plans, memory techniques, and mindset training for consistent excellence.",
       icon: "/notes.png",
       topicsCovered: ["TOEFL", "IELTS", "GRE", "Exam Strategy & Study Skills"],
-      bgColor: "from-blue-100 to-blue-300",
-      textColor: "text-blue-800",
+      bgColor: "from-pink-100 to-pink-300",
+      textColor: "text-pink-800",
+      bgGradient: true,
     },
     {
       id: 17,
@@ -274,8 +291,9 @@ export default function ProgramsPage() {
         "Skill Evaluation & Feedback Reports",
         "Interview Preparation (HR & Technical)",
       ],
-      bgColor: "from-green-100 to-green-300",
-      textColor: "text-green-800",
+      bgColor: "from-indigo-100 to-indigo-300",
+      textColor: "text-indigo-800",
+      bgGradient: true,
     },
     {
       id: 18,
@@ -285,8 +303,9 @@ export default function ProgramsPage() {
         "Master impactful self-introductions, craft logical arguments, and deliver professional pitches confidently, even under high-pressure situations for maximum impact.",
       icon: "/arrow.png",
       topicsCovered: ["Group Discussion Training", "Interview Orientation"],
-      bgColor: "from-red-100 to-red-300",
+      bgColor: "#e60000ff",
       textColor: "text-red-800",
+      bgGradient: false,
     },
     {
       id: 19,
@@ -303,8 +322,9 @@ export default function ProgramsPage() {
         "Portfolio Creation & Branding",
         "Strength Mapping & Confidence Building",
       ],
-      bgColor: "from-red-100 to-red-300",
-      textColor: "text-red-800",
+      bgColor: "from-cyan-100 to-cyan-300",
+      textColor: "text-cyan-800",
+      bgGradient: true,
     },
     {
       id: 20,
@@ -320,8 +340,9 @@ export default function ProgramsPage() {
         "Study Strategy & Time Management",
         "Subject-Specific Foundation Programs",
       ],
-      bgColor: "from-orange-100 to-orange-300",
-      textColor: "text-orange-800",
+      bgColor: "from-violet-100 to-violet-300",
+      textColor: "text-violet-800",
+      bgGradient: true,
     },
     {
       id: 21,
@@ -335,8 +356,9 @@ export default function ProgramsPage() {
         "Group Discussions",
         "Interview Mastery Sessions",
       ],
-      bgColor: "from-indigo-100 to-indigo-300",
-      textColor: "text-indigo-800",
+      bgColor: "from-orange-100 to-orange-300",
+      textColor: "text-orange-800",
+      bgGradient: true,
     },
     {
       id: 22,
@@ -346,8 +368,9 @@ export default function ProgramsPage() {
         "A transformational program focused on unlocking leadership potential, collaboration, decision-making and problem-solving in real-world team settings.",
       icon: "/rocket.png",
       topicsCovered: ["Leadership Training", "Teamwork Skills"],
-      bgColor: "from-blue-100 to-blue-300",
-      textColor: "text-blue-800",
+      bgColor: "#0e04ffff",
+      textColor: "text-white",
+      bgGradient: false,
     },
     {
       id: 23,
@@ -362,8 +385,9 @@ export default function ProgramsPage() {
         "Group Discussion Strategies",
         "Interview Hacks",
       ],
-      bgColor: "from-green-100 to-green-300",
+      bgColor: "#e64d00ff",
       textColor: "text-green-800",
+      bgGradient: false,
     },
     {
       id: 24,
@@ -373,8 +397,9 @@ export default function ProgramsPage() {
         "Self-discovery through standardized tests that reveal personality types, learning styles and career fit — followed by interpretation sessions for clarity and guidance.",
       icon: "/growth.png",
       topicsCovered: ["Psychometric Tests", "Personality Profiling"],
-      bgColor: "from-teal-100 to-teal-300",
-      textColor: "text-teal-800",
+      bgColor: "from-blue-100 to-blue-300",
+      textColor: "text-blue-800",
+      bgGradient: true,
     },
     {
       id: 25,
@@ -389,8 +414,9 @@ export default function ProgramsPage() {
         "Communication Skills Assessment",
         "Analytics & Benchmarking",
       ],
-      bgColor: "from-cyan-100 to-cyan-300",
-      textColor: "text-cyan-800",
+      bgColor: "from-green-100 to-green-300",
+      textColor: "text-green-800",
+      bgGradient: true,
     },
   ];
 
@@ -1007,7 +1033,13 @@ export default function ProgramsPage() {
                   className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[450px] justify-center min-h-[350px] ${cardClasses}`}
                 >
                   <div
-                    className={`p-8 sm:p-10 bg-gradient-to-b ${program.bgColor} h-full w-full flex flex-col`}
+     className={`p-8 sm:p-10 h-full w-full flex flex-col ${
+      program.bgGradient ? `bg-gradient-to-b ${program.bgColor}` : ""
+    } ${program.textColor}`}
+    style={{
+      background: !program.bgGradient ? program.bgColor : undefined,
+    }}
+
                   >
                     <div className="flex flex-col items-center">
                       {/* Icon */}
