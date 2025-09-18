@@ -97,8 +97,8 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/careers"
-                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300"
+                  href="/#hiring"
+                  className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-300 hover:cursor-pointer"
                 >
                   Careers
                 </Link>

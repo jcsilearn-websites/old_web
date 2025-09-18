@@ -73,11 +73,11 @@ export default function CorporatePartnershipsPage() {
               Partnership Opportunities
             </h2>
             <ul className="space-y-2 text-gray-700">
-              <li>• Recruitment drives & campus hiring</li>
-              <li>• Guest lectures & industry mentorship</li>
-              <li>• Sponsored workshops & hackathons</li>
-              <li>• Co-branded certification programs</li>
-              <li>• Internships & live projects</li>
+              <li>• Recruitment drives & Campus hiring</li>
+              <li>• Guest lectures & Industry mentorship</li>
+              <li>• Sponsored workshops & Hackathons</li>
+              <li>• Co-branded Certification programs</li>
+              <li>• Internships & Live projects</li>
             </ul>
           </div>
 
