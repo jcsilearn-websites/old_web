@@ -123,7 +123,10 @@ export default function Hiring() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/40 relative overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+      id="hiring"
+    >
       {/* Background decorative elements */}
 
       <div className="absolute inset-0 overflow-hidden">
