@@ -1,13 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import {
-  FaBriefcase,
-  FaChevronLeft,
-  FaChevronRight,
-  FaEnvelope,
-  FaUsers,
-} from "react-icons/fa";
+import { FaBriefcase, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import CommunicationImage from "../../../public/CommunicationImage.jpg";
 import AptitudeImage from "../../../public/aptitudeImage.jpg";
@@ -55,7 +49,7 @@ const courses = [
 
 // Dynamic visible cards based on screen size
 const getVisibleCards = () => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     if (window.innerWidth < 640) return 1; // Mobile: 1 card
     if (window.innerWidth < 1024) return 2; // Tablet: 2 cards
     return 3; // Desktop: 3 cards
@@ -98,8 +92,8 @@ export default function Careers() {
     };
 
     updateVisibleCards();
-    window.addEventListener('resize', updateVisibleCards);
-    return () => window.removeEventListener('resize', updateVisibleCards);
+    window.addEventListener("resize", updateVisibleCards);
+    return () => window.removeEventListener("resize", updateVisibleCards);
   }, []);
 
   const handlePrev = () => {
@@ -122,7 +116,14 @@ export default function Careers() {
 
   const variants: Variants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? (visibleCards === 1 ? 300 : 400) : (visibleCards === 1 ? -300 : -400),
+      x:
+        dir > 0
+          ? visibleCards === 1
+            ? 300
+            : 400
+          : visibleCards === 1
+          ? -300
+          : -400,
       opacity: 0,
       position: "absolute" as const,
       transition: { duration: 0.4, type: "tween" },
@@ -134,7 +135,14 @@ export default function Careers() {
       transition: { duration: 0.4, type: "tween" },
     },
     exit: (dir: number) => ({
-      x: dir > 0 ? (visibleCards === 1 ? -300 : -400) : (visibleCards === 1 ? 300 : 400),
+      x:
+        dir > 0
+          ? visibleCards === 1
+            ? -300
+            : -400
+          : visibleCards === 1
+          ? 300
+          : 400,
       opacity: 0,
       position: "absolute" as const,
       transition: { duration: 0.4, type: "tween" },
@@ -192,7 +200,7 @@ export default function Careers() {
                 >
                   <FaChevronLeft size={14} className="text-gray-700" />
                 </button>
-                
+
                 <div className="w-full px-12">
                   <AnimatePresence initial={false} custom={direction}>
                     <motion.div
@@ -235,7 +243,7 @@ export default function Careers() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-                
+
                 <button
                   className="absolute right-2 z-20 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300"
                   onClick={handleNext}
@@ -244,7 +252,7 @@ export default function Careers() {
                   <FaChevronRight size={14} className="text-gray-700" />
                 </button>
               </div>
-              
+
               {/* Mobile Indicators */}
               <div className="flex justify-center gap-2 mt-6">
                 {courses.map((_, i) => (
@@ -255,7 +263,7 @@ export default function Careers() {
                       setIndex(i);
                     }}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      i === index ? 'bg-blue-600 w-6' : 'bg-gray-300'
+                      i === index ? "bg-blue-600 w-6" : "bg-gray-300"
                     }`}
                   />
                 ))}
@@ -272,7 +280,7 @@ export default function Careers() {
                 >
                   <FaChevronLeft size={16} className="text-gray-700" />
                 </button>
-                
+
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.div
                     key={index}
@@ -283,7 +291,7 @@ export default function Careers() {
                     exit="exit"
                     transition={{ duration: 0.5, type: "tween" }}
                     className={`flex w-full justify-center ${
-                      visibleCards === 2 ? 'gap-6' : 'gap-8 lg:gap-12'
+                      visibleCards === 2 ? "gap-6" : "gap-8 lg:gap-12"
                     }`}
                     style={{ minHeight: 400 }}
                   >
@@ -291,7 +299,9 @@ export default function Careers() {
                       <motion.div
                         key={course.title + i}
                         className={`flex flex-col overflow-hidden border border-gray-100 rounded-2xl bg-white/90 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 group ${
-                          visibleCards === 2 ? 'w-full max-w-sm' : 'w-full max-w-xs'
+                          visibleCards === 2
+                            ? "w-full max-w-sm"
+                            : "w-full max-w-xs"
                         }`}
                       >
                         <div className="relative overflow-hidden">
@@ -321,7 +331,7 @@ export default function Careers() {
                     ))}
                   </motion.div>
                 </AnimatePresence>
-                
+
                 <button
                   className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg p-3 hover:bg-white hover:shadow-xl transition-all duration-300 z-10"
                   onClick={handleNext}
