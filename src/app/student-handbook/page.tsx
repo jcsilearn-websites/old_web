@@ -267,7 +267,7 @@ export default function StudentHandbookPage() {
             </div>
             <div className="mt-6 text-center">
               <a
-                href="/student-handbook.pdf"
+                href="/JCS-iLearn-Student-Handbook.pdf"
                 download
                 // className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 transition"
                 className="inline-flex items-center justify-center 
