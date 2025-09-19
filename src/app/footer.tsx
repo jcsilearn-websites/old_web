@@ -9,7 +9,7 @@ import footerlogonew from "../../public/footer-logo-new.svg";
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8 sm:pt-12 sm:pb-10  lg:pt-16 lg:pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-3 sm:space-y-4">
@@ -205,6 +205,18 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mb-4 mt-0">
+        <p className="text-gray-400 text-sm text-center md:text-left">
+          Developed by{" "}
+          <a
+            target="_blank"
+            className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+            href="https://www.kobrando.in/"
+          >
+            Kobrando
+          </a>
+        </p>
       </div>
     </footer>
   );

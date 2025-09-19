@@ -134,7 +134,7 @@ export default function ProgramsPage() {
         "Sharpen coding skills for contests and technical interviews with focused training in C, C++, Java, and Python problem-solving techniques.",
       icon: "/monitor.png",
       topicsCovered: ["Competitive Programming (C, C++, Java, Python)"],
-      bgColor: "#dfff04ff",
+      bgColor: "#ecff4d9c",
       textColor: "text-yellow-800",
       bgGradient: false,
     },
@@ -161,7 +161,7 @@ export default function ProgramsPage() {
         "Master hands-on web development from frontend to backend, mastering modern technologies and frameworks to build complete, real-world applications.",
       icon: "/computer.png",
       topicsCovered: ["Full Stack Development"],
-      bgColor: "#29f400ff",
+      bgColor: "#4ff92d82",
       textColor: "text-green-800",
       bgGradient: false,
     },
@@ -176,7 +176,7 @@ export default function ProgramsPage() {
         "ML/DS/AI projects",
         "Emerging Tools & Technologies (AI, Data Analytics, Cloud Basics)",
       ],
-      bgColor: "#00a3f4ff",
+      bgColor: "#00a3f46b",
       textColor: "text-blue-800",
       bgGradient: false,
     },
@@ -231,7 +231,7 @@ export default function ProgramsPage() {
         "Master fluency, clarity and precision in both spoken and written English to communicate confidently across academic, professional and global settings.",
       icon: "/speaking.png",
       topicsCovered: ["Communication Skills"],
-      bgColor: "#dfff04ff",
+      bgColor: "#df5dbd78",
       textColor: "text-yellow-800",
       bgGradient: false,
     },
@@ -263,7 +263,7 @@ export default function ProgramsPage() {
         "Custom Onboarding & Induction Programs",
         "Workplace Culture & Ethics",
       ],
-      bgColor: "#cd4300ff",
+      bgColor: "#cd430091",
       textColor: "text-red-800",
       bgGradient: false,
     },
@@ -303,7 +303,7 @@ export default function ProgramsPage() {
         "Master impactful self-introductions, craft logical arguments, and deliver professional pitches confidently, even under high-pressure situations for maximum impact.",
       icon: "/arrow.png",
       topicsCovered: ["Group Discussion Training", "Interview Orientation"],
-      bgColor: "#e60000ff",
+      bgColor: "#f90f0f57",
       textColor: "text-red-800",
       bgGradient: false,
     },
@@ -368,8 +368,8 @@ export default function ProgramsPage() {
         "A transformational program focused on unlocking leadership potential, collaboration, decision-making and problem-solving in real-world team settings.",
       icon: "/rocket.png",
       topicsCovered: ["Leadership Training", "Teamwork Skills"],
-      bgColor: "#0e04ffff",
-      textColor: "text-white",
+      bgColor: "#7004ff82",
+      textColor: "text-black",
       bgGradient: false,
     },
     {
@@ -385,8 +385,8 @@ export default function ProgramsPage() {
         "Group Discussion Strategies",
         "Interview Hacks",
       ],
-      bgColor: "#e64d00ff",
-      textColor: "text-green-800",
+      bgColor: "#0045e661",
+      textColor: "text-[#333489]",
       bgGradient: false,
     },
     {
@@ -1033,13 +1033,16 @@ export default function ProgramsPage() {
                   className={`relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] w-full max-w-sm h-[450px] justify-center min-h-[350px] ${cardClasses}`}
                 >
                   <div
-     className={`p-8 sm:p-10 h-full w-full flex flex-col ${
-      program.bgGradient ? `bg-gradient-to-b ${program.bgColor}` : ""
-    } ${program.textColor}`}
-    style={{
-      background: !program.bgGradient ? program.bgColor : undefined,
-    }}
-
+                    className={`p-8 sm:p-10 h-full w-full flex flex-col ${
+                      program.bgGradient
+                        ? `bg-gradient-to-b ${program.bgColor}`
+                        : ""
+                    } ${program.textColor}`}
+                    style={{
+                      backgroundColor: !program.bgGradient
+                        ? program.bgColor
+                        : undefined,
+                    }}
                   >
                     <div className="flex flex-col items-center">
                       {/* Icon */}
