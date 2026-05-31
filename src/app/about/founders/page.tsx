@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa";
+import founder1 from "../../../../public/founder1.jpeg";
+import founder2 from "../../../../public/founder2.jpeg";
 
 export default function FoundersPage() {
   return (
@@ -33,7 +36,7 @@ export default function FoundersPage() {
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <Image
-              src="https://images.pexels.com/photos/5756659/pexels-photo-5756659.jpeg?_gl=1*12wqdlr*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDUzODEkajUxJGwwJGgw"
+              src={founder1}
               alt="Founder portrait"
               width={500}
               height={600}
@@ -41,12 +44,28 @@ export default function FoundersPage() {
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl p-4 text-white">
               <p className="font-semibold">Founder & CEO</p>
+              <p className="text-sm opacity-90">Raghul J C</p>
             </div>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">
+                Raghul J C
+              </h2>
+              <p className="text-gray-600 mt-1">Founder & CEO · B.Tech., M.A.</p>
+              <a
+                href="https://www.linkedin.com/in/raghul-j-c-617818221/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-3 text-blue-700 hover:text-blue-900 font-medium"
+              >
+                <FaLinkedin className="text-lg" />
+                LinkedIn Profile
+              </a>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               From the Founder's Desk
-            </h2>
+            </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
                 The spark for JCS iLearn was ignited during one of my
@@ -86,7 +105,7 @@ export default function FoundersPage() {
             </div>
             <div className="mt-6 pt-4 border-t border-gray-200">
               <p className="text-gray-700 font-semibold">
-                — Founder, JCS iLearn
+                — Raghul J C, Founder & CEO
               </p>
             </div>
           </div>
@@ -95,9 +114,24 @@ export default function FoundersPage() {
         {/* Co-Founder */}
         <section className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">
+                Siva Harish M
+              </h2>
+              <p className="text-gray-600 mt-1">Co-Founder & VP · B.Tech</p>
+              <a
+                href="https://www.linkedin.com/in/siva-harish-m-056617223/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-3 text-blue-700 hover:text-blue-900 font-medium"
+              >
+                <FaLinkedin className="text-lg" />
+                LinkedIn Profile
+              </a>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Message from the Co-Founder
-            </h2>
+            </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
                 At JCS iLearn, we believe that skill is the foundation of
@@ -124,20 +158,21 @@ export default function FoundersPage() {
             </div>
             <div className="mt-6 pt-4 border-t border-gray-200">
               <p className="text-gray-700 font-semibold">
-                — Co-Founder, JCS iLearn
+                — Siva Harish M, Co-Founder & VP
               </p>
             </div>
           </div>
           <div className="relative">
             <Image
-              src="https://images.pexels.com/photos/2191123/pexels-photo-2191123.jpeg?_gl=1*1otqxyp*_ga*MTA2OTEzMTIxMS4xNzU1MDE3ODYz*_ga_8JE65Q40S6*czE3NTU1NDM5OTQkbzIkZzEkdDE3NTU1NDYyNDIkajI3JGwwJGgw"
+              src={founder2}
               alt="Co-Founder portrait"
               width={500}
               height={600}
               className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-700 via-indigo-800 to-blue-900 rounded-2xl p-4 text-white">
-              <p className="font-semibold">Co-Founder & COO</p>
+              <p className="font-semibold">Co-Founder & VP</p>
+              <p className="text-sm opacity-90">Siva Harish M</p>
             </div>
           </div>
         </section>

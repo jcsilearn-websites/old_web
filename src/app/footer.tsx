@@ -8,40 +8,49 @@ import footerlogonew from "../../public/footer-logo-new.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white">
+    <footer className="relative z-20 bg-gradient-to-br from-[#0a0b68ff] via-[#1026b3ff] to-[#0a0b68ff] text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8 sm:pt-12 sm:pb-10  lg:pt-16 lg:pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-3 sm:space-y-4">
-            <div className="flex justify-center lg:justify-start">
+          <div className="space-y-3 sm:space-y-4 relative">
+            <div className="flex justify-center lg:justify-start pointer-events-none">
               <div className="flex items-center justify-center">
                 <Image
                   src={footerlogonew}
                   alt="JCS iLearn Logo"
                   height={700}
-                  className="h-32 sm:h-36  w-auto object-contain drop-shadow-xl lg:scale-160 lg:w-full lg:h-auto lg:object-contain"
+                  className="h-32 sm:h-36 w-auto object-contain drop-shadow-xl lg:scale-125 lg:w-full lg:h-auto lg:max-h-48 lg:object-contain pointer-events-none"
                 />
               </div>
             </div>
 
-            <div className="flex gap-4 sm:gap-3">
+            <div className="relative z-20 flex gap-4 sm:gap-3 justify-center lg:justify-start mt-4 lg:mt-8">
               <a
-                href="#"
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                href="https://www.linkedin.com/company/jcs-institute-of-lifeskills-education-and-recruitment-network/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="JCS iLearn on LinkedIn"
+                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300 cursor-pointer"
               >
-                <FaLinkedin className="text-white text-xs sm:text-sm lg:text-base" />
+                <FaLinkedin className="text-white text-sm sm:text-base pointer-events-none" />
               </a>
               <a
-                href="#"
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                href="https://www.instagram.com/jcs_ilearn?igsh=N3hpZmQ1c2k3Njdq"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="JCS iLearn on Instagram"
+                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300 cursor-pointer"
               >
-                <FaInstagram className="text-white text-xs sm:text-sm lg:text-base" />
+                <FaInstagram className="text-white text-sm sm:text-base pointer-events-none" />
               </a>
               <a
-                href="#"
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                href="https://www.youtube.com/@JCSiLearn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="JCS iLearn on YouTube"
+                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300 cursor-pointer"
               >
-                <FaYoutube className="text-white text-xs sm:text-sm lg:text-base" />
+                <FaYoutube className="text-white text-sm sm:text-base pointer-events-none" />
               </a>
             </div>
           </div>

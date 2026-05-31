@@ -259,7 +259,35 @@ export default function StudentHandbookPage() {
               <div className="space-y-2">
                 <p>📧 Email: instituteoflearn@gmail.com</p>
                 <p>🌐 Website: www.jcsilearn.com</p>
-                <p>📱 Social Media: Instagram | LinkedIn | YouTube</p>
+                <p>
+                  📱 Social Media:{" "}
+                  <a
+                    href="https://www.instagram.com/jcs_ilearn?igsh=N3hpZmQ1c2k3Njdq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-blue-100"
+                  >
+                    Instagram
+                  </a>{" "}
+                  |{" "}
+                  <a
+                    href="https://www.linkedin.com/company/jcs-institute-of-lifeskills-education-and-recruitment-network/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-blue-100"
+                  >
+                    LinkedIn
+                  </a>{" "}
+                  |{" "}
+                  <a
+                    href="https://www.youtube.com/@JCSiLearn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-blue-100"
+                  >
+                    YouTube
+                  </a>
+                </p>
                 <p className="mt-4 font-semibold">
                   Your growth is our mission – let's learn and succeed together.
                 </p>
