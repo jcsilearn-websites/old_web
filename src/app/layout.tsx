@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "JCS iLEARN is a platform for learning and growing. We are a team of 1000+ developers and designers who are passionate about building the future of education.",
   icons: {
-    icon: "/logo.png.jpeg",
+    icon: "/setlogo.jpeg",
   },
 };
 
